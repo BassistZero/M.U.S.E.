@@ -5,14 +5,15 @@
 //  Created by Bassist_Zero on 4/23/22.
 //
 
-struct Note: Equatable {
+struct Note {
+
+    // MARK: - Public Properties
 
     var octave: Octave
     var value: NoteValue
+    var absolete: Int { octave.rawValue * 12 + value.rawValue }
 
-    var absolete: Int {
-        return octave.rawValue * 12 + value.rawValue
-    }
+    // MARK: - Inits
 
     init(octave: Octave, value: NoteValue) {
         self.octave = octave
@@ -37,6 +38,8 @@ struct Note: Equatable {
         self.value = value
     }
 
+    // MARK: - Public Methods
+
     func interval(note: Note) -> Interval {
         let rawValue = abs(note.absolete - absolete)
         let interval = Interval.init(rawValue: rawValue % 12)!
@@ -44,6 +47,8 @@ struct Note: Equatable {
     }
 
 }
+
+// MARK: - Comparable
 
 extension Note: Comparable {
 
@@ -53,60 +58,12 @@ extension Note: Comparable {
 
 }
 
+// MARK: - CustomStringConvertible
+
 extension Note: CustomStringConvertible {
 
     var description: String {
         return String(octave.rawValue) + value.description
-    }
-
-}
-
-extension Note {
-
-    enum NoteValue: Int, CaseIterable, CustomStringConvertible {
-
-        case c = 0
-        case cSharp = 1
-        case d
-        case dSharp
-        case e
-        case f
-        case fSharp
-        case g
-        case gSharp
-        case a
-        case aSharp
-        case b
-
-        var description: String {
-            switch self {
-            case .c:
-                return "C"
-            case .cSharp:
-                return "C#"
-            case .d:
-                return "D"
-            case .dSharp:
-                return "D#"
-            case .e:
-                return "E"
-            case .f:
-                return "F"
-            case .fSharp:
-                return "F#"
-            case .g:
-                return "G"
-            case .gSharp:
-                return "G#"
-            case .a:
-                return "A"
-            case .aSharp:
-                return "A#"
-            case .b:
-                return "B"
-            }
-        }
-
     }
 
 }

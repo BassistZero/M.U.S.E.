@@ -5,7 +5,7 @@
 //  Created by Bassist_Zero on 4/26/22.
 //
 
-enum Interval: Int, CaseIterable, CustomStringConvertible {
+enum Interval: Int, CaseIterable {
 
     case unison = 0
     case minorSecond = 1
@@ -20,6 +20,22 @@ enum Interval: Int, CaseIterable, CustomStringConvertible {
     case minorSeventh
     case majorSeventh
     case octave
+
+}
+
+// MARK: - Comparable
+
+extension Interval: Comparable {
+
+    static func < (lhs: Interval, rhs: Interval) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+
+}
+
+// MARK: - CustomStringConvertible
+
+extension Interval: CustomStringConvertible {
 
     var description: String {
         switch self {
@@ -50,14 +66,6 @@ enum Interval: Int, CaseIterable, CustomStringConvertible {
         case .octave:
             return "Octave"
         }
-    }
-
-}
-
-extension Interval: Comparable {
-
-    static func < (lhs: Interval, rhs: Interval) -> Bool {
-        return lhs.rawValue < rhs.rawValue
     }
 
 }

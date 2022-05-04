@@ -6,6 +6,7 @@
 //
 
 enum Octave: Int, CaseIterable {
+
     case zero = 0
     case one = 1
     case two
@@ -16,4 +17,5 @@ enum Octave: Int, CaseIterable {
     case seven
     case eight
     case nine
+    
 }
