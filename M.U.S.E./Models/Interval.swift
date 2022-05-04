@@ -53,3 +53,11 @@ enum Interval: Int, CaseIterable, CustomStringConvertible {
     }
 
 }
+
+extension Interval: Comparable {
+
+    static func < (lhs: Interval, rhs: Interval) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+
+}

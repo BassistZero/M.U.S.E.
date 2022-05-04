@@ -5,12 +5,13 @@
 //  Created by Bassist_Zero on 4/23/22.
 //
 
-struct Note {
+struct Note: Equatable {
 
-    let octave: Octave
-    let value: NoteValue
-    private var absolete: Int {
-        return octave.rawValue + value.rawValue
+    var octave: Octave
+    var value: NoteValue
+
+    var absolete: Int {
+        return octave.rawValue * 12 + value.rawValue
     }
 
     init(octave: Octave, value: NoteValue) {
@@ -37,8 +38,30 @@ struct Note {
     }
 
     func interval(note: Note) -> Interval {
-        return Interval.init(rawValue: note.absolete - absolete)!
+        let rawValue = abs(note.absolete - absolete)
+        let interval = Interval.init(rawValue: rawValue % 12)!
+        return interval
     }
+
+}
+
+extension Note: Comparable {
+
+    static func < (lhs: Note, rhs: Note) -> Bool {
+        return lhs.absolete < rhs.absolete
+    }
+
+}
+
+extension Note: CustomStringConvertible {
+
+    var description: String {
+        return String(octave.rawValue) + value.description
+    }
+
+}
+
+extension Note {
 
     enum NoteValue: Int, CaseIterable, CustomStringConvertible {
 
@@ -84,14 +107,6 @@ struct Note {
             }
         }
 
-    }
-
-}
-
-extension Note: CustomStringConvertible {
-
-    var description: String {
-        return String(octave.rawValue) + value.description
     }
 
 }

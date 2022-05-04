@@ -9,9 +9,10 @@ import UIKit
 
 final class ViewController: UIViewController {
 
-    @IBOutlet weak var chordLabel: UILabel!
-    @IBOutlet weak var chordPickerView: UIPickerView!
-    
+    @IBOutlet private weak var chordLabel: UILabel!
+    @IBOutlet private weak var valuePickerView: UIPickerView!
+    @IBOutlet private weak var octavePickerView: UIPickerView!
+
     var chord: Chord?
 
     // MARK: - UIViewController
@@ -21,13 +22,7 @@ final class ViewController: UIViewController {
 
         generateChord()
         updateUI()
-
-        chordPickerView.dataSource = self
-        chordPickerView.delegate = self
-
-        chordPickerView.selectRow(chord!.notes[0].value.rawValue, inComponent: 0, animated: true)
-        chordPickerView.selectRow(chord!.notes[1].value.rawValue, inComponent: 1, animated: true)
-        chordPickerView.selectRow(chord!.notes[2].value.rawValue, inComponent: 2, animated: true)
+        configurePickerView()
     }
 
 }
@@ -41,7 +36,15 @@ extension ViewController: UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        Note.NoteValue.allCases.count
+        if pickerView == valuePickerView {
+            return Note.NoteValue.allCases.count
+        }
+
+        if pickerView == octavePickerView {
+            return Octave.allCases.count
+        }
+
+        return 0
     }
 
 }
@@ -51,11 +54,26 @@ extension ViewController: UIPickerViewDataSource {
 extension ViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Note(value: .init(rawValue: row)!).value.description
+        if pickerView == valuePickerView {
+            return Note(value: .init(rawValue: row)!).value.description
+        }
+
+        if pickerView == octavePickerView {
+            return Octave(rawValue: row)!.rawValue.description
+        }
+
+        return "error"
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        chord?.notes[component] = Note(octave: .one, value: .init(rawValue: row)!)
+        if pickerView == valuePickerView {
+            chord?.updateValue(of: component, with: .init(rawValue: row)!)
+        }
+
+        if pickerView == octavePickerView {
+            chord?.updateOctave(of: component, with: .init(rawValue: row)!)
+        }
+
         updateUI()
     }
 
@@ -69,9 +87,35 @@ private extension ViewController {
         generateChord()
         updateUI()
 
-        chordPickerView.selectRow(chord!.notes[0].value.rawValue, inComponent: 0, animated: true)
-        chordPickerView.selectRow(chord!.notes[1].value.rawValue, inComponent: 1, animated: true)
-        chordPickerView.selectRow(chord!.notes[2].value.rawValue, inComponent: 2, animated: true)
+        valuePickerView.selectRow(chord!.notes[0].value.rawValue, inComponent: 0, animated: true)
+        valuePickerView.selectRow(chord!.notes[1].value.rawValue, inComponent: 1, animated: true)
+        valuePickerView.selectRow(chord!.notes[2].value.rawValue, inComponent: 2, animated: true)
+
+        octavePickerView.selectRow(chord!.notes[0].octave.rawValue, inComponent: 0, animated: true)
+        octavePickerView.selectRow(chord!.notes[1].octave.rawValue, inComponent: 1, animated: true)
+        octavePickerView.selectRow(chord!.notes[2].octave.rawValue, inComponent: 2, animated: true)
+    }
+
+}
+
+// MARK: - Configuration
+
+private extension ViewController {
+
+    func configurePickerView() {
+        valuePickerView.dataSource = self
+        valuePickerView.delegate = self
+
+        octavePickerView.dataSource = self
+        octavePickerView.delegate = self
+
+        valuePickerView.selectRow(chord!.notes[0].value.rawValue, inComponent: 0, animated: true)
+        valuePickerView.selectRow(chord!.notes[1].value.rawValue, inComponent: 1, animated: true)
+        valuePickerView.selectRow(chord!.notes[2].value.rawValue, inComponent: 2, animated: true)
+
+        octavePickerView.selectRow(chord!.notes[0].octave.rawValue, inComponent: 0, animated: true)
+        octavePickerView.selectRow(chord!.notes[1].octave.rawValue, inComponent: 1, animated: true)
+        octavePickerView.selectRow(chord!.notes[2].octave.rawValue, inComponent: 2, animated: true)
     }
 
 }
@@ -84,7 +128,7 @@ private extension ViewController {
         var notes = [Note]()
 
         for _ in 1...3 {
-            let note = Note(octave: .one)
+            let note = Note()
             notes.append(note)
         }
 
@@ -92,7 +136,7 @@ private extension ViewController {
     }
 
     func updateUI() {
-        chordLabel.text = "Intervals: \(chord!.intervals)\nChord Type: \(chord!.type)"
+        chordLabel.text = "Notes: \(chord!.notes.description)\nSortedNotes: \(chord!.sortedNotes)\n Intervals: \(chord!.intervals)\nChord Type: \(chord!.type)"
     }
     
 }
