@@ -175,13 +175,13 @@ extension ChordType: CustomStringConvertible {
         case .sevenMaj7no3:
             return "7-maj7-(no3)"
         case .add9:
-            return "add9"
+            return "(add9)"
         case .hash9:
-            return "#9"
+            return "(#9)"
         case .add11:
-            return "add11"
+            return "(add11)"
         case .hash11:
-            return "#11"
+            return "(#11)"
         case .b5no3:
             return "(b5)-(no3)"
         case .b5b6no3:
