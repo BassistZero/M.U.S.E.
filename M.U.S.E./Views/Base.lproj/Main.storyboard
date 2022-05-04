@@ -31,11 +31,19 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgO-GZ-AO2">
-                                <rect key="frame" x="15" y="245.5" width="384" height="216"/>
+                                <rect key="frame" x="15" y="253" width="384" height="216"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6m-EJ-peG" userLabel="Octave Picker View">
-                                <rect key="frame" x="15" y="477" width="384" height="216"/>
+                                <rect key="frame" x="15" y="484" width="384" height="216"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yp-Oi-I7w" userLabel="Sort Chord">
+                                <rect key="frame" x="159.5" y="210.5" width="95" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sort Chord"/>
+                                <connections>
+                                    <action selector="sortChord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EjF-Fn-AbT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,12 +52,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9fe-sQ-F77" secondAttribute="trailing" id="63B-Dh-25d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WgO-GZ-AO2" secondAttribute="trailing" constant="15" id="85s-YF-Id1"/>
                             <constraint firstItem="WgO-GZ-AO2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="96k-XX-Zev"/>
+                            <constraint firstItem="1yp-Oi-I7w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E2o-Pv-qad"/>
                             <constraint firstItem="TLg-Wa-6KJ" firstAttribute="top" secondItem="9fe-sQ-F77" secondAttribute="bottom" constant="50" id="G5n-4x-xOk"/>
-                            <constraint firstItem="WgO-GZ-AO2" firstAttribute="top" secondItem="TLg-Wa-6KJ" secondAttribute="bottom" constant="50" id="YGk-ir-s9J"/>
+                            <constraint firstItem="WgO-GZ-AO2" firstAttribute="top" secondItem="1yp-Oi-I7w" secondAttribute="bottom" constant="11.5" id="YGk-ir-s9J"/>
                             <constraint firstItem="TLg-Wa-6KJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YmL-65-j7i"/>
                             <constraint firstItem="V6m-EJ-peG" firstAttribute="top" secondItem="WgO-GZ-AO2" secondAttribute="bottom" constant="15" id="fHw-cj-NIB"/>
                             <constraint firstItem="9fe-sQ-F77" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="i6O-k1-AFH"/>
                             <constraint firstItem="9fe-sQ-F77" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m3G-am-FIe"/>
+                            <constraint firstItem="1yp-Oi-I7w" firstAttribute="top" secondItem="TLg-Wa-6KJ" secondAttribute="bottom" constant="15" id="wQ4-pq-SSb"/>
                             <constraint firstItem="9fe-sQ-F77" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x3G-Og-xoZ"/>
                             <constraint firstItem="V6m-EJ-peG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="yTq-QH-v80"/>
                         </constraints>
@@ -57,6 +67,7 @@
                     <connections>
                         <outlet property="chordLabel" destination="9fe-sQ-F77" id="jV7-4k-IbN"/>
                         <outlet property="octavePickerView" destination="V6m-EJ-peG" id="DwR-Ka-hgU"/>
+                        <outlet property="sortChordButton" destination="1yp-Oi-I7w" id="bTt-SS-4Nn"/>
                         <outlet property="valuePickerView" destination="WgO-GZ-AO2" id="Kjs-D4-cVa"/>
                     </connections>
                 </viewController>

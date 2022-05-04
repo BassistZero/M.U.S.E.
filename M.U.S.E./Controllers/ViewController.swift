@@ -9,11 +9,16 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    // MARK: - Private Outlets
+
     @IBOutlet private weak var chordLabel: UILabel!
     @IBOutlet private weak var valuePickerView: UIPickerView!
     @IBOutlet private weak var octavePickerView: UIPickerView!
+    @IBOutlet weak var sortChordButton: UIButton!
+    
+    // MARK: - Private Properties
 
-    var chord: Chord?
+    private var chord: Chord? { didSet { sortChordButton.isHidden = chord!.notes == chord!.sortedNotes! }}
 
     // MARK: - UIViewController
 
@@ -21,6 +26,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
 
         generateChord()
+        chord!.notes = chord!.sortedNotes!
         updateUI()
         configurePickerView()
     }
@@ -85,6 +91,13 @@ private extension ViewController {
 
     @IBAction func updateChord(_ sender: UIButton) {
         generateChord()
+        chord!.notes = chord!.sortedNotes!
+        updateUI()
+        selectAllPickerViewRows()
+    }
+
+    @IBAction func sortChord(_ sender: UIButton) {
+        chord!.notes = chord!.sortedNotes!
         updateUI()
         selectAllPickerViewRows()
     }
@@ -123,7 +136,11 @@ private extension ViewController {
     }
 
     func updateUI() {
-        chordLabel.text = "SortedNotes: \(chord!.sortedNotes!.description)\n Intervals: \(chord!.intervals!)\nChord: \(chord!.rootNote!.value)\(chord!.type!)"
+        if chord!.notes == chord!.sortedNotes! {
+            chordLabel.text = "Intervals: \(chord!.intervals!)\nChord: \(chord!.rootNote!.value)\(chord!.type!)"
+        } else {
+            chordLabel.text = "Root Note: \(chord!.rootNote!)\n Intervals: \(chord!.intervals!)\nChord: \(chord!.rootNote!.value)\(chord!.type!)"
+        }
     }
 
     func selectAllPickerViewRows() {
