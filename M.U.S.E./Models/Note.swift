@@ -1,3 +1,4 @@
+//swiftlint:disable force_unwrapping
 
 struct Note {
 
@@ -36,7 +37,7 @@ struct Note {
 
     func interval(note: Note) -> Interval {
         let rawValue = abs(note.absolete - absolete)
-        let interval = Interval.init(rawValue: rawValue % 12)!
+        let interval = Interval(rawValue: rawValue % 12)!
         return interval
     }
 

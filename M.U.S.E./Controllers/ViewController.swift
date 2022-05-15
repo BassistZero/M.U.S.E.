@@ -1,3 +1,4 @@
+//swiftlint:disable force_unwrapping
 
 import UIKit
 
@@ -8,11 +9,15 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var chordLabel: UILabel!
     @IBOutlet private weak var valuePickerView: UIPickerView!
     @IBOutlet private weak var octavePickerView: UIPickerView!
-    @IBOutlet weak var sortChordButton: UIButton!
-    
+    @IBOutlet private weak var sortChordButton: UIButton!
+
     // MARK: - Private Properties
 
-    private var chord: Chord? { didSet { sortChordButton.isHidden = chord!.notes == chord!.sortedNotes! }}
+    private var chord: Chord? {
+        didSet {
+            sortChordButton.isHidden = chord!.notes == chord!.sortedNotes!
+        }
+    }
 
     // MARK: - UIViewController
 
@@ -146,5 +151,5 @@ private extension ViewController {
         octavePickerView.selectRow(chord!.notes[1].octave.rawValue, inComponent: 1, animated: true)
         octavePickerView.selectRow(chord!.notes[2].octave.rawValue, inComponent: 2, animated: true)
     }
-    
+
 }

@@ -1,4 +1,4 @@
-enum NoteValue: Int, CaseIterable  {
+enum NoteValue: Int, CaseIterable {
 
     case c = 0
     case cSharp = 1

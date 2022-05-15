@@ -1,10 +1,12 @@
+//swiftlint:disable force_unwrapping
+//swiftlint:disable cyclomatic_complexity
 
 struct Chord {
 
     // MARK: - Public Properties
 
     var notes: [Note] { didSet { updateNotes() } }
-    
+
     private(set) var rootNote: Note?
     private(set) var intervals: [Interval]?
     private(set) var type: ChordType?
@@ -39,7 +41,10 @@ private extension Chord {
 
     mutating func updateNotes() {
         self.sortedNotes = notes.sorted(by: <)
-        guard let sortedNotes = self.sortedNotes else { return }
+        guard let sortedNotes = self.sortedNotes else {
+            return
+
+        }
 
         rootNote = sortedNotes[0]
 
