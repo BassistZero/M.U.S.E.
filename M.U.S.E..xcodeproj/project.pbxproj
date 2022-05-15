@@ -18,6 +18,7 @@
 		027102BE2814743200694F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027102BC2814743200694F3E /* LaunchScreen.storyboard */; };
 		027102D0281479D600694F3E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102CF281479D600694F3E /* Note.swift */; };
 		02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4DE5A2823034D0002B9DC /* NoteValue.swift */; };
+		C27B571D9C4046C7F7A386F7 /* libPods-M.U.S.E..a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDEA0D2491F6128454F4A13 /* libPods-M.U.S.E..a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		027102BF2814743200694F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027102CF281479D600694F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		02F4DE5A2823034D0002B9DC /* NoteValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteValue.swift; sourceTree = "<group>"; };
+		0DDEA0D2491F6128454F4A13 /* libPods-M.U.S.E..a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-M.U.S.E..a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B676175952A809D80D314F /* Pods-M.U.S.E..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M.U.S.E..debug.xcconfig"; path = "Target Support Files/Pods-M.U.S.E./Pods-M.U.S.E..debug.xcconfig"; sourceTree = "<group>"; };
+		FF0E0E7790C9AEFC1854BC53 /* Pods-M.U.S.E..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M.U.S.E..release.xcconfig"; path = "Target Support Files/Pods-M.U.S.E./Pods-M.U.S.E..release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27B571D9C4046C7F7A386F7 /* libPods-M.U.S.E..a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				027102B02814743000694F3E /* M.U.S.E. */,
 				027102AF2814743000694F3E /* Products */,
+				BBA38B51B06820AF0A790353 /* Pods */,
+				1F6732A08F8363B4165D9498 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +121,23 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		1F6732A08F8363B4165D9498 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DDEA0D2491F6128454F4A13 /* libPods-M.U.S.E..a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBA38B51B06820AF0A790353 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85B676175952A809D80D314F /* Pods-M.U.S.E..debug.xcconfig */,
+				FF0E0E7790C9AEFC1854BC53 /* Pods-M.U.S.E..release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +145,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 027102C22814743200694F3E /* Build configuration list for PBXNativeTarget "M.U.S.E." */;
 			buildPhases = (
+				1556D21710C8BA0465C070A6 /* [CP] Check Pods Manifest.lock */,
+				02F2D939283125710084F8A1 /* Run SwiftLint */,
+				02F2D93A2831257A0084F8A1 /* Run SwiftGen */,
 				027102AA2814743000694F3E /* Sources */,
 				027102AB2814743000694F3E /* Frameworks */,
 				027102AC2814743000694F3E /* Resources */,
@@ -178,6 +205,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02F2D939283125710084F8A1 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Pods/SwiftLint/swiftlint autocorrect\n./Pods/SwiftLint/swiftlint\n";
+		};
+		02F2D93A2831257A0084F8A1 /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/SwiftGen/bin/swiftgen\"\n";
+		};
+		1556D21710C8BA0465C070A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-M.U.S.E.-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		027102AA2814743000694F3E /* Sources */ = {
@@ -334,6 +422,7 @@
 		};
 		027102C32814743200694F3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85B676175952A809D80D314F /* Pods-M.U.S.E..debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
@@ -348,6 +437,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +453,7 @@
 		};
 		027102C42814743200694F3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF0E0E7790C9AEFC1854BC53 /* Pods-M.U.S.E..release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
@@ -377,6 +468,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
