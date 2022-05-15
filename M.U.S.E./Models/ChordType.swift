@@ -1,10 +1,3 @@
-//
-//  ChordType.swift
-//  M.U.S.E.
-//
-//  Created by Bassist_Zero on 4/30/22.
-//
-
 enum ChordType {
 
     case major

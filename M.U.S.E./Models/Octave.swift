@@ -1,10 +1,3 @@
-//
-//  Octave.swift
-//  M.U.S.E.
-//
-//  Created by Bassist_Zero on 4/26/22.
-//
-
 enum Octave: Int, CaseIterable {
 
     case zero = 0

@@ -1,10 +1,3 @@
-//
-//  Interval.swift
-//  M.U.S.E.
-//
-//  Created by Bassist_Zero on 4/26/22.
-//
-
 enum Interval: Int, CaseIterable {
 
     case unison = 0

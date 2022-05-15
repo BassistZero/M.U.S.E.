@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  M.U.S.E.
-//
-//  Created by Bassist_Zero on 4/23/22.
-//
 
 import UIKit
 
