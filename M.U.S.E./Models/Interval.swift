@@ -19,7 +19,6 @@ enum Interval: Int, CaseIterable {
     case majorSixth
     case minorSeventh
     case majorSeventh
-    case octave
 
 }
 
@@ -63,8 +62,6 @@ extension Interval: CustomStringConvertible {
             return "Minor Seventh"
         case .majorSeventh:
             return "Major Seventh"
-        case .octave:
-            return "Octave"
         }
     }
 

@@ -95,8 +95,6 @@ private extension Chord {
                 type = .sevenNo3
             case [.majorSeventh]:
                 type = .maj7no3
-            case [.octave]:
-                type = .major
             default:
                 type = .NaN
             }
@@ -124,8 +122,6 @@ private extension Chord {
                 type = .sevenNo3
             case [.unison, .majorSeventh]:
                 type = .maj7no3
-            case [.unison, .octave]:
-                type = .major
 
             case [.minorSecond, .majorSecond]:
                 type = .sus2b9
@@ -147,8 +143,6 @@ private extension Chord {
                 type = .sevenB9no3
             case [.minorSecond, .majorSeventh]:
                 type = .maj7b9no3
-            case [.minorSecond, .octave]:
-                type = .b9no3
 
             case [.majorSecond, .minorThird]:
                 type = .mAdd9
@@ -168,8 +162,6 @@ private extension Chord {
                 type = .sevenSus2
             case [.majorSecond, .majorSeventh]:
                 type = .maj7sus2
-            case [.majorSecond, .octave]:
-                type = .sus2
 
             case [.minorThird, .majorThird]:
                 type = .hash9
@@ -187,8 +179,6 @@ private extension Chord {
                 type = .m7
             case [.minorThird, .majorSeventh]:
                 type = .mMaj7
-            case [.minorThird, .octave]:
-                type = .minor
 
             case [.majorThird, .fourth]:
                 type = .add11
@@ -204,8 +194,6 @@ private extension Chord {
                 type = .seven
             case [.majorThird, .majorSeventh]:
                 type = .maj7
-            case [.majorThird, .octave]:
-                type = .major
 
             case [.fourth, .tritone]:
                 type = .sus4b5
@@ -219,8 +207,6 @@ private extension Chord {
                 type = .sevenSus4
             case [.fourth, .majorSeventh]:
                 type = .maj7sus4
-            case [.fourth, .octave]:
-                type = .sus4
 
             case [.tritone, .fifth]:
                 type = .b5no3
@@ -232,8 +218,6 @@ private extension Chord {
                 type = .sevenB5no3
             case [.tritone, .majorSeventh]:
                 type = .maj7hash11no3
-            case [.tritone, .octave]:
-                type = .b5no3
 
             case [.fifth, .minorSixth]:
                 type = .b6no3
@@ -243,8 +227,6 @@ private extension Chord {
                 type = .sevenNo3
             case [.fifth, .majorSeventh]:
                 type = .maj7no3
-            case [.fifth, .octave]:
-                type = .five
 
             case [.minorSixth, .majorSixth]:
                 type = .dim6b13no5
@@ -252,23 +234,14 @@ private extension Chord {
                 type = .sevenB13no3
             case [.minorSixth, .majorSeventh]:
                 type = .maj7hash5no3
-            case [.minorSixth, .octave]:
-                type = .augNo3
 
             case [.majorSixth, .minorSeventh]:
                 type = .thirteenNo3
             case [.majorSixth, .majorSeventh]:
                 type = .maj13no3
-            case [.majorSixth, .octave]:
-                type = .sixNo3
 
             case [.minorSeventh, .majorSeventh]:
                 type = .sevenMaj7no3
-            case [.minorSeventh, .octave]:
-                type = .sevenNo3
-
-            case [.majorSeventh, .octave]:
-                type = .maj7no3
 
             default:
                 type = .NaN
