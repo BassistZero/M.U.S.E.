@@ -1,0 +1,12 @@
+Interval.unison = "Unison";
+Interval.minorSecond = "Minor Second";
+Interval.majorSecond = "Major Second";
+Interval.minorThird = "Minor Third";
+Interval.majorThird = "Major Third";
+Interval.fourth = "Fourth";
+Interval.tritone = "Tritone";
+Interval.fifth = "Fifth";
+Interval.minorSixth = "Minor Sixth";
+Interval.majorSixth = "Major Sixth";
+Interval.minorSeventh = "Minor Seventh";
+Interval.majorSeventh = "Major Seventh";

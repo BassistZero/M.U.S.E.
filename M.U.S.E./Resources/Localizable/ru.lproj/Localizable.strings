@@ -1,0 +1,13 @@
+Interval.unison = "Унисон";
+Interval.minorSecond = "Малая Секунда";
+Interval.majorSecond = "Большая Секунда";
+Interval.minorThird = "Малая Терция";
+Interval.majorThird = "Большая Терция";
+Interval.fourth = "Кварта";
+Interval.tritone = "Тритон";
+Interval.fifth = "Квинта";
+Interval.minorSixth = "Малая Секста";
+Interval.majorSixth = "Большая Секста";
+Interval.minorSeventh = "Малая Септима";
+Interval.majorSeventh = "Большая Септима";
+

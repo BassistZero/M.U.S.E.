@@ -39,29 +39,29 @@ extension Interval: CustomStringConvertible {
     var description: String {
         switch self {
         case .unison:
-            return "Unison"
+            return L10n.Interval.unison
         case .minorSecond:
-            return "Minor Second"
+            return L10n.Interval.minorSecond
         case .majorSecond:
-            return "Major Second"
+            return L10n.Interval.majorSecond
         case .minorThird:
-            return "Minor Third"
+            return L10n.Interval.minorThird
         case .majorThird:
-            return "Major Third"
+            return L10n.Interval.majorThird
         case .fourth:
-            return "Fourth"
+            return L10n.Interval.fourth
         case .tritone:
-            return "Tritone"
+            return L10n.Interval.tritone
         case .fifth:
-            return "Fifth"
+            return L10n.Interval.fifth
         case .minorSixth:
-            return "Minor Sixth"
+            return L10n.Interval.minorSixth
         case .majorSixth:
-            return "Major Sixth"
+            return L10n.Interval.majorSixth
         case .minorSeventh:
-            return "Minor Seventh"
+            return L10n.Interval.minorSeventh
         case .majorSeventh:
-            return "Major Seventh"
+            return L10n.Interval.majorSeventh
         }
     }
 
