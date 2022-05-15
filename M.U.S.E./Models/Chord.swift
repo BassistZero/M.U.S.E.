@@ -1,6 +1,3 @@
-//swiftlint:disable force_unwrapping
-//swiftlint:disable cyclomatic_complexity
-
 struct Chord {
 
     // MARK: - Public Properties
@@ -13,6 +10,13 @@ struct Chord {
     private(set) var sortedNotes: [Note]?
 
     // MARK: - Inits
+
+    /// Random Notes
+    init() {
+        let notes = [Note(), Note(), Note()]
+        self.notes = notes
+        updateNotes()
+    }
 
     init(notes: [Note]) {
         self.notes = notes
@@ -33,6 +37,10 @@ extension Chord {
         notes[note].octave = octave
     }
 
+    mutating func sortNotes() {
+        notes = sortedNotes ?? [Note(), Note(), Note()]
+    }
+
 }
 
 // MARK: - Private Methods
@@ -41,9 +49,9 @@ private extension Chord {
 
     mutating func updateNotes() {
         self.sortedNotes = notes.sorted(by: <)
+
         guard let sortedNotes = self.sortedNotes else {
             return
-
         }
 
         rootNote = sortedNotes[0]
@@ -65,9 +73,14 @@ private extension Chord {
 
 private extension Chord {
 
+    //swiftlint:disable cyclomatic_complexity
     mutating func updateType() {
-        if intervals![0] == intervals![1] {
-            intervals = [intervals![0]]
+        guard let intervals = intervals else {
+            return
+        }
+
+        if intervals[0] == intervals[1] {
+            self.intervals = [intervals[0]]
 
             switch intervals {
             case[.unison]:
@@ -247,5 +260,6 @@ private extension Chord {
             }
         }
     }
+    //swiftlint:enable cyclomatic_complexity
 
 }

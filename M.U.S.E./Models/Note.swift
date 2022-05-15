@@ -1,5 +1,3 @@
-//swiftlint:disable force_unwrapping
-
 struct Note {
 
     // MARK: - Public Properties
@@ -17,19 +15,19 @@ struct Note {
 
     /// Random Note
     init() {
-        octave = Octave.allCases.randomElement()!
-        value = NoteValue.allCases.randomElement()!
+        octave = Octave.allCases.randomElement() ?? .zero
+        value = NoteValue.allCases.randomElement() ?? .c
     }
 
     /// Random Value
     init(octave: Octave) {
         self.octave = octave
-        value = NoteValue.allCases.randomElement()!
+        value = NoteValue.allCases.randomElement() ?? .c
     }
 
     /// Random Octave
     init(value: NoteValue) {
-        octave = Octave.allCases.randomElement()!
+        octave = Octave.allCases.randomElement() ?? .zero
         self.value = value
     }
 
@@ -37,7 +35,7 @@ struct Note {
 
     func interval(note: Note) -> Interval {
         let rawValue = abs(note.absolete - absolete)
-        let interval = Interval(rawValue: rawValue % 12)!
+        let interval = Interval(rawValue: rawValue % 12) ?? .unison
         return interval
     }
 

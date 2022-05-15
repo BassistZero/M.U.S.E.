@@ -13,9 +13,9 @@ final class ViewController: UIViewController {
 
     // MARK: - Private Properties
 
-    private var chord: Chord? {
+    private var chord = Chord() {
         didSet {
-            sortChordButton.isHidden = chord!.notes == chord!.sortedNotes!
+            sortChordButton.isHidden = chord.notes == chord.sortedNotes!
         }
     }
 
@@ -24,8 +24,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        generateChord()
-        chord!.notes = chord!.sortedNotes!
+        chord.notes = chord.sortedNotes!
         updateUI()
         configurePickerView()
     }
@@ -72,11 +71,11 @@ extension ViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == valuePickerView {
-            chord?.updateValue(of: component, with: .init(rawValue: row)!)
+            chord.updateValue(of: component, with: .init(rawValue: row)!)
         }
 
         if pickerView == octavePickerView {
-            chord?.updateOctave(of: component, with: .init(rawValue: row)!)
+            chord.updateOctave(of: component, with: .init(rawValue: row)!)
         }
 
         updateUI()
@@ -90,13 +89,13 @@ private extension ViewController {
 
     @IBAction func updateChord(_ sender: UIButton) {
         generateChord()
-        chord!.notes = chord!.sortedNotes!
+        chord.notes = chord.sortedNotes!
         updateUI()
         selectAllPickerViewRows()
     }
 
     @IBAction func sortChord(_ sender: UIButton) {
-        chord!.notes = chord!.sortedNotes!
+        chord.notes = chord.sortedNotes!
         updateUI()
         selectAllPickerViewRows()
     }
@@ -124,32 +123,25 @@ private extension ViewController {
 private extension ViewController {
 
     func generateChord() {
-        var notes = [Note]()
-
-        for _ in 1...3 {
-            let note = Note()
-            notes.append(note)
-        }
-
-        chord = Chord(notes: notes)
+        chord = Chord()
     }
 
     func updateUI() {
-        if chord!.notes == chord!.sortedNotes! {
-            chordLabel.text = "Intervals: \(chord!.intervals!)\nChord: \(chord!.rootNote!.value)\(chord!.type!)"
+        if chord.notes == chord.sortedNotes! {
+            chordLabel.text = "Intervals: \(chord.intervals!)\nChord: \(chord.rootNote!.value)\(chord.type!)"
         } else {
-            chordLabel.text = "Root Note: \(chord!.rootNote!)\n Intervals: \(chord!.intervals!)\nChord: \(chord!.rootNote!.value)\(chord!.type!)"
+            chordLabel.text = "Root Note: \(chord.rootNote!)\n Intervals: \(chord.intervals!)\nChord: \(chord.rootNote!.value)\(chord.type!)"
         }
     }
 
     func selectAllPickerViewRows() {
-        valuePickerView.selectRow(chord!.notes[0].value.rawValue, inComponent: 0, animated: true)
-        valuePickerView.selectRow(chord!.notes[1].value.rawValue, inComponent: 1, animated: true)
-        valuePickerView.selectRow(chord!.notes[2].value.rawValue, inComponent: 2, animated: true)
+        valuePickerView.selectRow(chord.notes[0].value.rawValue, inComponent: 0, animated: true)
+        valuePickerView.selectRow(chord.notes[1].value.rawValue, inComponent: 1, animated: true)
+        valuePickerView.selectRow(chord.notes[2].value.rawValue, inComponent: 2, animated: true)
 
-        octavePickerView.selectRow(chord!.notes[0].octave.rawValue, inComponent: 0, animated: true)
-        octavePickerView.selectRow(chord!.notes[1].octave.rawValue, inComponent: 1, animated: true)
-        octavePickerView.selectRow(chord!.notes[2].octave.rawValue, inComponent: 2, animated: true)
+        octavePickerView.selectRow(chord.notes[0].octave.rawValue, inComponent: 0, animated: true)
+        octavePickerView.selectRow(chord.notes[1].octave.rawValue, inComponent: 1, animated: true)
+        octavePickerView.selectRow(chord.notes[2].octave.rawValue, inComponent: 2, animated: true)
     }
 
 }
