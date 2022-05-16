@@ -1,5 +1,3 @@
-//swiftlint:disable force_unwrapping
-
 import UIKit
 
 final class ViewController: UIViewController {
@@ -15,7 +13,7 @@ final class ViewController: UIViewController {
 
     private var chord = Chord() {
         didSet {
-            sortChordButton.isHidden = chord.notes == chord.sortedNotes!
+            sortChordButton.isHidden = chord.notes == chord.sortedNotes
         }
     }
 
@@ -24,7 +22,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        chord.notes = chord.sortedNotes!
+        chord.notes = chord.sortedNotes
         updateUI()
         configurePickerView()
     }
@@ -59,11 +57,11 @@ extension ViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == valuePickerView {
-            return Note(value: .init(rawValue: row)!).value.description
+            return Note(value: .init(rawValue: row) ?? .c).value.description
         }
 
         if pickerView == octavePickerView {
-            return Octave(rawValue: row)!.rawValue.description
+            return Octave(rawValue: row)?.rawValue.description
         }
 
         return "error"
@@ -71,11 +69,11 @@ extension ViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == valuePickerView {
-            chord.updateValue(of: component, with: .init(rawValue: row)!)
+            chord.updateValue(of: component, with: .init(rawValue: row) ?? .c)
         }
 
         if pickerView == octavePickerView {
-            chord.updateOctave(of: component, with: .init(rawValue: row)!)
+            chord.updateOctave(of: component, with: .init(rawValue: row) ?? .zero)
         }
 
         updateUI()
@@ -89,13 +87,13 @@ private extension ViewController {
 
     @IBAction func updateChord(_ sender: UIButton) {
         generateChord()
-        chord.notes = chord.sortedNotes!
+        chord.notes = chord.sortedNotes
         updateUI()
         selectAllPickerViewRows()
     }
 
     @IBAction func sortChord(_ sender: UIButton) {
-        chord.notes = chord.sortedNotes!
+        chord.notes = chord.sortedNotes
         updateUI()
         selectAllPickerViewRows()
     }
@@ -127,10 +125,10 @@ private extension ViewController {
     }
 
     func updateUI() {
-        if chord.notes == chord.sortedNotes! {
-            chordLabel.text = "Intervals: \(chord.intervals!)\nChord: \(chord.rootNote!.value)\(chord.type!)"
+        if chord.notes == chord.sortedNotes {
+            chordLabel.text = "Intervals: \(chord.intervals)\nChord: \(chord.rootNote.value)\(chord.type)"
         } else {
-            chordLabel.text = "Root Note: \(chord.rootNote!)\n Intervals: \(chord.intervals!)\nChord: \(chord.rootNote!.value)\(chord.type!)"
+            chordLabel.text = "Root Note: \(chord.rootNote)\n Intervals: \(chord.intervals)\nChord: \(chord.rootNote.value)\(chord.type)"
         }
     }
 

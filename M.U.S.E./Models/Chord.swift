@@ -2,25 +2,18 @@ struct Chord {
 
     // MARK: - Public Properties
 
-    var notes: [Note] { didSet { updateNotes() } }
+    var notes: [Note]
+    var rootNote: Note { return sortedNotes[0] }
+    var intervals: [Interval] { return getIntervals() }
+    var type: ChordType { return getChordType() }
+    var sortedNotes: [Note] { return notes.sorted(by: <) }
 
-    private(set) var rootNote: Note?
-    private(set) var intervals: [Interval]?
-    private(set) var type: ChordType?
-    private(set) var sortedNotes: [Note]?
 
     // MARK: - Inits
 
     /// Random Notes
     init() {
-        let notes = [Note(), Note(), Note()]
-        self.notes = notes
-        updateNotes()
-    }
-
-    init(notes: [Note]) {
-        self.notes = notes
-        updateNotes()
+        self.notes = [Note(), Note(), Note()]
     }
 
 }
@@ -37,226 +30,208 @@ extension Chord {
         notes[note].octave = octave
     }
 
-    mutating func sortNotes() {
-        notes = sortedNotes ?? [Note(), Note(), Note()]
-    }
-
 }
 
 // MARK: - Private Methods
 
 private extension Chord {
 
-    mutating func updateNotes() {
-        self.sortedNotes = notes.sorted(by: <)
-
-        guard let sortedNotes = self.sortedNotes else {
-            return
-        }
-
-        rootNote = sortedNotes[0]
-
+    func getIntervals() -> [Interval] {
         var intervals = [Interval]()
 
         for i in 1...sortedNotes.count - 1 {
             intervals.append(sortedNotes[0].interval(note: sortedNotes[i]))
         }
 
-        self.intervals = intervals.sorted(by: <)
-
-        updateType()
+        return intervals.sorted(by: <)
     }
 
 }
 
-// MARK: - SetType
+// MARK: - getChordType
 
 private extension Chord {
 
     //swiftlint:disable cyclomatic_complexity
-    mutating func updateType() {
-        guard let intervals = intervals else {
-            return
-        }
-
+    func getChordType() -> ChordType {
         if intervals[0] == intervals[1] {
-            self.intervals = [intervals[0]]
+            let interval = [intervals[0]]
 
-            switch intervals {
+            switch interval {
             case[.unison]:
-                type = .major
+                return .major
             case [.minorSecond]:
-                type = .b9no3
+                return .b9no3
             case [.majorSecond]:
-                type = .sus2
+                return .sus2
             case [.minorThird]:
-                type = .minor
+                return .minor
             case [.majorThird]:
-                type = .major
+                return .major
             case [.fourth]:
-                type = .sus4
+                return .sus4
             case [.tritone]:
-                type = .b5no3
+                return .b5no3
             case [.fifth]:
-                type = .five
+                return .five
             case [.minorSixth]:
-                type = .augNo3
+                return .augNo3
             case [.majorSixth]:
-                type = .sixNo3
+                return .sixNo3
             case [.minorSeventh]:
-                type = .sevenNo3
+                return .sevenNo3
             case [.majorSeventh]:
-                type = .maj7no3
+                return .maj7no3
             default:
-                type = .NaN
+                return .NaN
             }
         } else {
             switch intervals {
             case [.unison, .minorSecond]:
-                type = .b9no3
+                return .b9no3
             case [.unison, .majorSecond]:
-                type = .sus2
+                return .sus2
             case [.unison, .minorThird]:
-                type = .minor
+                return .minor
             case [.unison, .majorThird]:
-                type = .major
+                return .major
             case [.unison, .fourth]:
-                type = .sus4
+                return .sus4
             case [.unison, .tritone]:
-                type = .b5no3
+                return .b5no3
             case [.unison, .fifth]:
-                type = .five
+                return .five
             case [.unison, .minorSixth]:
-                type = .augNo3
+                return .augNo3
             case [.unison, .majorSixth]:
-                type = .sixNo3
+                return .sixNo3
             case [.unison, .minorSeventh]:
-                type = .sevenNo3
+                return .sevenNo3
             case [.unison, .majorSeventh]:
-                type = .maj7no3
+                return .maj7no3
 
             case [.minorSecond, .majorSecond]:
-                type = .sus2b9
+                return .sus2b9
             case [.minorSecond, .minorThird]:
-                type = .mB9
+                return .mB9
             case [.minorSecond, .majorThird]:
-                type = .b9
+                return .b9
             case [.minorSecond, .fourth]:
-                type = .sus4B9
+                return .sus4B9
             case [.minorSecond, .tritone]:
-                type = .b5b9no3
+                return .b5b9no3
             case [.minorSecond, .fifth]:
-                type = .b9no3
+                return .b9no3
             case [.minorSecond, .minorSixth]:
-                type = .b6b9no3
+                return .b6b9no3
             case [.minorSecond, .majorSixth]:
-                type = .sixB9no3
+                return .sixB9no3
             case [.minorSecond, .minorSeventh]:
-                type = .sevenB9no3
+                return .sevenB9no3
             case [.minorSecond, .majorSeventh]:
-                type = .maj7b9no3
+                return .maj7b9no3
 
             case [.majorSecond, .minorThird]:
-                type = .mAdd9
+                return .mAdd9
             case [.majorSecond, .majorThird]:
-                type = .add9
+                return .add9
             case [.majorSecond, .fourth]:
-                type = .sus4Add9
+                return .sus4Add9
             case [.majorSecond, .tritone]:
-                type = .sus2hash11
+                return .sus2hash11
             case [.majorSecond, .fifth]:
-                type = .sus2
+                return .sus2
             case [.majorSecond, .minorSixth]:
-                type = .sus2b6
+                return .sus2b6
             case [.majorSecond, .majorSixth]:
-                type = .sixSus2
+                return .sixSus2
             case [.majorSecond, .minorSeventh]:
-                type = .sevenSus2
+                return .sevenSus2
             case [.majorSecond, .majorSeventh]:
-                type = .maj7sus2
+                return .maj7sus2
 
             case [.minorThird, .majorThird]:
-                type = .hash9
+                return .hash9
             case [.minorThird, .fourth]:
-                type = .mAdd11
+                return .mAdd11
             case [.minorThird, .tritone]:
-                type = .dim
+                return .dim
             case [.minorThird, .fifth]:
-                type = .minor
+                return .minor
             case [.minorThird, .minorSixth]:
-                type = .mB6
+                return .mB6
             case [.minorThird, .majorSixth]:
-                type = .m6
+                return .m6
             case [.minorThird, .minorSeventh]:
-                type = .m7
+                return .m7
             case [.minorThird, .majorSeventh]:
-                type = .mMaj7
+                return .mMaj7
 
             case [.majorThird, .fourth]:
-                type = .add11
+                return .add11
             case [.majorThird, .tritone]:
-                type = .hash11
+                return .hash11
             case [.majorThird, .fifth]:
-                type = .major
+                return .major
             case [.majorThird, .minorSixth]:
-                type = .aug
+                return .aug
             case [.majorThird, .majorSixth]:
-                type = .six
+                return .six
             case [.majorThird, .minorSeventh]:
-                type = .seven
+                return .seven
             case [.majorThird, .majorSeventh]:
-                type = .maj7
+                return .maj7
 
             case [.fourth, .tritone]:
-                type = .sus4b5
+                return .sus4b5
             case [.fourth, .fifth]:
-                type = .sus4
+                return .sus4
             case [.fourth, .minorSixth]:
-                type = .sus4b6
+                return .sus4b6
             case [.fourth, .majorSixth]:
-                type = .sixSus4
+                return .sixSus4
             case [.fourth, .minorSeventh]:
-                type = .sevenSus4
+                return .sevenSus4
             case [.fourth, .majorSeventh]:
-                type = .maj7sus4
+                return .maj7sus4
 
             case [.tritone, .fifth]:
-                type = .b5no3
+                return .b5no3
             case [.tritone, .minorSixth]:
-                type = .b5b6no3
+                return .b5b6no3
             case [.tritone, .majorSixth]:
-                type = .sixB5no3
+                return .sixB5no3
             case [.tritone, .minorSeventh]:
-                type = .sevenB5no3
+                return .sevenB5no3
             case [.tritone, .majorSeventh]:
-                type = .maj7hash11no3
+                return .maj7hash11no3
 
             case [.fifth, .minorSixth]:
-                type = .b6no3
+                return .b6no3
             case [.fifth, .majorSixth]:
-                type = .sixNo3
+                return .sixNo3
             case [.fifth, .minorSeventh]:
-                type = .sevenNo3
+                return .sevenNo3
             case [.fifth, .majorSeventh]:
-                type = .maj7no3
+                return .maj7no3
 
             case [.minorSixth, .majorSixth]:
-                type = .dim6b13no5
+                return .dim6b13no5
             case [.minorSixth, .minorSeventh]:
-                type = .sevenB13no3
+                return .sevenB13no3
             case [.minorSixth, .majorSeventh]:
-                type = .maj7hash5no3
+                return .maj7hash5no3
 
             case [.majorSixth, .minorSeventh]:
-                type = .thirteenNo3
+                return .thirteenNo3
             case [.majorSixth, .majorSeventh]:
-                type = .maj13no3
+                return .maj13no3
 
             case [.minorSeventh, .majorSeventh]:
-                type = .sevenMaj7no3
+                return .sevenMaj7no3
 
             default:
-                type = .NaN
+                return .NaN
             }
         }
     }
