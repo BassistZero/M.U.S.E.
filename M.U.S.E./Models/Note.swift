@@ -6,12 +6,11 @@ struct Note {
     var value: NoteValue
     var absolete: Int { octave.rawValue * Interval.allCases.count + value.rawValue }
 
-    // MARK: - Inits
+}
 
-    init(octave: Octave, value: NoteValue) {
-        self.octave = octave
-        self.value = value
-    }
+// MARK: - Inits
+
+extension Note {
 
     /// Random Note
     init() {
@@ -31,7 +30,11 @@ struct Note {
         self.value = value
     }
 
-    // MARK: - Public Methods
+}
+
+// MARK: - Public Methods
+
+extension Note {
 
     func interval(note: Note) -> Interval {
         let rawValue = abs(note.absolete - absolete)

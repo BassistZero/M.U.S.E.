@@ -8,8 +8,11 @@ struct Chord {
     var type: ChordType { return getChordType() }
     var sortedNotes: [Note] { return notes.sorted(by: <) }
 
+}
 
-    // MARK: - Inits
+// MARK: - Inits
+
+extension Chord {
 
     /// Random Notes
     init() {

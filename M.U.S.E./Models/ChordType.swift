@@ -72,6 +72,8 @@ enum ChordType {
     case NaN
 }
 
+// MARK: - CustomStringConvertible
+
 extension ChordType: CustomStringConvertible {
 
     var description: String {
