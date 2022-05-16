@@ -4,7 +4,7 @@ struct Note {
 
     var octave: Octave
     var value: NoteValue
-    var absolete: Int { octave.rawValue * 12 + value.rawValue }
+    var absolete: Int { octave.rawValue * Interval.allCases.count + value.rawValue }
 
     // MARK: - Inits
 
@@ -35,7 +35,7 @@ struct Note {
 
     func interval(note: Note) -> Interval {
         let rawValue = abs(note.absolete - absolete)
-        let interval = Interval(rawValue: rawValue % 12) ?? .unison
+        let interval = Interval(rawValue: rawValue % Interval.allCases.count) ?? .unison
         return interval
     }
 
