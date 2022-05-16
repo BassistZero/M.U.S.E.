@@ -1,0 +1,10 @@
+input_dir: M.U.S.E./Resources/
+output_dir: M.U.S.E./Resources/
+
+# Localization
+strings:
+    inputs: Localizable/en.lproj/Localizable.strings
+    filter: .+\.strings$
+    outputs:
+        templateName: structured-swift5
+        output: Localizable/Localizable.swift

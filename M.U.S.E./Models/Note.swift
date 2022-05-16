@@ -1,48 +1,44 @@
-//
-//  Note.swift
-//  M.U.S.E.
-//
-//  Created by Bassist_Zero on 4/23/22.
-//
-
 struct Note {
 
     // MARK: - Public Properties
 
     var octave: Octave
     var value: NoteValue
-    var absolete: Int { octave.rawValue * 12 + value.rawValue }
+    var absolete: Int { octave.rawValue * Interval.allCases.count + value.rawValue }
 
-    // MARK: - Inits
+}
 
-    init(octave: Octave, value: NoteValue) {
-        self.octave = octave
-        self.value = value
-    }
+// MARK: - Inits
+
+extension Note {
 
     /// Random Note
     init() {
-        octave = Octave.allCases.randomElement()!
-        value = NoteValue.allCases.randomElement()!
+        octave = Octave.allCases.randomElement() ?? .zero
+        value = NoteValue.allCases.randomElement() ?? .c
     }
 
     /// Random Value
     init(octave: Octave) {
         self.octave = octave
-        value = NoteValue.allCases.randomElement()!
+        value = NoteValue.allCases.randomElement() ?? .c
     }
 
     /// Random Octave
     init(value: NoteValue) {
-        octave = Octave.allCases.randomElement()!
+        octave = Octave.allCases.randomElement() ?? .zero
         self.value = value
     }
 
-    // MARK: - Public Methods
+}
+
+// MARK: - Public Methods
+
+extension Note {
 
     func interval(note: Note) -> Interval {
         let rawValue = abs(note.absolete - absolete)
-        let interval = Interval.init(rawValue: rawValue % 12)!
+        let interval = Interval(rawValue: rawValue % Interval.allCases.count) ?? .unison
         return interval
     }
 

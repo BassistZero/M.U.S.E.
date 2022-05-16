@@ -1,11 +1,4 @@
-//
-//  NoteValue.swift
-//  M.U.S.E.
-//
-//  Created by Bassist_Zero on 5/4/22.
-//
-
-enum NoteValue: Int, CaseIterable  {
+enum NoteValue: Int, CaseIterable {
 
     case c = 0
     case cSharp = 1
