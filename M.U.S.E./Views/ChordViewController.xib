@@ -14,6 +14,7 @@
                 <outlet property="chordLabel" destination="3gi-eu-TZU" id="ezQ-o4-5p0"/>
                 <outlet property="octavePickerView" destination="kMn-BL-lKg" id="hdr-3h-yNZ"/>
                 <outlet property="sortChordButton" destination="PEK-4T-1Js" id="V7A-Bd-MCc"/>
+                <outlet property="updateChordButton" destination="f7X-OM-Sge" id="fqg-Br-dMj"/>
                 <outlet property="valuePickerView" destination="rWx-y4-ptg" id="DI0-r5-LoT"/>
                 <outlet property="view" destination="yS0-Co-QxX" id="0ud-2x-PAa"/>
             </connections>

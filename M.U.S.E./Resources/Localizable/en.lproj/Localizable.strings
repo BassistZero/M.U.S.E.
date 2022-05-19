@@ -10,3 +10,9 @@ Interval.minorSixth = "Minor Sixth";
 Interval.majorSixth = "Major Sixth";
 Interval.minorSeventh = "Minor Seventh";
 Interval.majorSeventh = "Major Seventh";
+
+ChordViewController.text.chord = "Chord";
+ChordViewController.text.intervals = "Intervals";
+ChordViewController.text.rootNote = "Root";
+ChordViewController.buttons.update = "New Chord";
+ChordViewController.buttons.sort = "Sort Notes";

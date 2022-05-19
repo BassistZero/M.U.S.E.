@@ -11,6 +11,23 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum ChordViewController {
+    internal enum Buttons {
+      /// Sort Notes
+      internal static let sort = L10n.tr("Localizable", "ChordViewController.buttons.sort")
+      /// New Chord
+      internal static let update = L10n.tr("Localizable", "ChordViewController.buttons.update")
+    }
+    internal enum Text {
+      /// Chord
+      internal static let chord = L10n.tr("Localizable", "ChordViewController.text.chord")
+      /// Intervals
+      internal static let intervals = L10n.tr("Localizable", "ChordViewController.text.intervals")
+      /// Root
+      internal static let rootNote = L10n.tr("Localizable", "ChordViewController.text.rootNote")
+    }
+  }
+
   internal enum Interval {
     /// Fifth
     internal static let fifth = L10n.tr("Localizable", "Interval.fifth")

@@ -7,6 +7,7 @@ final class ChordViewController: UIViewController {
     @IBOutlet private weak var chordLabel: UILabel!
     @IBOutlet private weak var valuePickerView: UIPickerView!
     @IBOutlet private weak var octavePickerView: UIPickerView!
+    @IBOutlet private weak var updateChordButton: UIButton!
     @IBOutlet private weak var sortChordButton: UIButton!
 
     // MARK: - Private Properties
@@ -24,7 +25,7 @@ final class ChordViewController: UIViewController {
 
         chord.notes = chord.sortedNotes
         updateUI()
-        configurePickerView()
+        setupInitialState()
     }
 
 }
@@ -104,6 +105,11 @@ private extension ChordViewController {
 
 private extension ChordViewController {
 
+    func setupInitialState() {
+        configurePickerView()
+        configureButtons()
+    }
+
     func configurePickerView() {
         valuePickerView.dataSource = self
         valuePickerView.delegate = self
@@ -112,6 +118,11 @@ private extension ChordViewController {
         octavePickerView.delegate = self
 
         selectAllPickerViewRows()
+    }
+
+    func configureButtons() {
+        updateChordButton.setTitle(L10n.ChordViewController.Buttons.update, for: .normal)
+        sortChordButton.setTitle(L10n.ChordViewController.Buttons.sort, for: .normal)
     }
 
 }
@@ -124,13 +135,15 @@ private extension ChordViewController {
         chord = Chord()
     }
 
+    // swiftlint:disable line_length
     func updateUI() {
         if chord.notes == chord.sortedNotes {
-            chordLabel.text = "Intervals: \(chord.intervals)\nChord: \(chord.rootNote.value)\(chord.type)"
+            chordLabel.text = "\(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.rootNote.value)\(chord.type)"
         } else {
-            chordLabel.text = "Root Note: \(chord.rootNote)\n Intervals: \(chord.intervals)\nChord: \(chord.rootNote.value)\(chord.type)"
+            chordLabel.text = "\(L10n.ChordViewController.Text.rootNote): \(chord.rootNote)\n \(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.rootNote.value)\(chord.type)"
         }
     }
+    // swiftlint:enable line_length
 
     func selectAllPickerViewRows() {
         valuePickerView.selectRow(chord.notes[0].value.rawValue, inComponent: 0, animated: true)
