@@ -21,7 +21,17 @@ class MainTabBarController: UITabBarController {
 private extension MainTabBarController {
 
     func setupInitialState() {
-        viewControllers = [ChordViewController()]
+        let firstTab = ChordViewController()
+        let secondTab = ProgressionViewController()
+
+        firstTab.tabBarItem.title = "Chord"
+        firstTab.tabBarItem.image = UIImage(systemName: "music.note")
+
+        secondTab.tabBarItem.title = "Progression"
+        secondTab.tabBarItem.image = UIImage(systemName: "music.quarternote.3")
+
+        viewControllers = [firstTab, secondTab]
+
     }
 
 }

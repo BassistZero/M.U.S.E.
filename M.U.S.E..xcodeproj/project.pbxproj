@@ -20,6 +20,8 @@
 		02F2D94428312D6E0084F8A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D94628312D6E0084F8A1 /* Localizable.strings */; };
 		02F2D94D283130580084F8A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D94C283130580084F8A1 /* Localizable.swift */; };
 		02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4DE5A2823034D0002B9DC /* NoteValue.swift */; };
+		02FAA7032836A2E100E63622 /* ProgressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FAA7022836A2E100E63622 /* ProgressionViewController.swift */; };
+		02FAA7052836A36000E63622 /* ProgressionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FAA7042836A36000E63622 /* ProgressionViewController.xib */; };
 		C27B571D9C4046C7F7A386F7 /* libPods-M.U.S.E..a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDEA0D2491F6128454F4A13 /* libPods-M.U.S.E..a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		02F2D94728312D8E0084F8A1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94C283130580084F8A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		02F4DE5A2823034D0002B9DC /* NoteValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteValue.swift; sourceTree = "<group>"; };
+		02FAA7022836A2E100E63622 /* ProgressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionViewController.swift; sourceTree = "<group>"; };
+		02FAA7042836A36000E63622 /* ProgressionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressionViewController.xib; sourceTree = "<group>"; };
 		0DDEA0D2491F6128454F4A13 /* libPods-M.U.S.E..a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-M.U.S.E..a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B676175952A809D80D314F /* Pods-M.U.S.E..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M.U.S.E..debug.xcconfig"; path = "Target Support Files/Pods-M.U.S.E./Pods-M.U.S.E..debug.xcconfig"; sourceTree = "<group>"; };
 		FF0E0E7790C9AEFC1854BC53 /* Pods-M.U.S.E..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-M.U.S.E..release.xcconfig"; path = "Target Support Files/Pods-M.U.S.E./Pods-M.U.S.E..release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			children = (
 				027102BC2814743200694F3E /* LaunchScreen.storyboard */,
 				02218D6128369145004C30B2 /* ChordViewController.xib */,
+				02FAA7042836A36000E63622 /* ProgressionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				027102B52814743000694F3E /* ChordViewController.swift */,
 				02218D5D28368884004C30B2 /* MainTabBarController.swift */,
+				02FAA7022836A2E100E63622 /* ProgressionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FAA7052836A36000E63622 /* ProgressionViewController.xib in Resources */,
 				027102BE2814743200694F3E /* LaunchScreen.storyboard in Resources */,
 				02F2D94428312D6E0084F8A1 /* Localizable.strings in Resources */,
 				02218D6228369145004C30B2 /* ChordViewController.xib in Resources */,
@@ -304,6 +311,7 @@
 				022B901828187C07009ED3F7 /* Interval.swift in Sources */,
 				027102B22814743000694F3E /* AppDelegate.swift in Sources */,
 				021C9C2E281DB18B00BDB0A6 /* ChordType.swift in Sources */,
+				02FAA7032836A2E100E63622 /* ProgressionViewController.swift in Sources */,
 				027102D0281479D600694F3E /* Note.swift in Sources */,
 				02F2D94D283130580084F8A1 /* Localizable.swift in Sources */,
 				022B901A2818839F009ED3F7 /* Chord.swift in Sources */,
