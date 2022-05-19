@@ -2,6 +2,8 @@ import UIKit
 
 final class MainTabBarController: UITabBarController {
 
+    // MARK: - UIViewController
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupInitialState()
