@@ -1,13 +1,6 @@
-//
-//  TabBarController.swift
-//  M.U.S.E.
-//
-//  Created by Bassist_Zero on 5/19/22.
-//
-
 import UIKit
 
-class MainTabBarController: UITabBarController {
+final class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
