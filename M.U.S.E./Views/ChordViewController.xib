@@ -25,27 +25,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gi-eu-TZU">
-                    <rect key="frame" x="186.5" y="94" width="41.5" height="20.5"/>
+                    <rect key="frame" x="40" y="59" width="334" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7X-OM-Sge">
-                    <rect key="frame" x="149.5" y="164.5" width="115" height="31"/>
+                    <rect key="frame" x="149.5" y="369" width="115" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Update Chord"/>
                     <connections>
                         <action selector="updateChord:" destination="-1" eventType="touchUpInside" id="vVl-vK-5Am"/>
                     </connections>
                 </button>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWx-y4-ptg">
-                    <rect key="frame" x="15" y="253" width="384" height="216"/>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWx-y4-ptg" userLabel="Value Picker View">
+                    <rect key="frame" x="40" y="430" width="334" height="216"/>
                 </pickerView>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMn-BL-lKg" userLabel="Octave Picker View">
-                    <rect key="frame" x="15" y="484" width="384" height="216"/>
+                    <rect key="frame" x="40" y="646" width="334" height="216"/>
                 </pickerView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-4T-1Js" userLabel="Sort Chord">
-                    <rect key="frame" x="159.5" y="210.5" width="95" height="31"/>
+                    <rect key="frame" x="159.5" y="410" width="95" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Sort Chord"/>
                     <connections>
@@ -56,20 +56,20 @@
             <viewLayoutGuide key="safeArea" id="Pdq-68-nzj"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="3gi-eu-TZU" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="3no-Uq-nAb"/>
-                <constraint firstItem="kMn-BL-lKg" firstAttribute="leading" secondItem="Pdq-68-nzj" secondAttribute="leading" constant="15" id="71b-Cz-LGX"/>
-                <constraint firstItem="f7X-OM-Sge" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="9pk-Xz-UL3"/>
-                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3gi-eu-TZU" secondAttribute="trailing" id="B4F-dB-yiT"/>
-                <constraint firstItem="rWx-y4-ptg" firstAttribute="leading" secondItem="Pdq-68-nzj" secondAttribute="leading" constant="15" id="BdQ-1o-nNE"/>
-                <constraint firstItem="kMn-BL-lKg" firstAttribute="top" secondItem="rWx-y4-ptg" secondAttribute="bottom" constant="15" id="Guq-by-w9u"/>
-                <constraint firstItem="f7X-OM-Sge" firstAttribute="top" secondItem="3gi-eu-TZU" secondAttribute="bottom" constant="50" id="QLd-q7-ct5"/>
-                <constraint firstItem="PEK-4T-1Js" firstAttribute="top" secondItem="f7X-OM-Sge" secondAttribute="bottom" constant="15" id="XXP-a3-z3a"/>
-                <constraint firstItem="3gi-eu-TZU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pdq-68-nzj" secondAttribute="leading" id="c9g-iy-iPp"/>
-                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" secondItem="rWx-y4-ptg" secondAttribute="trailing" constant="15" id="f8r-ek-eDC"/>
-                <constraint firstItem="3gi-eu-TZU" firstAttribute="top" secondItem="Pdq-68-nzj" secondAttribute="top" constant="50" id="ga1-eI-bjG"/>
-                <constraint firstItem="rWx-y4-ptg" firstAttribute="top" secondItem="PEK-4T-1Js" secondAttribute="bottom" constant="11.5" id="ofc-5I-7bC"/>
-                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" secondItem="kMn-BL-lKg" secondAttribute="trailing" constant="15" id="yZ9-Ci-YVj"/>
-                <constraint firstItem="PEK-4T-1Js" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="zfZ-h6-PvK"/>
+                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" secondItem="rWx-y4-ptg" secondAttribute="trailing" constant="40" id="3En-HW-3Xs"/>
+                <constraint firstItem="kMn-BL-lKg" firstAttribute="leading" secondItem="Pdq-68-nzj" secondAttribute="leading" constant="40" id="3xO-qg-gyr"/>
+                <constraint firstItem="3gi-eu-TZU" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="4HY-2E-Xht"/>
+                <constraint firstItem="f7X-OM-Sge" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="82l-sm-v7c"/>
+                <constraint firstItem="rWx-y4-ptg" firstAttribute="leading" secondItem="Pdq-68-nzj" secondAttribute="leading" constant="40" id="D6Z-3I-3zt"/>
+                <constraint firstItem="kMn-BL-lKg" firstAttribute="top" secondItem="rWx-y4-ptg" secondAttribute="bottom" id="FWt-tX-3Ez"/>
+                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" secondItem="3gi-eu-TZU" secondAttribute="trailing" constant="40" id="Foe-nq-OnU"/>
+                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" secondItem="kMn-BL-lKg" secondAttribute="trailing" constant="40" id="MsL-cq-w8Z"/>
+                <constraint firstItem="PEK-4T-1Js" firstAttribute="top" secondItem="f7X-OM-Sge" secondAttribute="bottom" constant="10" id="SzB-up-Gdk"/>
+                <constraint firstItem="3gi-eu-TZU" firstAttribute="leading" secondItem="Pdq-68-nzj" secondAttribute="leading" constant="40" id="bkT-IC-phg"/>
+                <constraint firstItem="Pdq-68-nzj" firstAttribute="bottom" secondItem="kMn-BL-lKg" secondAttribute="bottom" id="dgO-MX-1MQ"/>
+                <constraint firstItem="rWx-y4-ptg" firstAttribute="top" secondItem="f7X-OM-Sge" secondAttribute="bottom" constant="30" id="qV0-mP-aqq"/>
+                <constraint firstItem="3gi-eu-TZU" firstAttribute="top" secondItem="Pdq-68-nzj" secondAttribute="top" constant="15" id="vro-6g-5E5"/>
+                <constraint firstItem="PEK-4T-1Js" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="xsf-3k-rsN"/>
             </constraints>
             <point key="canvasLocation" x="132" y="-534"/>
         </view>
