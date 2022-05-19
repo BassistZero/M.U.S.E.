@@ -30,6 +30,12 @@ extension Note {
         self.value = value
     }
 
+    /// Octave and value set automatically
+    init(absolete: Int) {
+        self.octave = .init(rawValue: absolete / 12) ?? .zero
+        self.value = .init(rawValue: absolete % 12) ?? .c
+    }
+
 }
 
 // MARK: - Public Methods

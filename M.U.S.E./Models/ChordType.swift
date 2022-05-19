@@ -1,4 +1,4 @@
-enum ChordType {
+enum ChordType: CaseIterable {
 
     case major
 

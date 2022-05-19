@@ -11,3 +11,8 @@ Interval.majorSixth = "Большая Секста";
 Interval.minorSeventh = "Малая Септима";
 Interval.majorSeventh = "Большая Септима";
 
+ChordViewController.Text.chord = "Аккорд";
+ChordViewController.Text.intervals = "Интервалы";
+ChordViewController.Text.rootNote = "Основной Тон";
+ChordViewController.Buttons.update = "Новый Аккорд";
+ChordViewController.Buttons.sort = "Отсортировать Ноты";
