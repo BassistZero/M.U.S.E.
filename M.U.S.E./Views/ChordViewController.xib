@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChordViewController" customModule="M_U_S_E_" customModuleProvider="target">
+            <connections>
+                <outlet property="chordLabel" destination="3gi-eu-TZU" id="ezQ-o4-5p0"/>
+                <outlet property="octavePickerView" destination="kMn-BL-lKg" id="hdr-3h-yNZ"/>
+                <outlet property="sortChordButton" destination="PEK-4T-1Js" id="V7A-Bd-MCc"/>
+                <outlet property="valuePickerView" destination="rWx-y4-ptg" id="DI0-r5-LoT"/>
+                <outlet property="view" destination="yS0-Co-QxX" id="0ud-2x-PAa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yS0-Co-QxX">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gi-eu-TZU">
+                    <rect key="frame" x="186.5" y="94" width="41.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7X-OM-Sge">
+                    <rect key="frame" x="149.5" y="164.5" width="115" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Update Chord"/>
+                    <connections>
+                        <action selector="updateChord:" destination="-1" eventType="touchUpInside" id="vVl-vK-5Am"/>
+                    </connections>
+                </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWx-y4-ptg">
+                    <rect key="frame" x="15" y="253" width="384" height="216"/>
+                </pickerView>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMn-BL-lKg" userLabel="Octave Picker View">
+                    <rect key="frame" x="15" y="484" width="384" height="216"/>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-4T-1Js" userLabel="Sort Chord">
+                    <rect key="frame" x="159.5" y="210.5" width="95" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Sort Chord"/>
+                    <connections>
+                        <action selector="sortChord:" destination="-1" eventType="touchUpInside" id="pEd-Wm-7Km"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Pdq-68-nzj"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3gi-eu-TZU" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="3no-Uq-nAb"/>
+                <constraint firstItem="kMn-BL-lKg" firstAttribute="leading" secondItem="Pdq-68-nzj" secondAttribute="leading" constant="15" id="71b-Cz-LGX"/>
+                <constraint firstItem="f7X-OM-Sge" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="9pk-Xz-UL3"/>
+                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3gi-eu-TZU" secondAttribute="trailing" id="B4F-dB-yiT"/>
+                <constraint firstItem="rWx-y4-ptg" firstAttribute="leading" secondItem="Pdq-68-nzj" secondAttribute="leading" constant="15" id="BdQ-1o-nNE"/>
+                <constraint firstItem="kMn-BL-lKg" firstAttribute="top" secondItem="rWx-y4-ptg" secondAttribute="bottom" constant="15" id="Guq-by-w9u"/>
+                <constraint firstItem="f7X-OM-Sge" firstAttribute="top" secondItem="3gi-eu-TZU" secondAttribute="bottom" constant="50" id="QLd-q7-ct5"/>
+                <constraint firstItem="PEK-4T-1Js" firstAttribute="top" secondItem="f7X-OM-Sge" secondAttribute="bottom" constant="15" id="XXP-a3-z3a"/>
+                <constraint firstItem="3gi-eu-TZU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pdq-68-nzj" secondAttribute="leading" id="c9g-iy-iPp"/>
+                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" secondItem="rWx-y4-ptg" secondAttribute="trailing" constant="15" id="f8r-ek-eDC"/>
+                <constraint firstItem="3gi-eu-TZU" firstAttribute="top" secondItem="Pdq-68-nzj" secondAttribute="top" constant="50" id="ga1-eI-bjG"/>
+                <constraint firstItem="rWx-y4-ptg" firstAttribute="top" secondItem="PEK-4T-1Js" secondAttribute="bottom" constant="11.5" id="ofc-5I-7bC"/>
+                <constraint firstItem="Pdq-68-nzj" firstAttribute="trailing" secondItem="kMn-BL-lKg" secondAttribute="trailing" constant="15" id="yZ9-Ci-YVj"/>
+                <constraint firstItem="PEK-4T-1Js" firstAttribute="centerX" secondItem="yS0-Co-QxX" secondAttribute="centerX" id="zfZ-h6-PvK"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-534"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,6 +1,6 @@
 import UIKit
 
-final class ViewController: UIViewController {
+final class ChordViewController: UIViewController {
 
     // MARK: - Private Outlets
 
@@ -31,7 +31,7 @@ final class ViewController: UIViewController {
 
 // MARK: - UIPickerViewDataSource
 
-extension ViewController: UIPickerViewDataSource {
+extension ChordViewController: UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
@@ -53,7 +53,7 @@ extension ViewController: UIPickerViewDataSource {
 
 // MARK: - UIPickerViewDelegate
 
-extension ViewController: UIPickerViewDelegate {
+extension ChordViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == valuePickerView {
@@ -83,7 +83,7 @@ extension ViewController: UIPickerViewDelegate {
 
 // MARK: - Private Actions
 
-private extension ViewController {
+private extension ChordViewController {
 
     @IBAction func updateChord(_ sender: UIButton) {
         generateChord()
@@ -102,7 +102,7 @@ private extension ViewController {
 
 // MARK: - Configuration
 
-private extension ViewController {
+private extension ChordViewController {
 
     func configurePickerView() {
         valuePickerView.dataSource = self
@@ -118,7 +118,7 @@ private extension ViewController {
 
 // MARK: - Private Methods
 
-private extension ViewController {
+private extension ChordViewController {
 
     func generateChord() {
         chord = Chord()
