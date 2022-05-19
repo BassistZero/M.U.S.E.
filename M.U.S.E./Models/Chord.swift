@@ -38,11 +38,15 @@ extension Chord {
 extension Chord {
 
     mutating func updateValue(of note: Int, with value: NoteValue) {
-        notes[note].value = value
+        if notes.indices.contains(note) {
+            notes[note].value = value
+        }
     }
 
     mutating func updateOctave(of note: Int, with octave: Octave) {
-        notes[note].octave = octave
+        if notes.indices.contains(note) {
+            notes[note].octave = octave
+        }
     }
 
 }
@@ -71,6 +75,31 @@ private extension Chord {
     func getChordType() -> ChordType {
 
         switch intervals {
+        case[.unison]:
+            return .major
+        case [.minorSecond]:
+            return .b9no3
+        case [.majorSecond]:
+            return .sus2
+        case [.minorThird]:
+            return .minor
+        case [.majorThird]:
+            return .major
+        case [.fourth]:
+            return .sus4
+        case [.tritone]:
+            return .b5no3
+        case [.fifth]:
+            return .five
+        case [.minorSixth]:
+            return .augNo3
+        case [.majorSixth]:
+            return .sixNo3
+        case [.minorSeventh]:
+            return .sevenNo3
+        case [.majorSeventh]:
+            return .maj7no3
+
         case[.unison, .unison]:
             return .major
         case [.minorSecond, .minorSecond]:
