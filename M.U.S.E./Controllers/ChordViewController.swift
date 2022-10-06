@@ -9,6 +9,7 @@ final class ChordViewController: UIViewController {
     @IBOutlet private weak var octavePickerView: UIPickerView!
     @IBOutlet private weak var updateChordButton: UIButton!
     @IBOutlet private weak var sortChordButton: UIButton!
+    @IBOutlet private weak var isPolyphonyLabel: UILabel!
     @IBOutlet private weak var polyphonySwitch: UISwitch!
     @IBOutlet private weak var playChordButton: UIButton!
 
