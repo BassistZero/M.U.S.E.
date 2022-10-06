@@ -17,7 +17,7 @@ extension Chord {
     /// Random Notes
     init() {
         let type = ChordType.allCases.randomElement() ?? .major
-        self.notes = Chord(root: Note(octave: .three), of: type).notes
+        self.notes = Chord(root: Note(octave: .allCases.randomElement() ?? .zero), of: type).notes
     }
 
     init(root: Note, of type: ChordType) {
