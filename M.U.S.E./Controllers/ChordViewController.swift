@@ -27,9 +27,8 @@ final class ChordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        chord.notes = chord.sortedNotes
-        updateUI()
         setupInitialState()
+
     }
 
 }
@@ -117,6 +116,8 @@ private extension ChordViewController {
     func setupInitialState() {
         configurePickerView()
         configureButtons()
+        chord.notes = chord.sortedNotes
+        configureLabels()
         playChord()
 
     }
@@ -134,6 +135,11 @@ private extension ChordViewController {
     func configureButtons() {
         updateChordButton.setTitle(L10n.ChordViewController.Buttons.update, for: .normal)
         sortChordButton.setTitle(L10n.ChordViewController.Buttons.sort, for: .normal)
+
+    }
+
+    func configureLabels() {
+        updateUI()
     }
 
 }
