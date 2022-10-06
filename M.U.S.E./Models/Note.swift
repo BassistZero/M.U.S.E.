@@ -65,7 +65,7 @@ extension Note: Comparable {
 extension Note: CustomStringConvertible {
 
     var description: String {
-        return String(octave.rawValue) + value.description
+        return value.description + String(octave.rawValue)
     }
 
 }
