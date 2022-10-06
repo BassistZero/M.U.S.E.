@@ -26,7 +26,7 @@ extension Chord {
         let intervals = getIntervals(from: type)
 
         for interval in intervals {
-            notes += [Note(absolete: root.absolete + interval.rawValue)]
+            notes += [Note(absolute: root.absolute + interval.rawValue)]
         }
 
     }
