@@ -9,6 +9,7 @@ final class ChordViewController: UIViewController {
     @IBOutlet private weak var octavePickerView: UIPickerView!
     @IBOutlet private weak var updateChordButton: UIButton!
     @IBOutlet private weak var sortChordButton: UIButton!
+    @IBOutlet private weak var polyphonySwitch: UISwitch!
     @IBOutlet private weak var playChordButton: UIButton!
 
     // MARK: - Private Properties
@@ -165,7 +166,17 @@ private extension ChordViewController {
     }
 
     func playChord() {
+        let delay = 0.5
+
+        if polyphonySwitch.isOn {
             DispatchQueue.global().async {
                 self.chordPlayer.play(chord: self.chord)
             }
+        } else {
+            DispatchQueue.global().async {
+                self.chordPlayer.play(chord: self.chord, delay: delay)
+            }
+        }
+    }
+
 }
