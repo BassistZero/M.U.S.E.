@@ -135,10 +135,12 @@ private extension ChordViewController {
     func configureButtons() {
         updateChordButton.setTitle(L10n.ChordViewController.Buttons.update, for: .normal)
         sortChordButton.setTitle(L10n.ChordViewController.Buttons.sort, for: .normal)
+        playChordButton.setTitle(L10n.ChordViewController.Buttons.playChord, for: .normal)
 
     }
 
     func configureLabels() {
+        isPolyphonyLabel.text = L10n.ChordViewController.Switch.text
         updateUI()
     }
 

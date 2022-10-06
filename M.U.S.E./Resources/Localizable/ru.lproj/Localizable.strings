@@ -16,3 +16,8 @@ ChordViewController.Text.intervals = "Интервалы";
 ChordViewController.Text.rootNote = "Основной Тон";
 ChordViewController.Buttons.update = "Новый Аккорд";
 ChordViewController.Buttons.sort = "Отсортировать Ноты";
+ChordViewController.Buttons.playChord = "Сыграть аккорд";
+ChordViewController.Switch.text = "Полифония:";
+
+TabBar.item.chord = "Аккорд";
+TabBar.item.progression = "Прогрессия";
