@@ -52,6 +52,14 @@
                         <action selector="sortChord:" destination="-1" eventType="touchUpInside" id="pEd-Wm-7Km"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewz-20-KAb">
+                    <rect key="frame" x="152.5" y="323" width="109" height="34.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Play Sound"/>
+                    <connections>
+                        <action selector="playChordPressed:" destination="-1" eventType="touchUpInside" id="BiL-JS-KyG"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Pdq-68-nzj"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

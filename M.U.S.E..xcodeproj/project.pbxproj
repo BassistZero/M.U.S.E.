@@ -17,6 +17,7 @@
 		027102B62814743000694F3E /* ChordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102B52814743000694F3E /* ChordViewController.swift */; };
 		027102BE2814743200694F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027102BC2814743200694F3E /* LaunchScreen.storyboard */; };
 		027102D0281479D600694F3E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102CF281479D600694F3E /* Note.swift */; };
+		02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */; };
 		02F2D94428312D6E0084F8A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D94628312D6E0084F8A1 /* Localizable.strings */; };
 		02F2D94D283130580084F8A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D94C283130580084F8A1 /* Localizable.swift */; };
 		02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4DE5A2823034D0002B9DC /* NoteValue.swift */; };
@@ -38,6 +39,7 @@
 		027102BD2814743200694F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027102BF2814743200694F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027102CF281479D600694F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
 		02F2D94528312D6E0084F8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94728312D8E0084F8A1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94C283130580084F8A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				022B901728187C07009ED3F7 /* Interval.swift */,
 				022B90192818839F009ED3F7 /* Chord.swift */,
 				021C9C2D281DB18B00BDB0A6 /* ChordType.swift */,
+				02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				021C9C2E281DB18B00BDB0A6 /* ChordType.swift in Sources */,
 				02FAA7032836A2E100E63622 /* ProgressionViewController.swift in Sources */,
 				027102D0281479D600694F3E /* Note.swift in Sources */,
+				02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */,
 				02F2D94D283130580084F8A1 /* Localizable.swift in Sources */,
 				022B901A2818839F009ED3F7 /* Chord.swift in Sources */,
 			);

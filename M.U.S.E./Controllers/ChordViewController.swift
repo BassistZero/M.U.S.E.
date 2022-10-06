@@ -9,9 +9,11 @@ final class ChordViewController: UIViewController {
     @IBOutlet private weak var octavePickerView: UIPickerView!
     @IBOutlet private weak var updateChordButton: UIButton!
     @IBOutlet private weak var sortChordButton: UIButton!
+    @IBOutlet private weak var playChordButton: UIButton!
 
     // MARK: - Private Properties
 
+    private var chordPlayer = ChordPlayer()
     private var chord = Chord() {
         didSet {
             sortChordButton.isHidden = chord.notes == chord.sortedNotes
@@ -91,12 +93,17 @@ private extension ChordViewController {
         chord.notes = chord.sortedNotes
         updateUI()
         selectAllPickerViewRows()
+        playChord()
     }
 
     @IBAction func sortChord(_ sender: UIButton) {
         chord.notes = chord.sortedNotes
         updateUI()
         selectAllPickerViewRows()
+    }
+
+    @IBAction func playChordPressed(_ sender: UIButton) {
+        playChord()
     }
 
 }
@@ -108,6 +115,8 @@ private extension ChordViewController {
     func setupInitialState() {
         configurePickerView()
         configureButtons()
+        playChord()
+
     }
 
     func configurePickerView() {
@@ -155,4 +164,8 @@ private extension ChordViewController {
         octavePickerView.selectRow(chord.notes[2].octave.rawValue, inComponent: 2, animated: true)
     }
 
+    func playChord() {
+            DispatchQueue.global().async {
+                self.chordPlayer.play(chord: self.chord)
+            }
 }
