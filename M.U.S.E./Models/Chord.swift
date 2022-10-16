@@ -23,6 +23,12 @@ extension Chord {
     }
 
     init(root: Note, of type: ChordType) {
+        var root = root
+
+        if root.octave == Octave.allCases.last ?? .zero {
+            root.octave = Octave(rawValue: (Octave.allCases.last?.rawValue ?? .zero) - 1) ?? .zero
+        }
+
         self.notes = [root]
 
         let intervals = getIntervals(from: type)
