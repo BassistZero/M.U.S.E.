@@ -4,7 +4,12 @@ struct Note {
 
     var octave: Octave
     var value: NoteValue
-    var absolete: Int { octave.rawValue * Interval.allCases.count + value.rawValue }
+    var absolute: Int { octave.rawValue * Interval.allCases.count + value.rawValue }
+
+    // MARK: - Static properties
+
+    static let min = Note(octave: Octave.allCases.first ?? .zero, value: NoteValue.allCases.first ?? .c)
+    static let max = Note(octave: Octave.allCases.last ?? .zero, value: NoteValue.allCases.last ?? .c)
 
 }
 
@@ -31,9 +36,9 @@ extension Note {
     }
 
     /// Octave and value set automatically
-    init(absolete: Int) {
-        self.octave = .init(rawValue: absolete / 12) ?? .zero
-        self.value = .init(rawValue: absolete % 12) ?? .c
+    init(absolute: Int) {
+        self.octave = .init(rawValue: absolute / 12) ?? .zero
+        self.value = .init(rawValue: absolute % 12) ?? .c
     }
 
 }
@@ -43,7 +48,7 @@ extension Note {
 extension Note {
 
     func interval(note: Note) -> Interval {
-        let rawValue = abs(note.absolete - absolete)
+        let rawValue = abs(note.absolute - absolute)
         let interval = Interval(rawValue: rawValue % Interval.allCases.count) ?? .unison
         return interval
     }
@@ -55,7 +60,7 @@ extension Note {
 extension Note: Comparable {
 
     static func < (lhs: Note, rhs: Note) -> Bool {
-        return lhs.absolete < rhs.absolete
+        return lhs.absolute < rhs.absolute
     }
 
 }
@@ -65,7 +70,7 @@ extension Note: Comparable {
 extension Note: CustomStringConvertible {
 
     var description: String {
-        return String(octave.rawValue) + value.description
+        return value.description + String(octave.rawValue)
     }
 
 }

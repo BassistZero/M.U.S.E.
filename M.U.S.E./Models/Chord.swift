@@ -16,19 +16,26 @@ extension Chord {
 
     /// Random Notes
     init() {
+        let root = Note(octave: .allCases.randomElement() ?? .zero)
         let type = ChordType.allCases.randomElement() ?? .major
-        self.notes = Chord(root: Note(octave: .three), of: type).notes
+
+        self.notes = Chord(root: root, of: type).notes
     }
 
     init(root: Note, of type: ChordType) {
+        var root = root
+
+        if root.octave == Octave.allCases.last ?? .zero {
+            root.octave = Octave(rawValue: (Octave.allCases.last?.rawValue ?? .zero) - 1) ?? .zero
+        }
+
         self.notes = [root]
 
         let intervals = getIntervals(from: type)
 
         for interval in intervals {
-            notes += [Note(absolete: root.absolete + interval.rawValue)]
+            notes += [Note(absolute: root.absolute + interval.rawValue)]
         }
-
     }
 
 }

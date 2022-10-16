@@ -16,3 +16,8 @@ ChordViewController.Text.intervals = "Intervals";
 ChordViewController.Text.rootNote = "Root";
 ChordViewController.Buttons.update = "New Chord";
 ChordViewController.Buttons.sort = "Sort Notes";
+ChordViewController.Buttons.playChord = "Play Chord";
+ChordViewController.Switch.text = "Is polyphony:";
+
+TabBar.item.chord = "Chord";
+TabBar.item.progression = "Progression";

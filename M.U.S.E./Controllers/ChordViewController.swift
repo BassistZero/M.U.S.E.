@@ -9,9 +9,13 @@ final class ChordViewController: UIViewController {
     @IBOutlet private weak var octavePickerView: UIPickerView!
     @IBOutlet private weak var updateChordButton: UIButton!
     @IBOutlet private weak var sortChordButton: UIButton!
+    @IBOutlet private weak var isPolyphonyLabel: UILabel!
+    @IBOutlet private weak var polyphonySwitch: UISwitch!
+    @IBOutlet private weak var playChordButton: UIButton!
 
     // MARK: - Private Properties
 
+    private var chordPlayer = ChordPlayer()
     private var chord = Chord() {
         didSet {
             sortChordButton.isHidden = chord.notes == chord.sortedNotes
@@ -23,9 +27,8 @@ final class ChordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        chord.notes = chord.sortedNotes
-        updateUI()
         setupInitialState()
+
     }
 
 }
@@ -91,12 +94,17 @@ private extension ChordViewController {
         chord.notes = chord.sortedNotes
         updateUI()
         selectAllPickerViewRows()
+        playChord()
     }
 
     @IBAction func sortChord(_ sender: UIButton) {
         chord.notes = chord.sortedNotes
         updateUI()
         selectAllPickerViewRows()
+    }
+
+    @IBAction func playChordPressed(_ sender: UIButton) {
+        playChord()
     }
 
 }
@@ -108,6 +116,10 @@ private extension ChordViewController {
     func setupInitialState() {
         configurePickerView()
         configureButtons()
+        chord.notes = chord.sortedNotes
+        configureLabels()
+        playChord()
+
     }
 
     func configurePickerView() {
@@ -123,6 +135,13 @@ private extension ChordViewController {
     func configureButtons() {
         updateChordButton.setTitle(L10n.ChordViewController.Buttons.update, for: .normal)
         sortChordButton.setTitle(L10n.ChordViewController.Buttons.sort, for: .normal)
+        playChordButton.setTitle(L10n.ChordViewController.Buttons.playChord, for: .normal)
+
+    }
+
+    func configureLabels() {
+        isPolyphonyLabel.text = L10n.ChordViewController.Switch.text
+        updateUI()
     }
 
 }
@@ -153,6 +172,20 @@ private extension ChordViewController {
         octavePickerView.selectRow(chord.notes[0].octave.rawValue, inComponent: 0, animated: true)
         octavePickerView.selectRow(chord.notes[1].octave.rawValue, inComponent: 1, animated: true)
         octavePickerView.selectRow(chord.notes[2].octave.rawValue, inComponent: 2, animated: true)
+    }
+
+    func playChord() {
+        let delay = 0.5
+
+        if polyphonySwitch.isOn {
+            DispatchQueue.global().async {
+                self.chordPlayer.play(chord: self.chord)
+            }
+        } else {
+            DispatchQueue.global().async {
+                self.chordPlayer.play(chord: self.chord, delay: delay)
+            }
+        }
     }
 
 }
