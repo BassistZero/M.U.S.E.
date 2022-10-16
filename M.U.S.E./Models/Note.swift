@@ -6,6 +6,11 @@ struct Note {
     var value: NoteValue
     var absolute: Int { octave.rawValue * Interval.allCases.count + value.rawValue }
 
+    // MARK: - Static properties
+
+    static let min = Note(octave: Octave.allCases.first ?? .zero, value: NoteValue.allCases.first ?? .c)
+    static let max = Note(octave: Octave.allCases.last ?? .zero, value: NoteValue.allCases.last ?? .c)
+
 }
 
 // MARK: - Inits
