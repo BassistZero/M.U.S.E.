@@ -16,8 +16,10 @@ extension Chord {
 
     /// Random Notes
     init() {
+        let root = Note(octave: .allCases.randomElement() ?? .zero)
         let type = ChordType.allCases.randomElement() ?? .major
-        self.notes = Chord(root: Note(octave: .allCases.randomElement() ?? .zero), of: type).notes
+
+        self.notes = Chord(root: root, of: type).notes
     }
 
     init(root: Note, of type: ChordType) {
@@ -28,7 +30,6 @@ extension Chord {
         for interval in intervals {
             notes += [Note(absolute: root.absolute + interval.rawValue)]
         }
-
     }
 
 }
