@@ -5,4 +5,8 @@ enum Octave: Int, CaseIterable {
     case two
     case three
     case four
+    case five
+    case six
+    case seven
+
 }
