@@ -74,6 +74,16 @@ private extension Chord {
 
 }
 
+// MARK: - CustomStringConvertible
+
+extension Chord: CustomStringConvertible {
+
+    var description: String {
+        return "\(rootNote.value)\(type.description)"
+    }
+
+}
+
 // MARK: - getChordType
 
 private extension Chord {
