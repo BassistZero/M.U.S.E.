@@ -21,3 +21,4 @@ ChordViewController.Switch.text = "Is polyphony:";
 
 TabBar.item.chord = "Chord";
 TabBar.item.progression = "Progression";
+TabBar.item.savedProgressions = "Saved Progressions";

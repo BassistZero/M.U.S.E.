@@ -21,3 +21,4 @@ ChordViewController.Switch.text = "Полифония:";
 
 TabBar.item.chord = "Аккорд";
 TabBar.item.progression = "Прогрессия";
+TabBar.item.savedProgressions = "Сохранённые Прогрессии";

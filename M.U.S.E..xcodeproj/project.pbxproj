@@ -22,6 +22,9 @@
 		027102B62814743000694F3E /* ChordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102B52814743000694F3E /* ChordViewController.swift */; };
 		027102BE2814743200694F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027102BC2814743200694F3E /* LaunchScreen.storyboard */; };
 		027102D0281479D600694F3E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102CF281479D600694F3E /* Note.swift */; };
+		027D6BA02939E3A900A7E99B /* SavedProgressionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027D6B9E2939E3A900A7E99B /* SavedProgressionsController.swift */; };
+		027D6BA12939E3A900A7E99B /* SavedProgressionsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */; };
+		027D6BA32939F87F00A7E99B /* ProgressionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027D6BA22939F87F00A7E99B /* ProgressionPlayer.swift */; };
 		02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */; };
 		02F2D94428312D6E0084F8A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D94628312D6E0084F8A1 /* Localizable.strings */; };
 		02F2D94D283130580084F8A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D94C283130580084F8A1 /* Localizable.swift */; };
@@ -145,6 +148,8 @@
 		027102BD2814743200694F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027102BF2814743200694F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027102CF281479D600694F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		027D6B9E2939E3A900A7E99B /* SavedProgressionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedProgressionsController.swift; sourceTree = "<group>"; };
+		027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedProgressionsController.xib; sourceTree = "<group>"; };
 		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
 		02F2D94528312D6E0084F8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94728312D8E0084F8A1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -303,6 +308,7 @@
 				027102BC2814743200694F3E /* LaunchScreen.storyboard */,
 				02218D6128369145004C30B2 /* ChordViewController.xib */,
 				02FAA7042836A36000E63622 /* ProgressionViewController.xib */,
+				027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 				027102B52814743000694F3E /* ChordViewController.swift */,
 				02218D5D28368884004C30B2 /* MainTabBarController.swift */,
 				02FAA7022836A2E100E63622 /* ProgressionViewController.swift */,
+				027D6B9E2939E3A900A7E99B /* SavedProgressionsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -553,6 +560,7 @@
 				E8E30A3B28F9DEFF007FF597 /* D#0.mp3 in Resources */,
 				E8E30A1428F9DEFF007FF597 /* F2.mp3 in Resources */,
 				E8E30A3428F9DEFF007FF597 /* G#5.mp3 in Resources */,
+				027D6BA12939E3A900A7E99B /* SavedProgressionsController.xib in Resources */,
 				E8E30A0D28F9DEFF007FF597 /* G6.mp3 in Resources */,
 				E8E30A0928F9DEFF007FF597 /* E4.mp3 in Resources */,
 				E8E30A2C28F9DEFF007FF597 /* C2.mp3 in Resources */,
@@ -719,6 +727,7 @@
 				022B901628187BD7009ED3F7 /* Octave.swift in Sources */,
 				027102B62814743000694F3E /* ChordViewController.swift in Sources */,
 				0217355429227F32006A67B5 /* ScaleStep.swift in Sources */,
+				027D6BA02939E3A900A7E99B /* SavedProgressionsController.swift in Sources */,
 				02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */,
 				02218D5E28368884004C30B2 /* MainTabBarController.swift in Sources */,
 				0217354A292275FB006A67B5 /* Progression.swift in Sources */,
