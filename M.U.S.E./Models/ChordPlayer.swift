@@ -13,9 +13,17 @@ struct ChordPlayer {
 
         var generalDelay = 0.0
 
-        players.forEach {
-            $0.play(atTime: $0.deviceCurrentTime + generalDelay)
-            generalDelay += delay
+        DispatchQueue.global().async {
+            players.forEach {
+                $0.play(atTime: $0.deviceCurrentTime + generalDelay)
+                generalDelay += delay
+            }
+        }
+    }
+
+    func stop() {
+        DispatchQueue.global().async {
+            players.forEach { $0.stop() }
         }
     }
 
