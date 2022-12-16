@@ -16,16 +16,20 @@ final class MainTabBarController: UITabBarController {
 private extension MainTabBarController {
 
     func setupInitialState() {
-        let firstTab = ChordViewController()
-        let secondTab = ProgressionViewController()
+        let chordTab = ChordViewController()
+        let progressionTab = ProgressionViewController()
+        let savedProgressionsTab = SavedProgressionsController()
 
-        firstTab.tabBarItem.title = L10n.TabBar.Item.chord
-        firstTab.tabBarItem.image = UIImage(systemName: "music.note")
+        progressionTab.tabBarItem.title = L10n.TabBar.Item.progression
+        progressionTab.tabBarItem.image = UIImage(systemName: "music.quarternote.3")
 
-        secondTab.tabBarItem.title = L10n.TabBar.Item.progression
-        secondTab.tabBarItem.image = UIImage(systemName: "music.quarternote.3")
+        savedProgressionsTab.tabBarItem.title = L10n.TabBar.Item.savedProgressions
+        savedProgressionsTab.tabBarItem.image = UIImage(systemName: "music.note.list")
 
-        viewControllers = [firstTab, secondTab]
+        chordTab.tabBarItem.title = L10n.TabBar.Item.chord
+        chordTab.tabBarItem.image = UIImage(systemName: "music.note")
+
+        viewControllers = [progressionTab, savedProgressionsTab, chordTab]
 
     }
 
