@@ -150,6 +150,7 @@
 		027102CF281479D600694F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		027D6B9E2939E3A900A7E99B /* SavedProgressionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedProgressionsController.swift; sourceTree = "<group>"; };
 		027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedProgressionsController.xib; sourceTree = "<group>"; };
+		027D6BA22939F87F00A7E99B /* ProgressionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionPlayer.swift; sourceTree = "<group>"; };
 		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
 		02F2D94528312D6E0084F8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94728312D8E0084F8A1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -327,6 +328,7 @@
 		027102C72814748000694F3E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				027D6BA22939F87F00A7E99B /* ProgressionPlayer.swift */,
 				027102CF281479D600694F3E /* Note.swift */,
 				02F4DE5A2823034D0002B9DC /* NoteValue.swift */,
 				022B901528187BD7009ED3F7 /* Octave.swift */,
@@ -742,6 +744,7 @@
 				02F2D94D283130580084F8A1 /* Localizable.swift in Sources */,
 				0217355029227E21006A67B5 /* Scale.swift in Sources */,
 				022B901A2818839F009ED3F7 /* Chord.swift in Sources */,
+				027D6BA32939F87F00A7E99B /* ProgressionPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

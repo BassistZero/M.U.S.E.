@@ -12,9 +12,12 @@ final class ProgressionViewController: UIViewController {
     @IBOutlet private weak var progressionVersion: UISegmentedControl!
 
     @IBOutlet private weak var ProgressionTextView: UITextView!
+    @IBOutlet private weak var polyphonySwitch: UISwitch!
     // MARK: - Private Properties
 
-    private var keyNote = Note()
+    private var keyNote: Note?
+    private var progression: Progression?
+    private var progressionPlayer: ProgressionPlayer?
 
 }
 
@@ -41,7 +44,7 @@ extension ProgressionViewController {
     @IBAction func noteValueChanged(_ sender: UISegmentedControl) {
         if sender === cFNotes {
             fSharpBNotes.selectedSegmentIndex = UISegmentedControl.noSegment
-        } else {
+        } else if sender !== octaveNote {
             cFNotes.selectedSegmentIndex = UISegmentedControl.noSegment
         }
 
@@ -49,14 +52,20 @@ extension ProgressionViewController {
 
         if sender === cFNotes {
             rawNoteValue = sender.selectedSegmentIndex
-        } else {
+        } else if sender === fSharpBNotes {
             rawNoteValue = cFNotes.numberOfSegments + sender.selectedSegmentIndex
+        } else {
+            rawNoteValue = keyNote?.value.rawValue ?? 0
         }
 
         let octave = Octave(rawValue: octaveNote.selectedSegmentIndex) ?? .zero
         let value = NoteValue(rawValue: rawNoteValue) ?? .c
 
         keyNote = Note(octave: octave, value: value)
+    }
+
+    @IBAction func playProgression(_ sender: UIButton) {
+        playProgression()
     }
 
 }
@@ -70,6 +79,8 @@ private extension ProgressionViewController {
         configureOctaveSegmentedControl()
         configureKeyNote()
         configureProgressionView()
+        configureProgressionPlayer()
+        playProgression()
     }
 
     func configureNotesSegmentedControl() {
@@ -84,6 +95,7 @@ private extension ProgressionViewController {
     func configureKeyNote() {
         let value = NoteValue(rawValue: cFNotes.selectedSegmentIndex) ?? .c
         let octave = Octave(rawValue: octaveNote.selectedSegmentIndex) ?? .zero
+
         keyNote = Note(octave: octave, value: value)
     }
 
@@ -94,9 +106,10 @@ private extension ProgressionViewController {
         type = configureType()
         version = configureVersion()
 
-        let progression = Progression(root: keyNote, type: type, version: version)
-
-        ProgressionTextView.text = progression.description
+        if let keyNote = keyNote {
+            progression = Progression(root: keyNote, type: type, version: version)
+            ProgressionTextView.text = progression?.description
+        }
     }
 
     func configureVersion() -> ProgressionVersion {
@@ -117,10 +130,10 @@ private extension ProgressionViewController {
     //swiftlint:disable cyclomatic_complexity
     func configureType() -> ScaleType {
         switch progressionType.selectedSegmentIndex {
-        // minor
+            // minor
         case 0:
             switch progressionTypeColor.selectedSegmentIndex {
-            // natural
+                // natural
             case 0:
                 return .minorNatural
             case 1:
@@ -132,7 +145,7 @@ private extension ProgressionViewController {
             }
         case 1:
             switch progressionTypeColor.selectedSegmentIndex {
-            // natural
+                // natural
             case 0:
                 return .majorNatural
             case 1:
@@ -147,6 +160,33 @@ private extension ProgressionViewController {
         }
 
         return .minorNatural
+    }
+
+    func configureProgressionPlayer() {
+        progressionPlayer = ProgressionPlayer()
+    }
+
+}
+
+// MARK: - Private Methods
+
+private extension ProgressionViewController {
+
+    func playProgression() {
+        polyphonySwitch.isOn ? playProgressionWithoutPolyphony() : playProgressionWithPolyphony()
+    }
+
+    func playProgressionWithPolyphony() {
+        if let progression = progression {
+            let notesDelay = 0.3
+            progressionPlayer?.play(progression: progression, notesDelay: notesDelay)
+        }
+    }
+
+    func playProgressionWithoutPolyphony() {
+        if let progression = progression {
+            progressionPlayer?.play(progression: progression)
+        }
     }
 
 }

@@ -107,6 +107,9 @@
                         <segment title="6"/>
                         <segment title="7"/>
                     </segments>
+                    <connections>
+                        <action selector="noteValueChanged:" destination="-1" eventType="valueChanged" id="F23-66-Xkr"/>
+                    </connections>
                 </segmentedControl>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt7-23-WRN">
                     <rect key="frame" x="89" y="418.5" width="305" height="35"/>
