@@ -4,8 +4,7 @@ final class ProgressionViewController: UIViewController {
 
     // MARK: - Private Outlets
 
-    @IBOutlet private weak var cFNotes: UISegmentedControl!
-    @IBOutlet private weak var fSharpBNotes: UISegmentedControl!
+    @IBOutlet private weak var notePickerView: NotePickerView!
     @IBOutlet private weak var octaveNote: UISegmentedControl!
     @IBOutlet private weak var progressionType: UISegmentedControl!
     @IBOutlet private weak var progressionTypeColor: UISegmentedControl!
@@ -15,7 +14,6 @@ final class ProgressionViewController: UIViewController {
     @IBOutlet private weak var polyphonySwitch: UISwitch!
     // MARK: - Private Properties
 
-    private var keyNote: Note?
     private var progression: Progression?
     private var progressionPlayer: ProgressionPlayer?
 
@@ -42,26 +40,7 @@ extension ProgressionViewController {
     }
 
     @IBAction func noteValueChanged(_ sender: UISegmentedControl) {
-        if sender === cFNotes {
-            fSharpBNotes.selectedSegmentIndex = UISegmentedControl.noSegment
-        } else if sender !== octaveNote {
-            cFNotes.selectedSegmentIndex = UISegmentedControl.noSegment
-        }
 
-        var rawNoteValue: Int
-
-        if sender === cFNotes {
-            rawNoteValue = sender.selectedSegmentIndex
-        } else if sender === fSharpBNotes {
-            rawNoteValue = cFNotes.numberOfSegments + sender.selectedSegmentIndex
-        } else {
-            rawNoteValue = keyNote?.value.rawValue ?? 0
-        }
-
-        let octave = Octave(rawValue: octaveNote.selectedSegmentIndex) ?? .zero
-        let value = NoteValue(rawValue: rawNoteValue) ?? .c
-
-        keyNote = Note(octave: octave, value: value)
     }
 
     @IBAction func playProgression(_ sender: UIButton) {
@@ -75,41 +54,32 @@ extension ProgressionViewController {
 private extension ProgressionViewController {
 
     func setupInitialState() {
-        configureNotesSegmentedControl()
         configureOctaveSegmentedControl()
-        configureKeyNote()
         configureProgressionView()
         configureProgressionPlayer()
         playProgression()
-    }
-
-    func configureNotesSegmentedControl() {
-        cFNotes.selectedSegmentIndex = 0
-        fSharpBNotes.selectedSegmentIndex = UISegmentedControl.noSegment
     }
 
     func configureOctaveSegmentedControl() {
         octaveNote.selectedSegmentIndex = 4
     }
 
-    func configureKeyNote() {
-        let value = NoteValue(rawValue: cFNotes.selectedSegmentIndex) ?? .c
+    func configureKeyNote() -> Note {
+        let value = notePickerView.selectedNoteValue
         let octave = Octave(rawValue: octaveNote.selectedSegmentIndex) ?? .zero
 
-        keyNote = Note(octave: octave, value: value)
+        let keyNote = Note(octave: octave, value: value)
+
+        return keyNote
     }
 
     func configureProgressionView() {
-        let type: ScaleType
-        let version: ProgressionVersion
+        let type = configureType()
+        let version = configureVersion()
+        let keyNote = configureKeyNote()
 
-        type = configureType()
-        version = configureVersion()
-
-        if let keyNote = keyNote {
-            progression = Progression(root: keyNote, type: type, version: version)
-            ProgressionTextView.text = progression?.description
-        }
+        progression = Progression(root: keyNote, type: type, version: version)
+        ProgressionTextView.text = progression?.description
     }
 
     func configureVersion() -> ProgressionVersion {

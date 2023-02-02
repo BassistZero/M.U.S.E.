@@ -12,8 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressionViewController" customModule="M_U_S_E_" customModuleProvider="target">
             <connections>
                 <outlet property="ProgressionTextView" destination="OFx-3Z-7ax" id="c6y-56-R26"/>
-                <outlet property="cFNotes" destination="ogB-Sm-IQC" id="YNK-0l-P1q"/>
-                <outlet property="fSharpBNotes" destination="zQT-Lh-KtG" id="lBk-GU-S15"/>
+                <outlet property="notePickerView" destination="ROl-Yq-Cp1" id="YdI-Lj-bQe"/>
                 <outlet property="octaveNote" destination="FY9-ia-uaL" id="lBV-EU-Krz"/>
                 <outlet property="polyphonySwitch" destination="axB-E4-zDa" id="Lw1-CJ-v9A"/>
                 <outlet property="progressionType" destination="6b2-Cb-6Pr" id="3qc-yQ-pTU"/>
@@ -27,34 +26,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ogB-Sm-IQC">
-                    <rect key="frame" x="20" y="68" width="374" height="32"/>
-                    <segments>
-                        <segment title="C"/>
-                        <segment title="C#"/>
-                        <segment title="D"/>
-                        <segment title="D#"/>
-                        <segment title="E"/>
-                        <segment title="F"/>
-                    </segments>
-                    <connections>
-                        <action selector="noteValueChanged:" destination="-1" eventType="valueChanged" id="GXt-FE-XW7"/>
-                    </connections>
-                </segmentedControl>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zQT-Lh-KtG">
-                    <rect key="frame" x="20" y="109" width="374" height="32"/>
-                    <segments>
-                        <segment title="F#"/>
-                        <segment title="G"/>
-                        <segment title="G#"/>
-                        <segment title="A"/>
-                        <segment title="A#"/>
-                        <segment title="B"/>
-                    </segments>
-                    <connections>
-                        <action selector="noteValueChanged:" destination="-1" eventType="valueChanged" id="WMa-fb-DsT"/>
-                    </connections>
-                </segmentedControl>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6b2-Cb-6Pr">
                     <rect key="frame" x="20" y="211" width="374" height="32"/>
                     <segments>
@@ -122,21 +93,27 @@
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axB-E4-zDa" userLabel="Polyphony Switch">
                     <rect key="frame" x="20" y="418.5" width="51" height="31"/>
                 </switch>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROl-Yq-Cp1" customClass="NotePickerView" customModule="M_U_S_E_" customModuleProvider="target">
+                    <rect key="frame" x="20" y="68" width="374" height="72"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="72" id="Puo-fc-2PD"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="dea-7M-rfy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="0G3-y8-4Y9"/>
+                <constraint firstItem="ROl-Yq-Cp1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="0pu-PG-xJP"/>
                 <constraint firstItem="mdx-65-yfC" firstAttribute="top" secondItem="6b2-Cb-6Pr" secondAttribute="bottom" constant="20" id="2Jl-SV-JRX"/>
                 <constraint firstItem="dea-7M-rfy" firstAttribute="top" secondItem="m1o-BY-7M0" secondAttribute="bottom" constant="20" id="7ZW-zi-1yp"/>
-                <constraint firstItem="zQT-Lh-KtG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="7q8-fF-Pva"/>
                 <constraint firstItem="axB-E4-zDa" firstAttribute="top" secondItem="dea-7M-rfy" secondAttribute="bottom" constant="20" id="C67-Pk-3mg"/>
+                <constraint firstItem="FY9-ia-uaL" firstAttribute="top" secondItem="ROl-Yq-Cp1" secondAttribute="bottom" constant="20" id="CQC-LR-iq7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ROl-Yq-Cp1" secondAttribute="trailing" constant="20" id="DbZ-HC-qhr"/>
                 <constraint firstItem="FY9-ia-uaL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Dmu-Os-eCf"/>
-                <constraint firstItem="FY9-ia-uaL" firstAttribute="top" secondItem="zQT-Lh-KtG" secondAttribute="bottom" constant="20" id="Dta-pQ-ziL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ogB-Sm-IQC" secondAttribute="trailing" constant="20" id="EKW-lh-6ew"/>
                 <constraint firstItem="m1o-BY-7M0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="F2M-fe-poH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6b2-Cb-6Pr" secondAttribute="trailing" constant="20" id="J3V-W8-P7t"/>
-                <constraint firstItem="ogB-Sm-IQC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Jo5-30-1VF"/>
                 <constraint firstItem="Bt7-23-WRN" firstAttribute="top" secondItem="dea-7M-rfy" secondAttribute="bottom" constant="20" id="KCA-km-7Wo"/>
                 <constraint firstItem="6b2-Cb-6Pr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="KCe-mh-2ky"/>
                 <constraint firstItem="6b2-Cb-6Pr" firstAttribute="top" secondItem="FY9-ia-uaL" secondAttribute="bottom" constant="20" id="NyM-Z8-SrI"/>
@@ -146,16 +123,14 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Bt7-23-WRN" secondAttribute="trailing" constant="20" id="Xkw-18-JOS"/>
                 <constraint firstItem="mdx-65-yfC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ZTQ-XL-vBC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FY9-ia-uaL" secondAttribute="trailing" constant="20" id="aJ2-Tu-j7G"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zQT-Lh-KtG" secondAttribute="trailing" constant="20" id="awU-6Y-iRf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mdx-65-yfC" secondAttribute="trailing" constant="20" id="dgP-dW-Hle"/>
                 <constraint firstItem="axB-E4-zDa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gp3-Fk-vFS"/>
+                <constraint firstItem="ROl-Yq-Cp1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="iLn-g0-GSh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OFx-3Z-7ax" secondAttribute="bottom" constant="20" id="ile-3h-sH4"/>
-                <constraint firstItem="ogB-Sm-IQC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="iu7-qF-PJg"/>
                 <constraint firstItem="Bt7-23-WRN" firstAttribute="leading" secondItem="axB-E4-zDa" secondAttribute="trailing" constant="20" id="juY-sW-Rh1"/>
                 <constraint firstItem="OFx-3Z-7ax" firstAttribute="top" secondItem="Bt7-23-WRN" secondAttribute="bottom" constant="20" id="naA-d5-8LT"/>
                 <constraint firstItem="m1o-BY-7M0" firstAttribute="top" secondItem="mdx-65-yfC" secondAttribute="bottom" constant="20" id="r3Z-L4-Top"/>
                 <constraint firstItem="OFx-3Z-7ax" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="sOD-Fc-nbk"/>
-                <constraint firstItem="zQT-Lh-KtG" firstAttribute="top" secondItem="ogB-Sm-IQC" secondAttribute="bottom" constant="10" id="xJ2-aq-ICP"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
         </view>

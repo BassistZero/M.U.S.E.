@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotePickerView" customModule="M_U_S_E_" customModuleProvider="target">
+            <connections>
+                <outlet property="cFNotes" destination="zGO-vs-9cP" id="f12-VN-u6U"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="CrZ-Yz-L7u"/>
+                <outlet property="fSharpBNotes" destination="FpK-PW-5Sr" id="hdk-l2-O6A"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zGO-vs-9cP">
+                    <rect key="frame" x="0.0" y="0.0" width="279" height="32"/>
+                    <segments>
+                        <segment title="C"/>
+                        <segment title="C#"/>
+                        <segment title="D"/>
+                        <segment title="D#"/>
+                        <segment title="E"/>
+                        <segment title="F"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentTapped:" destination="-1" eventType="valueChanged" id="cmK-Me-t9Q"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FpK-PW-5Sr">
+                    <rect key="frame" x="0.0" y="41" width="279" height="32"/>
+                    <segments>
+                        <segment title="F#"/>
+                        <segment title="G"/>
+                        <segment title="G#"/>
+                        <segment title="A"/>
+                        <segment title="A#"/>
+                        <segment title="B"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentTapped:" destination="-1" eventType="valueChanged" id="atH-eu-T2P"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zGO-vs-9cP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9O0-iK-mo7"/>
+                <constraint firstAttribute="trailing" secondItem="FpK-PW-5Sr" secondAttribute="trailing" id="LaQ-Ty-38g"/>
+                <constraint firstItem="FpK-PW-5Sr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NsZ-cu-GIk"/>
+                <constraint firstAttribute="bottom" secondItem="FpK-PW-5Sr" secondAttribute="bottom" id="Wd2-vn-8pn"/>
+                <constraint firstItem="FpK-PW-5Sr" firstAttribute="top" secondItem="zGO-vs-9cP" secondAttribute="bottom" constant="10" id="YTX-4U-6Tq"/>
+                <constraint firstAttribute="trailing" secondItem="zGO-vs-9cP" secondAttribute="trailing" id="gss-sz-DFL"/>
+                <constraint firstItem="zGO-vs-9cP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ox7-w6-j4J"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-880.15267175572512" y="-287.32394366197184"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
