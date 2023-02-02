@@ -5,13 +5,12 @@ final class ProgressionViewController: UIViewController {
     // MARK: - Private Outlets
 
     @IBOutlet private weak var notePickerView: NotePickerView!
-    @IBOutlet private weak var octaveNote: UISegmentedControl!
     @IBOutlet private weak var progressionType: UISegmentedControl!
     @IBOutlet private weak var progressionTypeColor: UISegmentedControl!
     @IBOutlet private weak var progressionVersion: UISegmentedControl!
-
     @IBOutlet private weak var ProgressionTextView: UITextView!
     @IBOutlet private weak var polyphonySwitch: UISwitch!
+
     // MARK: - Private Properties
 
     private var progression: Progression?
@@ -39,10 +38,6 @@ extension ProgressionViewController {
         configureProgressionView()
     }
 
-    @IBAction func noteValueChanged(_ sender: UISegmentedControl) {
-
-    }
-
     @IBAction func playProgression(_ sender: UIButton) {
         playProgression()
     }
@@ -54,23 +49,9 @@ extension ProgressionViewController {
 private extension ProgressionViewController {
 
     func setupInitialState() {
-        configureOctaveSegmentedControl()
         configureProgressionView()
         configureProgressionPlayer()
         playProgression()
-    }
-
-    func configureOctaveSegmentedControl() {
-        octaveNote.selectedSegmentIndex = 4
-    }
-
-    func configureKeyNote() -> Note {
-        let value = notePickerView.selectedNoteValue
-        let octave = Octave(rawValue: octaveNote.selectedSegmentIndex) ?? .zero
-
-        let keyNote = Note(octave: octave, value: value)
-
-        return keyNote
     }
 
     func configureProgressionView() {
@@ -80,6 +61,15 @@ private extension ProgressionViewController {
 
         progression = Progression(root: keyNote, type: type, version: version)
         ProgressionTextView.text = progression?.description
+    }
+
+    func configureKeyNote() -> Note {
+        let value = notePickerView.selectedNoteValue
+        let octave = notePickerView.selectedOctave
+
+        let keyNote = Note(octave: octave, value: value)
+
+        return keyNote
     }
 
     func configureVersion() -> ProgressionVersion {
@@ -100,10 +90,8 @@ private extension ProgressionViewController {
     //swiftlint:disable cyclomatic_complexity
     func configureType() -> ScaleType {
         switch progressionType.selectedSegmentIndex {
-            // minor
         case 0:
             switch progressionTypeColor.selectedSegmentIndex {
-                // natural
             case 0:
                 return .minorNatural
             case 1:
@@ -113,9 +101,9 @@ private extension ProgressionViewController {
             default:
                 break
             }
+
         case 1:
             switch progressionTypeColor.selectedSegmentIndex {
-                // natural
             case 0:
                 return .majorNatural
             case 1:
@@ -125,6 +113,7 @@ private extension ProgressionViewController {
             default:
                 break
             }
+
         default:
             break
         }

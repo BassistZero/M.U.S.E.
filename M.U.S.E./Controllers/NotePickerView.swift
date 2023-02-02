@@ -8,10 +8,12 @@ class NotePickerView: UIView {
     @IBOutlet private var contentView: UIView!
     @IBOutlet private weak var cFNotes: UISegmentedControl!
     @IBOutlet private weak var fSharpBNotes: UISegmentedControl!
+    @IBOutlet private weak var octavePicker: UISegmentedControl!
 
     // MARK: - Public Properties
 
     var selectedNoteValue: NoteValue = .c
+    var selectedOctave: Octave = .four
 
     // MARK: - UIView
 
@@ -62,6 +64,10 @@ class NotePickerView: UIView {
             cFNotes.selectedSegmentIndex = UISegmentedControl.noSegment
             selectedNoteValue = fSharpBDict[fSharpBNotes.selectedSegmentIndex] ?? .f
         }
+
+        if sender === octavePicker {
+            selectedOctave = .init(rawValue: octavePicker.selectedSegmentIndex) ?? .four
+        }
     }
 
     // MARK: - Configuration
@@ -69,6 +75,7 @@ class NotePickerView: UIView {
     private func configureAppearance() {
         cFNotes.selectedSegmentIndex = 0
         fSharpBNotes.selectedSegmentIndex = UISegmentedControl.noSegment
+        octavePicker.selectedSegmentIndex = 4
     }
 
     private func commonInit() {
