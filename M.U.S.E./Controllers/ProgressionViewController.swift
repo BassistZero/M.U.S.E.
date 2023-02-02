@@ -173,17 +173,16 @@ private extension ProgressionViewController {
 private extension ProgressionViewController {
 
     func playProgression() {
-        polyphonySwitch.isOn ? playProgressionWithoutPolyphony() : playProgressionWithPolyphony()
-    }
-
-    func playProgressionWithPolyphony() {
-        if let progression = progression {
-            let notesDelay = 0.3
-            progressionPlayer?.play(progression: progression, notesDelay: notesDelay)
-        }
+        polyphonySwitch.isOn ? playProgressionWithPolyphony() : playProgressionWithoutPolyphony()
     }
 
     func playProgressionWithoutPolyphony() {
+        if let progression = progression {
+            progressionPlayer?.play(progression: progression, isPolyphony: false)
+        }
+    }
+
+    func playProgressionWithPolyphony() {
         if let progression = progression {
             progressionPlayer?.play(progression: progression)
         }

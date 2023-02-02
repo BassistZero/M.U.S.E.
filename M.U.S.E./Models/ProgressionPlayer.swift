@@ -1,6 +1,6 @@
 import AVFoundation
 
-struct ProgressionPlayer {
+class ProgressionPlayer {
 
     // MARK: - Private Properties
 
@@ -8,26 +8,28 @@ struct ProgressionPlayer {
 
     // MARK: - Public Methods
 
-    mutating func play(progression: Progression, chordsDelay: Double = 0.75, notesDelay: Double = 0) {
-        var players = makePlayers(progression: progression)
+    func play(progression: Progression, chordsDelay: Double = 0.75, isPolyphony: Bool = true) {
+        stop()
 
-        players.forEach { $0.stop() }
+        players = makePlayers(progression: progression)
 
         var generalDelay = 0.0
 
-        for offset in 0...players.count {
+        let notesDelay = isPolyphony ? 0 : chordsDelay / Double(progression.chords.first?.notes.count ?? 1)
 
+        for (offset, _) in players.enumerated() {
             DispatchQueue.global().asyncAfter(deadline: .now() + generalDelay) {
-                guard offset != players.count else {
-                    return
-                }
-
-                players[offset].play(chord: progression.chords[offset], delay: notesDelay)
+                self.players[offset].play(chord: progression.chords[offset], delay: notesDelay)
             }
 
             generalDelay += chordsDelay
         }
-    }
+
+}
+
+func stop() {
+    players.forEach { $0.stop() }
+}
 
 }
 
@@ -35,15 +37,12 @@ struct ProgressionPlayer {
 
 private extension ProgressionPlayer {
 
-    mutating func makePlayers(progression: Progression) -> [ChordPlayer] {
-        players.forEach { $0.stop() }
+    func makePlayers(progression: Progression) -> [ChordPlayer] {
         players = []
 
-        progression.chords.forEach { _ in
-            let player = ChordPlayer()
-            players.append(player)
-        }
+        progression.chords.forEach { _ in players.append(ChordPlayer()) }
 
         return players
     }
+
 }
