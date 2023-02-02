@@ -1,8 +1,6 @@
 struct Progression {
 
-    var chords: [Chord] {
-        getChords()
-    }
+    var chords = [Chord]()
 
     let root: Note
     let scale: Scale
@@ -12,6 +10,8 @@ struct Progression {
         self.root = root
         self.version = version
         scale = Scale(root: root, type: type)
+
+        chords = getChords()
     }
 
 }
@@ -65,7 +65,18 @@ private extension Progression {
 extension Progression: CustomStringConvertible {
 
     var description: String {
-        return chords.description
+        var progressionString = ""
+
+        for (offset, chord) in chords.enumerated() {
+            if offset == chords.count - 1 {
+                progressionString.append("\(chord)")
+                continue
+            }
+
+            progressionString.append("\(chord) -> ")
+        }
+
+        return progressionString
     }
 
 }
