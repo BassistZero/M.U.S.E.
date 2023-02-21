@@ -18,16 +18,12 @@ final class ProgressionPlayer {
 
         makePlayers(progression: progression)
 
-    playLabel: for _ in players {
-        var isPlaying = false
-
+    for _ in players {
         timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(floatLiteral: generalDelay + chordsDelay), repeats: false) { [self] timer in
             playProgression(progression: progression, notesDelay: notesDelay)
             updateOffset()
             timer.invalidate()
         }
-
-        if isPlaying { break playLabel }
 
         generalDelay += chordsDelay
     }
@@ -55,7 +51,6 @@ private extension ProgressionPlayer {
     }
 
     func playProgression(progression: Progression, notesDelay: Double) {
-        print(offset)
         players[offset].play(chord: progression.chords[offset], delay: notesDelay)
     }
 
