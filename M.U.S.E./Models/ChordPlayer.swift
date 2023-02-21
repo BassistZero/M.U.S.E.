@@ -8,8 +8,10 @@ final class ChordPlayer {
 
     // MARK: - Public Methods
 
-    func play(chord: Chord, delay: Double = 0) {
+    func play(chord: Chord?, delay: Double = 0) {
         stop()
+
+        guard let chord else { return }
 
         players = makePlayers(chord: chord)
 
