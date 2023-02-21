@@ -27,6 +27,8 @@
 		027D6BA12939E3A900A7E99B /* SavedProgressionsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */; };
 		027D6BA32939F87F00A7E99B /* ProgressionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027D6BA22939F87F00A7E99B /* ProgressionPlayer.swift */; };
 		02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */; };
+		02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */; };
+		02DDDDC7299F617800D207B8 /* ProgressionConfigurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */; };
 		02F2D94428312D6E0084F8A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D94628312D6E0084F8A1 /* Localizable.strings */; };
 		02F2D94D283130580084F8A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D94C283130580084F8A1 /* Localizable.swift */; };
 		02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4DE5A2823034D0002B9DC /* NoteValue.swift */; };
@@ -155,6 +157,8 @@
 		027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedProgressionsController.xib; sourceTree = "<group>"; };
 		027D6BA22939F87F00A7E99B /* ProgressionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionPlayer.swift; sourceTree = "<group>"; };
 		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
+		02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionConfigurationView.swift; sourceTree = "<group>"; };
+		02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressionConfigurationView.xib; sourceTree = "<group>"; };
 		02F2D94528312D6E0084F8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94728312D8E0084F8A1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94C283130580084F8A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				02FAA7042836A36000E63622 /* ProgressionViewController.xib */,
 				027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */,
 				02FD3018298BC2FD007CDCB8 /* NotePickerView.xib */,
+				02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				02FAA7022836A2E100E63622 /* ProgressionViewController.swift */,
 				027D6B9E2939E3A900A7E99B /* SavedProgressionsController.swift */,
 				02572C11298BC44D003B5070 /* NotePickerView.swift */,
+				02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -652,6 +658,7 @@
 				E8E30A1A28F9DEFF007FF597 /* C#0.mp3 in Resources */,
 				E8E30A5728F9DEFF007FF597 /* C#1.mp3 in Resources */,
 				E8E30A0A28F9DEFF007FF597 /* C#7.mp3 in Resources */,
+				02DDDDC7299F617800D207B8 /* ProgressionConfigurationView.xib in Resources */,
 				E8E30A4C28F9DEFF007FF597 /* D1.mp3 in Resources */,
 				02218D6228369145004C30B2 /* ChordViewController.xib in Resources */,
 				E8E30A4028F9DEFF007FF597 /* B7.mp3 in Resources */,
@@ -739,6 +746,7 @@
 				02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */,
 				027D6BA02939E3A900A7E99B /* SavedProgressionsController.swift in Sources */,
 				02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */,
+				02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */,
 				02218D5E28368884004C30B2 /* MainTabBarController.swift in Sources */,
 				0217354A292275FB006A67B5 /* Progression.swift in Sources */,
 				022B901828187C07009ED3F7 /* Interval.swift in Sources */,

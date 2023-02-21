@@ -1,7 +1,7 @@
 import UIKit
 
 @IBDesignable
-class NotePickerView: UIView {
+final class NotePickerView: UIView {
 
     // MARK: - Private Outlets
 
