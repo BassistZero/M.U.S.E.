@@ -1,6 +1,6 @@
 import AVFoundation
 
-class ChordPlayer {
+final class ChordPlayer {
 
     // MARK: - Private Properties
 

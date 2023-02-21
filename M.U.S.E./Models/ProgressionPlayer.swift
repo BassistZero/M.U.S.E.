@@ -1,6 +1,6 @@
 import AVFoundation
 
-class ProgressionPlayer {
+final class ProgressionPlayer {
 
     // MARK: - Private Properties
 
