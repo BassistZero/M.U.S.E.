@@ -5,31 +5,44 @@ final class ProgressionPlayer {
     // MARK: - Private Properties
 
     private var players = [ChordPlayer]()
+    private var offset = 0
+    private var generalDelay = 0.0
+    private var timer: Timer?
 
     // MARK: - Public Methods
 
     func play(progression: Progression, chordsDelay: Double = 0.75, isPolyphony: Bool = true) {
         stop()
 
-        players = makePlayers(progression: progression)
-
-        var generalDelay = 0.0
-
         let notesDelay = isPolyphony ? 0 : chordsDelay / Double(progression.chords.first?.notes.count ?? 1)
 
-        for (offset, _) in players.enumerated() {
-            DispatchQueue.global().asyncAfter(deadline: .now() + generalDelay) {
-                self.players[offset].play(chord: progression.chords[offset], delay: notesDelay)
-            }
+        makePlayers(progression: progression)
 
-            generalDelay += chordsDelay
+    playLabel: for _ in players {
+        var isPlaying = false
+
+        timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(floatLiteral: generalDelay + chordsDelay), repeats: false) { [self] timer in
+            playProgression(progression: progression, notesDelay: notesDelay)
+            updateOffset()
+            timer.invalidate()
         }
 
-}
+        if isPlaying { break playLabel }
 
-func stop() {
-    players.forEach { $0.stop() }
-}
+        generalDelay += chordsDelay
+    }
+
+    }
+
+    func stop() {
+        players.forEach { $0.stop() }
+        players = []
+        timer?.invalidate()
+        timer = nil
+
+        offset = 0
+        generalDelay = 0.0
+    }
 
 }
 
@@ -37,12 +50,21 @@ func stop() {
 
 private extension ProgressionPlayer {
 
-    func makePlayers(progression: Progression) -> [ChordPlayer] {
-        players = []
-
+    func makePlayers(progression: Progression) {
         progression.chords.forEach { _ in players.append(ChordPlayer()) }
+    }
 
-        return players
+    func playProgression(progression: Progression, notesDelay: Double) {
+        print(offset)
+        players[offset].play(chord: progression.chords[offset], delay: notesDelay)
+    }
+
+    func updateOffset() {
+        if offset >= players.count - 1 {
+            offset = 0
+        }
+
+        offset += 1
     }
 
 }
