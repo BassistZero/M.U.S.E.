@@ -21,6 +21,7 @@ final class ProgressionConfigurationView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        configureAppearance()
     }
 
     override init(frame: CGRect) {
@@ -38,6 +39,31 @@ final class ProgressionConfigurationView: UIView {
 // MARK: - Configuration
 
 private extension ProgressionConfigurationView {
+
+    func configureAppearance() {
+        configureProgressionTypeText()
+        configureProgressionTypeColorText()
+        configureProgressionVersionText()
+
+    }
+
+    func configureProgressionTypeText() {
+        progressionType.setTitle(L10n.ProgressionType.minor, forSegmentAt: 0)
+        progressionType.setTitle(L10n.ProgressionType.major, forSegmentAt: 1)
+    }
+
+    func configureProgressionTypeColorText() {
+        progressionTypeColor.setTitle(L10n.ProgressionTypeColor.natural, forSegmentAt: 0)
+        progressionTypeColor.setTitle(L10n.ProgressionTypeColor.harmonic, forSegmentAt: 1)
+        progressionTypeColor.setTitle(L10n.ProgressionTypeColor.melodic, forSegmentAt: 2)
+    }
+
+    func configureProgressionVersionText() {
+        progressionVersion.setTitle(L10n.ProgressionVersion.oneThreeFourFive, forSegmentAt: 0)
+        progressionVersion.setTitle(L10n.ProgressionVersion.oneTwoThreeFour, forSegmentAt: 1)
+        progressionVersion.setTitle(L10n.ProgressionVersion.oneSixFourFive, forSegmentAt: 2)
+        progressionVersion.setTitle(L10n.ProgressionVersion.random, forSegmentAt: 3)
+    }
 
     func configureProgression() -> Progression {
         let keyNote = configureKeyNote()

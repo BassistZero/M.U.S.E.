@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressionViewController" customModule="M_U_S_E_" customModuleProvider="target">
             <connections>
+                <outlet property="generateProgressionButton" destination="dea-7M-rfy" id="AJ2-qq-cqK"/>
+                <outlet property="playProgressionButton" destination="Bt7-23-WRN" id="t5F-4F-IgL"/>
                 <outlet property="polyphonySwitch" destination="axB-E4-zDa" id="Lw1-CJ-v9A"/>
                 <outlet property="progressionConfigurationView" destination="yWi-NO-Q6h" id="MUQ-yx-VBC"/>
                 <outlet property="progressionTextView" destination="OFx-3Z-7ax" id="c6y-56-R26"/>

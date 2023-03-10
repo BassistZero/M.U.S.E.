@@ -58,6 +58,64 @@ internal enum L10n {
     /// Unison
     internal static let unison = L10n.tr("Localizable", "Interval.unison", fallback: "Unison")
   }
+  internal enum Note {
+    /// A
+    internal static let a = L10n.tr("Localizable", "Note.a", fallback: "A")
+    /// A#
+    internal static let aSharp = L10n.tr("Localizable", "Note.aSharp", fallback: "A#")
+    /// B
+    internal static let b = L10n.tr("Localizable", "Note.b", fallback: "B")
+    /// C
+    internal static let c = L10n.tr("Localizable", "Note.c", fallback: "C")
+    /// C#
+    internal static let cSharp = L10n.tr("Localizable", "Note.cSharp", fallback: "C#")
+    /// D
+    internal static let d = L10n.tr("Localizable", "Note.d", fallback: "D")
+    /// D#
+    internal static let dSharp = L10n.tr("Localizable", "Note.dSharp", fallback: "D#")
+    /// E
+    internal static let e = L10n.tr("Localizable", "Note.e", fallback: "E")
+    /// F
+    internal static let f = L10n.tr("Localizable", "Note.f", fallback: "F")
+    /// F#
+    internal static let fSharp = L10n.tr("Localizable", "Note.fSharp", fallback: "F#")
+    /// G
+    internal static let g = L10n.tr("Localizable", "Note.g", fallback: "G")
+    /// G#
+    internal static let gSharp = L10n.tr("Localizable", "Note.gSharp", fallback: "G#")
+  }
+  internal enum ProgressionType {
+    /// Major
+    internal static let major = L10n.tr("Localizable", "ProgressionType.major", fallback: "Major")
+    /// Minor
+    internal static let minor = L10n.tr("Localizable", "ProgressionType.minor", fallback: "Minor")
+  }
+  internal enum ProgressionTypeColor {
+    /// Harmonic
+    internal static let harmonic = L10n.tr("Localizable", "ProgressionTypeColor.harmonic", fallback: "Harmonic")
+    /// Melodic
+    internal static let melodic = L10n.tr("Localizable", "ProgressionTypeColor.melodic", fallback: "Melodic")
+    /// Natural
+    internal static let natural = L10n.tr("Localizable", "ProgressionTypeColor.natural", fallback: "Natural")
+  }
+  internal enum ProgressionVersion {
+    /// I-VI-IV-V
+    internal static let oneSixFourFive = L10n.tr("Localizable", "ProgressionVersion.oneSixFourFive", fallback: "I-VI-IV-V")
+    /// I-III-IV-V
+    internal static let oneThreeFourFive = L10n.tr("Localizable", "ProgressionVersion.oneThreeFourFive", fallback: "I-III-IV-V")
+    /// I-II-III-IV
+    internal static let oneTwoThreeFour = L10n.tr("Localizable", "ProgressionVersion.oneTwoThreeFour", fallback: "I-II-III-IV")
+    /// Random
+    internal static let random = L10n.tr("Localizable", "ProgressionVersion.random", fallback: "Random")
+  }
+  internal enum ProgressionViewController {
+    internal enum Buttons {
+      /// Generate Progression
+      internal static let generateProgression = L10n.tr("Localizable", "ProgressionViewController.Buttons.generateProgression", fallback: "Generate Progression")
+      /// Play Progression
+      internal static let playProgression = L10n.tr("Localizable", "ProgressionViewController.Buttons.playProgression", fallback: "Play Progression")
+    }
+  }
   internal enum TabBar {
     internal enum Item {
       /// Chord

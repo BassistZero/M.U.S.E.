@@ -7,6 +7,8 @@ final class ProgressionViewController: UIViewController {
     @IBOutlet private weak var progressionConfigurationView: ProgressionConfigurationView!
     @IBOutlet private weak var progressionTextView: UITextView!
     @IBOutlet private weak var polyphonySwitch: UISwitch!
+    @IBOutlet private weak var generateProgressionButton: UIButton!
+    @IBOutlet private weak var playProgressionButton: UIButton!
 
     // MARK: - Private Properties
 
@@ -32,9 +34,15 @@ extension ProgressionViewController {
 private extension ProgressionViewController {
 
     func setupInitialState() {
+        configureButtonsText()
         configureProgressionView()
         configureProgressionPlayer()
         playProgression()
+    }
+
+    func configureButtonsText() {
+        generateProgressionButton.setTitle(L10n.ProgressionViewController.Buttons.generateProgression, for: .normal)
+        playProgressionButton.setTitle(L10n.ProgressionViewController.Buttons.playProgression, for: .normal)
     }
 
     func configureProgressionView() {
