@@ -10,3 +10,13 @@ enum Octave: Int, CaseIterable {
     case seven
 
 }
+
+// MARK: - CustomStringConvertible
+
+extension Octave: CustomStringConvertible {
+
+    var description: String {
+        return "\(self.rawValue)"
+    }
+
+}

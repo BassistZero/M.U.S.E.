@@ -22,29 +22,29 @@ extension NoteValue: CustomStringConvertible {
     var description: String {
         switch self {
         case .c:
-            return "C"
+            return L10n.Note.c
         case .cSharp:
-            return "C#"
+            return L10n.Note.cSharp
         case .d:
-            return "D"
+            return L10n.Note.d
         case .dSharp:
-            return "D#"
+            return L10n.Note.dSharp
         case .e:
-            return "E"
+            return L10n.Note.e
         case .f:
-            return "F"
+            return L10n.Note.f
         case .fSharp:
-            return "F#"
+            return L10n.Note.fSharp
         case .g:
-            return "G"
+            return L10n.Note.g
         case .gSharp:
-            return "G#"
+            return L10n.Note.gSharp
         case .a:
-            return "A"
+            return L10n.Note.a
         case .aSharp:
-            return "A#"
+            return L10n.Note.aSharp
         case .b:
-            return "B"
+            return L10n.Note.b
         }
     }
 

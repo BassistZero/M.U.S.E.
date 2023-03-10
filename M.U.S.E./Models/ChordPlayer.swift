@@ -1,6 +1,6 @@
 import AVFoundation
 
-struct ChordPlayer {
+final class ChordPlayer {
 
     // MARK: - Private Properties
 
@@ -8,14 +8,26 @@ struct ChordPlayer {
 
     // MARK: - Public Methods
 
-    mutating func play(chord: Chord, delay: Double = 0) {
-        let players = makePlayers(chord: chord)
+    func play(chord: Chord?, delay: Double = 0) {
+        stop()
+
+        guard let chord else { return }
+
+        players = makePlayers(chord: chord)
 
         var generalDelay = 0.0
 
-        players.forEach {
-            $0.play(atTime: $0.deviceCurrentTime + generalDelay)
-            generalDelay += delay
+        DispatchQueue.global().async {
+            self.players.forEach {
+                $0.play(atTime: $0.deviceCurrentTime + generalDelay)
+                generalDelay += delay
+            }
+        }
+    }
+
+    func stop() {
+        DispatchQueue.global().async {
+            self.players.forEach { $0.stop() }
         }
     }
 
@@ -25,8 +37,7 @@ struct ChordPlayer {
 
 private extension ChordPlayer {
 
-    mutating func makePlayers(chord: Chord) -> [AVAudioPlayer] {
-        players.forEach { $0.stop() }
+    func makePlayers(chord: Chord) -> [AVAudioPlayer] {
         players = []
 
         chord.notes.forEach { note in

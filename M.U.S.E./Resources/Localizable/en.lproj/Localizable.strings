@@ -1,3 +1,16 @@
+Note.c = "C";
+Note.cSharp = "C#";
+Note.d = "D";
+Note.dSharp = "D#";
+Note.e = "E";
+Note.f = "F";
+Note.fSharp = "F#";
+Note.g = "G";
+Note.gSharp = "G#";
+Note.a = "A";
+Note.aSharp = "A#";
+Note.b = "B";
+
 Interval.unison = "Unison";
 Interval.minorSecond = "Minor Second";
 Interval.majorSecond = "Major Second";
@@ -19,5 +32,21 @@ ChordViewController.Buttons.sort = "Sort Notes";
 ChordViewController.Buttons.playChord = "Play Chord";
 ChordViewController.Switch.text = "Is polyphony:";
 
+ProgressionViewController.Buttons.generateProgression = "Generate Progression";
+ProgressionViewController.Buttons.playProgression = "Play Progression";
+
 TabBar.item.chord = "Chord";
 TabBar.item.progression = "Progression";
+TabBar.item.savedProgressions = "Saved Progressions";
+
+ProgressionType.minor = "Minor";
+ProgressionType.major = "Major";
+
+ProgressionTypeColor.natural = "Natural";
+ProgressionTypeColor.harmonic = "Harmonic";
+ProgressionTypeColor.melodic = "Melodic";
+
+ProgressionVersion.oneThreeFourFive = "I-III-IV-V";
+ProgressionVersion.oneTwoThreeFour = "I-II-III-IV";
+ProgressionVersion.oneSixFourFive = "I-VI-IV-V";
+ProgressionVersion.random = "Random";
