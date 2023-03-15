@@ -88,7 +88,6 @@ extension Chord: CustomStringConvertible {
 
 private extension Chord {
 
-    //swiftlint:disable cyclomatic_complexity
     func getChordType() -> ChordType {
 
         switch intervals {
@@ -289,7 +288,6 @@ private extension Chord {
             return .NaN
         }
     }
-    //swiftlint:enable cyclomatic_complexity
 
 }
 
@@ -297,7 +295,6 @@ private extension Chord {
 
 private extension Chord {
 
-    //swiftlint:disable cyclomatic_complexity
     func getIntervals(from type: ChordType) -> [Interval] {
 
         switch type {
@@ -419,6 +416,5 @@ private extension Chord {
             return [.unison, .unison]
         }
     }
-    //swiftlint:enable cyclomatic_complexity
 
 }

@@ -20,7 +20,6 @@ struct Progression {
 
 private extension Progression {
 
-    // swiftlint:disable line_length
     func getChords() -> [Chord] {
 
         switch version {
@@ -34,7 +33,6 @@ private extension Progression {
             return configureChords(first: .allCases.randomElement() ?? .one, second: .allCases.randomElement() ?? .one, third: .allCases.randomElement() ?? .one, fourth: .allCases.randomElement() ?? .one)
         }
     }
-    // swiftlint:enable line_length
 
     func configureChords(first: ScaleStep, second: ScaleStep, third: ScaleStep, fourth: ScaleStep) -> [Chord] {
         let chord1 = getSimpleChord(from: first)
