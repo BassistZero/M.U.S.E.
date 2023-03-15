@@ -352,6 +352,8 @@
 			children = (
 				02572C11298BC44D003B5070 /* NotePickerView.swift */,
 				02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */,
+				02FD3018298BC2FD007CDCB8 /* NotePickerView.xib */,
+				02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
