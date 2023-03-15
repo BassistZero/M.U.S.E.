@@ -13,6 +13,7 @@
 		0217355229227E63006A67B5 /* ScaleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217355129227E63006A67B5 /* ScaleType.swift */; };
 		0217355429227F32006A67B5 /* ScaleStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0217355329227F32006A67B5 /* ScaleStep.swift */; };
 		021C9C2E281DB18B00BDB0A6 /* ChordType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C9C2D281DB18B00BDB0A6 /* ChordType.swift */; };
+		022041CE29C23FD90038121C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022041CD29C23FD90038121C /* SceneDelegate.swift */; };
 		02218D5E28368884004C30B2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02218D5D28368884004C30B2 /* MainTabBarController.swift */; };
 		02218D6228369145004C30B2 /* ChordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02218D6128369145004C30B2 /* ChordViewController.xib */; };
 		022B901628187BD7009ED3F7 /* Octave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B901528187BD7009ED3F7 /* Octave.swift */; };
@@ -140,6 +141,7 @@
 		0217355129227E63006A67B5 /* ScaleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleType.swift; sourceTree = "<group>"; };
 		0217355329227F32006A67B5 /* ScaleStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleStep.swift; sourceTree = "<group>"; };
 		021C9C2D281DB18B00BDB0A6 /* ChordType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordType.swift; sourceTree = "<group>"; };
+		022041CD29C23FD90038121C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		02218D5D28368884004C30B2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		02218D6128369145004C30B2 /* ChordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChordViewController.xib; sourceTree = "<group>"; };
 		022B901528187BD7009ED3F7 /* Octave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Octave.swift; sourceTree = "<group>"; };
@@ -298,11 +300,11 @@
 		027102B02814743000694F3E /* M.U.S.E. */ = {
 			isa = PBXGroup;
 			children = (
-				027102C82814748D00694F3E /* App */,
 				027102C72814748000694F3E /* Models */,
 				027102C62814747D00694F3E /* Controllers */,
 				027102C52814745E00694F3E /* Views */,
 				02B5EB4028EAF17E00D6AF94 /* Samples */,
+				027102C82814748D00694F3E /* Application */,
 				02F2D93B28312C3C0084F8A1 /* Resources */,
 			);
 			path = M.U.S.E.;
@@ -311,7 +313,6 @@
 		027102C52814745E00694F3E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				027102BC2814743200694F3E /* LaunchScreen.storyboard */,
 				02218D6128369145004C30B2 /* ChordViewController.xib */,
 				02FAA7042836A36000E63622 /* ProgressionViewController.xib */,
 				027D6B9F2939E3A900A7E99B /* SavedProgressionsController.xib */,
@@ -353,13 +354,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		027102C82814748D00694F3E /* App */ = {
+		027102C82814748D00694F3E /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				027102BF2814743200694F3E /* Info.plist */,
 				027102B12814743000694F3E /* AppDelegate.swift */,
+				022041CD29C23FD90038121C /* SceneDelegate.swift */,
+				027102BC2814743200694F3E /* LaunchScreen.storyboard */,
 			);
-			path = App;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		02B5EB4028EAF17E00D6AF94 /* Samples */ = {
@@ -742,6 +745,7 @@
 				0217355429227F32006A67B5 /* ScaleStep.swift in Sources */,
 				02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */,
 				02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */,
+				022041CE29C23FD90038121C /* SceneDelegate.swift in Sources */,
 				02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */,
 				02218D5E28368884004C30B2 /* MainTabBarController.swift in Sources */,
 				0217354A292275FB006A67B5 /* Progression.swift in Sources */,
@@ -909,7 +913,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SMNXVGXK4L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = M.U.S.E./App/Info.plist;
+				INFOPLIST_FILE = M.U.S.E./Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -938,7 +942,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SMNXVGXK4L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = M.U.S.E./App/Info.plist;
+				INFOPLIST_FILE = M.U.S.E./Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
