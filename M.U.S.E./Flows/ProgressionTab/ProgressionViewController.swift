@@ -23,7 +23,6 @@ extension ProgressionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupInitialState()
     }
 
@@ -37,7 +36,6 @@ private extension ProgressionViewController {
         configureButtonsText()
         configureProgressionView()
         configureProgressionPlayer()
-        playProgression()
     }
 
     func configureButtonsText() {

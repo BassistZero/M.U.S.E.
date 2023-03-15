@@ -120,10 +120,12 @@ internal enum L10n {
     internal enum Item {
       /// Chord
       internal static let chord = L10n.tr("Localizable", "TabBar.item.chord", fallback: "Chord")
+      /// Favorites
+      internal static let favorites = L10n.tr("Localizable", "TabBar.item.favorites", fallback: "Favorites")
       /// Progression
       internal static let progression = L10n.tr("Localizable", "TabBar.item.progression", fallback: "Progression")
-      /// Saved Progressions
-      internal static let savedProgressions = L10n.tr("Localizable", "TabBar.item.savedProgressions", fallback: "Saved Progressions")
+      /// Music Project
+      internal static let songBuilder = L10n.tr("Localizable", "TabBar.item.songBuilder", fallback: "Music Project")
     }
   }
 }

@@ -26,9 +26,7 @@ final class ChordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupInitialState()
-
     }
 
 }
@@ -118,8 +116,6 @@ private extension ChordViewController {
         configureButtons()
         chord.notes = chord.sortedNotes
         configureLabels()
-        playChord()
-
     }
 
     func configurePickerView() {
@@ -154,7 +150,6 @@ private extension ChordViewController {
         chord = Chord()
     }
 
-    // swiftlint:disable line_length
     func updateUI() {
         if chord.notes == chord.sortedNotes {
             chordLabel.text = "\(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.rootNote.value)\(chord.type)"
@@ -162,7 +157,6 @@ private extension ChordViewController {
             chordLabel.text = "\(L10n.ChordViewController.Text.rootNote): \(chord.rootNote)\n \(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.rootNote.value)\(chord.type)"
         }
     }
-    // swiftlint:enable line_length
 
     func selectAllPickerViewRows() {
         valuePickerView.selectRow(chord.notes[0].value.rawValue, inComponent: 0, animated: true)

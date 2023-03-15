@@ -35,9 +35,10 @@ ChordViewController.Switch.text = "Is polyphony:";
 ProgressionViewController.Buttons.generateProgression = "Generate Progression";
 ProgressionViewController.Buttons.playProgression = "Play Progression";
 
+TabBar.item.songBuilder = "Music Project";
 TabBar.item.chord = "Chord";
 TabBar.item.progression = "Progression";
-TabBar.item.savedProgressions = "Saved Progressions";
+TabBar.item.favorites = "Favorites";
 
 ProgressionType.minor = "Minor";
 ProgressionType.major = "Major";

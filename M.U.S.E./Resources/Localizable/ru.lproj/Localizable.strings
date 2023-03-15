@@ -35,9 +35,10 @@ ChordViewController.Switch.text = "Полифония:";
 ProgressionViewController.Buttons.generateProgression = "Новая Прогрессия";
 ProgressionViewController.Buttons.playProgression = "Сыграть Прогрессию";
 
+TabBar.item.songBuilder = "Проект Песни";
 TabBar.item.chord = "Аккорд";
 TabBar.item.progression = "Прогрессия";
-TabBar.item.savedProgressions = "Сохранённые Прогрессии";
+TabBar.item.favorites = "Избранные";
 
 ProgressionType.minor = "Минор";
 ProgressionType.major = "Мажор";
