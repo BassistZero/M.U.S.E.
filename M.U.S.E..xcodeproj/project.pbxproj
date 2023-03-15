@@ -302,7 +302,6 @@
 			children = (
 				027102C62814747D00694F3E /* Controllers */,
 				027102C52814745E00694F3E /* Views */,
-				02B5EB4028EAF17E00D6AF94 /* Samples */,
 				027102C82814748D00694F3E /* Application */,
 				027102C72814748000694F3E /* Domain */,
 				02F2D93B28312C3C0084F8A1 /* Resources */,
@@ -471,6 +470,7 @@
 		02F2D93B28312C3C0084F8A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				02B5EB4028EAF17E00D6AF94 /* Samples */,
 				02F2D93F28312CB70084F8A1 /* Localizable */,
 			);
 			path = Resources;
