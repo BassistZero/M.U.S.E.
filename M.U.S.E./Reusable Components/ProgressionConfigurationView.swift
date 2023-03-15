@@ -97,7 +97,6 @@ private extension ProgressionConfigurationView {
         }
     }
 
-    //swiftlint:disable cyclomatic_complexity
     func configureType() -> ScaleType {
         switch progressionType.selectedSegmentIndex {
         case 0:
