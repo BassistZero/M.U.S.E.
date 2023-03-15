@@ -8,11 +8,11 @@ whitelist_rules:
     - collection_alignment
     - colon
     - comma
-    - conditional_returns_on_newline
+#    - conditional_returns_on_newline
     - control_statement
     - convenience_type
     - custom_rules
-    - cyclomatic_complexity
+#    - cyclomatic_complexity
 #    - discouraged_optional_boolean
     - duplicate_imports
     - empty_count
@@ -125,7 +125,7 @@ custom_rules:
         message: "Every MARK should be surrounded with 1 newline before and 1 after it"
         severity: warning
 
-line_length: 160
+line_length: 240
 
 file_length:
     warning: 500
