@@ -338,10 +338,10 @@
 		027102B02814743000694F3E /* M.U.S.E. */ = {
 			isa = PBXGroup;
 			children = (
+				0272961F29DC30FC0089D6F6 /* Library */,
 				027102C82814748D00694F3E /* Application */,
 				022041C729C23DDC0038121C /* Flows */,
 				027102C72814748000694F3E /* Domain */,
-				027102C52814745E00694F3E /* Reusable Components */,
 				02F2D93B28312C3C0084F8A1 /* Resources */,
 			);
 			path = M.U.S.E.;
@@ -387,6 +387,14 @@
 				027102BC2814743200694F3E /* LaunchScreen.storyboard */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		0272961F29DC30FC0089D6F6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				027102C52814745E00694F3E /* Reusable Components */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		02B5EB4028EAF17E00D6AF94 /* Samples */ = {
