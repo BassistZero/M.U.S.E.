@@ -40,9 +40,9 @@ MainTabBar.Item.chord = "Аккорд";
 MainTabBar.Item.progression = "Прогрессия";
 MainTabBar.Item.favorites = "Избранные";
 
-SongTabBar.Item.configuration = "Настройка";
+SongTabBar.Item.configuration = "⚙️";
 SongTabBar.Item.structure = "Структура";
-SongTabBar.Item.instruments = "Инструменты";
+SongTabBar.Item.instruments = "🎸🎹🥁";
 SongTabBar.Item.result = "Итог";
 
 ProgressionType.minor = "Минор";

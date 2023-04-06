@@ -156,10 +156,10 @@ internal enum L10n {
   }
   internal enum SongTabBar {
     internal enum Item {
-      /// Settings
-      internal static let configuration = L10n.tr("Localizable", "SongTabBar.Item.configuration", fallback: "Settings")
-      /// Instruments
-      internal static let instruments = L10n.tr("Localizable", "SongTabBar.Item.instruments", fallback: "Instruments")
+      /// ⚙️
+      internal static let configuration = L10n.tr("Localizable", "SongTabBar.Item.configuration", fallback: "⚙️")
+      /// 🎸🎹🥁
+      internal static let instruments = L10n.tr("Localizable", "SongTabBar.Item.instruments", fallback: "🎸🎹🥁")
       /// Result
       internal static let result = L10n.tr("Localizable", "SongTabBar.Item.result", fallback: "Result")
       /// Structure
