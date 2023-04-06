@@ -57,6 +57,17 @@ ProgressionVersion.oneTwoThreeFour = "I-II-III-IV";
 ProgressionVersion.oneSixFourFive = "I-VI-IV-V";
 ProgressionVersion.random = "Случайная";
 
+StructurePart.intro = "Вступление";
+StructurePart.preVerse = "Пред-Куплет";
+StructurePart.verse = "Куплет";
+StructurePart.preChorus = "Пред-Припев";
+StructurePart.chorus = "Припев";
+StructurePart.bridge = "Проигрыш";
+StructurePart.preSolo = "Пред-Соло";
+StructurePart.solo = "Соло";
+StructurePart.preOutro = "Пред-Концовка";
+StructurePart.outro = "Концовка";
+
 SongBuilder.Main.addNewSong = "Добавить Новую Песню";
 
 SongBuilder.Main.templateSongName = "Песня";

@@ -58,6 +58,18 @@ internal enum L10n {
     /// Unison
     internal static let unison = L10n.tr("Localizable", "Interval.unison", fallback: "Unison")
   }
+  internal enum MainTabBar {
+    internal enum Item {
+      /// Chord
+      internal static let chord = L10n.tr("Localizable", "MainTabBar.Item.chord", fallback: "Chord")
+      /// Favorites
+      internal static let favorites = L10n.tr("Localizable", "MainTabBar.Item.favorites", fallback: "Favorites")
+      /// Progression
+      internal static let progression = L10n.tr("Localizable", "MainTabBar.Item.progression", fallback: "Progression")
+      /// Music Project
+      internal static let songBuilder = L10n.tr("Localizable", "MainTabBar.Item.songBuilder", fallback: "Music Project")
+    }
+  }
   internal enum Note {
     /// A
     internal static let a = L10n.tr("Localizable", "Note.a", fallback: "A")
@@ -153,6 +165,28 @@ internal enum L10n {
       /// Structure
       internal static let structure = L10n.tr("Localizable", "SongTabBar.Item.structure", fallback: "Structure")
     }
+  }
+  internal enum StructurePart {
+    /// Bridge
+    internal static let bridge = L10n.tr("Localizable", "StructurePart.bridge", fallback: "Bridge")
+    /// Chorus
+    internal static let chorus = L10n.tr("Localizable", "StructurePart.chorus", fallback: "Chorus")
+    /// Intro
+    internal static let intro = L10n.tr("Localizable", "StructurePart.intro", fallback: "Intro")
+    /// Outro
+    internal static let outro = L10n.tr("Localizable", "StructurePart.outro", fallback: "Outro")
+    /// Pre-Chorus
+    internal static let preChorus = L10n.tr("Localizable", "StructurePart.preChorus", fallback: "Pre-Chorus")
+    /// Pre-Outro
+    internal static let preOutro = L10n.tr("Localizable", "StructurePart.preOutro", fallback: "Pre-Outro")
+    /// Pre-Solo
+    internal static let preSolo = L10n.tr("Localizable", "StructurePart.preSolo", fallback: "Pre-Solo")
+    /// Pre-Verse
+    internal static let preVerse = L10n.tr("Localizable", "StructurePart.preVerse", fallback: "Pre-Verse")
+    /// Solo
+    internal static let solo = L10n.tr("Localizable", "StructurePart.solo", fallback: "Solo")
+    /// Verse
+    internal static let verse = L10n.tr("Localizable", "StructurePart.verse", fallback: "Verse")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
