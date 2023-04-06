@@ -46,6 +46,8 @@
 		028DE88629C473C0003671D0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DE88529C473C0003671D0 /* Time.swift */; };
 		02A9F15D29DEF50B00B6D46B /* SongBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9F15B29DEF50B00B6D46B /* SongBuilderViewController.swift */; };
 		02A9F15E29DEF50B00B6D46B /* SongBuilderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A9F15C29DEF50B00B6D46B /* SongBuilderViewController.xib */; };
+		02A9F16229DEF70B00B6D46B /* InstrumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */; };
+		02A9F16329DEF70B00B6D46B /* InstrumentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */; };
 		02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */; };
 		02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */; };
 		02DDDDC7299F617800D207B8 /* ProgressionConfigurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */; };
@@ -157,6 +159,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020F8E8929D34C5B006B4E7A /* SongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		020F8E8A29D34C5B006B4E7A /* SongsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongsViewController.xib; sourceTree = "<group>"; };
+		020F8E8E29D34E20006B4E7A /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		020F8E8F29D34E20006B4E7A /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		02173549292275FB006A67B5 /* Progression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progression.swift; sourceTree = "<group>"; };
 		0217354D29227752006A67B5 /* ProgressionVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionVersion.swift; sourceTree = "<group>"; };
 		0217354F29227E21006A67B5 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 		028DE88529C473C0003671D0 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		02A9F15B29DEF50B00B6D46B /* SongBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongBuilderViewController.swift; sourceTree = "<group>"; };
 		02A9F15C29DEF50B00B6D46B /* SongBuilderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongBuilderViewController.xib; sourceTree = "<group>"; };
+		02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsTableViewCell.swift; sourceTree = "<group>"; };
+		02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentsTableViewCell.xib; sourceTree = "<group>"; };
 		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
 		02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionConfigurationView.swift; sourceTree = "<group>"; };
 		02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressionConfigurationView.xib; sourceTree = "<group>"; };
@@ -510,6 +518,15 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		02A9F15F29DEF6E900B6D46B /* Instruments */ = {
+			isa = PBXGroup;
+			children = (
+				02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */,
+				02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */,
+			);
+			path = Instruments;
+			sourceTree = "<group>";
+		};
 		02B5EB4028EAF17E00D6AF94 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
@@ -819,6 +836,7 @@
 				E8E30A2928F9DEFF007FF597 /* A#5.mp3 in Resources */,
 				E8E30A3528F9DEFF007FF597 /* G#1.mp3 in Resources */,
 				E8E30A5228F9DEFF007FF597 /* G#3.mp3 in Resources */,
+				02A9F16329DEF70B00B6D46B /* InstrumentsTableViewCell.xib in Resources */,
 				E8E30A2E28F9DEFF007FF597 /* E3.mp3 in Resources */,
 				E8E30A0628F9DEFF007FF597 /* G5.mp3 in Resources */,
 				E8E30A2028F9DEFF007FF597 /* E1.mp3 in Resources */,
@@ -918,6 +936,7 @@
 				0217355429227F32006A67B5 /* ScaleStep.swift in Sources */,
 				02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */,
 				02E183A329D44C3900F968F1 /* SetupTableViewCell.swift in Sources */,
+				02A9F16229DEF70B00B6D46B /* InstrumentsTableViewCell.swift in Sources */,
 				022FF1CE29C23A5900CEDD5E /* StructureTableViewCell.swift in Sources */,
 				028DE88429C47280003671D0 /* Beat.swift in Sources */,
 				028DE87929C47023003671D0 /* SongPart.swift in Sources */,
