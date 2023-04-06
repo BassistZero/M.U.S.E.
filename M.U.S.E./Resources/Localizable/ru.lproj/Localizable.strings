@@ -43,6 +43,8 @@ MainTabBar.Item.favorites = "Избранные";
 SongTabBar.Item.configuration = "Настройка";
 SongTabBar.Item.structure = "Структура";
 SongTabBar.Item.instruments = "Инструменты";
+SongTabBar.Item.result = "Итог";
+
 ProgressionType.minor = "Минор";
 ProgressionType.major = "Мажор";
 

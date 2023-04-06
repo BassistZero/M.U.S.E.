@@ -55,6 +55,8 @@
 		02E183A429D44C3900F968F1 /* SetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E183A229D44C3900F968F1 /* SetupTableViewCell.xib */; };
 		02F2D94428312D6E0084F8A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02F2D94628312D6E0084F8A1 /* Localizable.strings */; };
 		02F2D94D283130580084F8A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F2D94C283130580084F8A1 /* Localizable.swift */; };
+		02F48AD329DF0A6E006D4C5C /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F48AD129DF0A6E006D4C5C /* ResultTableViewCell.swift */; };
+		02F48AD429DF0A6E006D4C5C /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02F48AD229DF0A6E006D4C5C /* ResultTableViewCell.xib */; };
 		02F4DE5B2823034D0002B9DC /* NoteValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F4DE5A2823034D0002B9DC /* NoteValue.swift */; };
 		02FAA7032836A2E100E63622 /* ProgressionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FAA7022836A2E100E63622 /* ProgressionViewController.swift */; };
 		02FAA7052836A36000E63622 /* ProgressionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02FAA7042836A36000E63622 /* ProgressionViewController.xib */; };
@@ -210,6 +212,8 @@
 		02F2D94528312D6E0084F8A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94728312D8E0084F8A1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		02F2D94C283130580084F8A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		02F48AD129DF0A6E006D4C5C /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		02F48AD229DF0A6E006D4C5C /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		02F4DE5A2823034D0002B9DC /* NoteValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteValue.swift; sourceTree = "<group>"; };
 		02FAA7022836A2E100E63622 /* ProgressionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionViewController.swift; sourceTree = "<group>"; };
 		02FAA7042836A36000E63622 /* ProgressionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressionViewController.xib; sourceTree = "<group>"; };
@@ -652,6 +656,15 @@
 			path = Setup;
 			sourceTree = "<group>";
 		};
+		02F2051C29DF0469005ECC1E /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				02F48AD129DF0A6E006D4C5C /* ResultTableViewCell.swift */,
+				02F48AD229DF0A6E006D4C5C /* ResultTableViewCell.xib */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		02F2D93B28312C3C0084F8A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +835,7 @@
 				E8E30A5028F9DEFF007FF597 /* F#6.mp3 in Resources */,
 				E8E30A5328F9DEFF007FF597 /* G#7.mp3 in Resources */,
 				02A9F15E29DEF50B00B6D46B /* SongBuilderViewController.xib in Resources */,
+				02F48AD429DF0A6E006D4C5C /* ResultTableViewCell.xib in Resources */,
 				E8E30A5128F9DEFF007FF597 /* F0.mp3 in Resources */,
 				E8E30A5D28F9DEFF007FF597 /* E7.mp3 in Resources */,
 				E8E30A1128F9DEFF007FF597 /* F#7.mp3 in Resources */,
@@ -946,6 +960,7 @@
 				028DE87529C46E42003671D0 /* BeatLength.swift in Sources */,
 				022041CE29C23FD90038121C /* SceneDelegate.swift in Sources */,
 				020F8E9029D34E20006B4E7A /* SongTableViewCell.swift in Sources */,
+				02F48AD329DF0A6E006D4C5C /* ResultTableViewCell.swift in Sources */,
 				028DE87129C46D3E003671D0 /* Setup.swift in Sources */,
 				028DE87329C46E1E003671D0 /* Genre.swift in Sources */,
 				02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */,
