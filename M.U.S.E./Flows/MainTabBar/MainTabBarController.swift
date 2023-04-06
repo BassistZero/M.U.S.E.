@@ -16,7 +16,7 @@ final class MainTabBarController: UITabBarController {
 private extension MainTabBarController {
 
     func setupInitialState() {
-        let songBuilderTab = SongBuilderViewController()
+        let songBuilderTab = UINavigationController(rootViewController: SongsViewController())
         let chordTab = ChordViewController()
         let progressionTab = ProgressionViewController()
 
