@@ -51,3 +51,13 @@ ProgressionVersion.oneThreeFourFive = "I-III-IV-V";
 ProgressionVersion.oneTwoThreeFour = "I-II-III-IV";
 ProgressionVersion.oneSixFourFive = "I-VI-IV-V";
 ProgressionVersion.random = "Random";
+
+SongBuilder.Main.addNewSong = "Add New Song";
+
+SongBuilder.Main.templateSongName = "Song";
+
+SongBuilder.Main.Alert.title = "Enter the Song Name";
+SongBuilder.Main.Alert.placeholder = "Song Name";
+SongBuilder.Main.Alert.cancel = "Cancel";
+SongBuilder.Main.Alert.proceedWithDummyName = "Decide Later";
+SongBuilder.Main.Alert.proceedWithSongName = "OK";

@@ -116,16 +116,42 @@ internal enum L10n {
       internal static let playProgression = L10n.tr("Localizable", "ProgressionViewController.Buttons.playProgression", fallback: "Play Progression")
     }
   }
-  internal enum TabBar {
+  internal enum SongBuilder {
+    internal enum Detail {
+      /// Add New Structure Part
+      internal static let addNewStructurePart = L10n.tr("Localizable", "SongBuilder.Detail.addNewStructurePart", fallback: "Add New Structure Part")
+      /// Structure Part
+      internal static let menuTitle = L10n.tr("Localizable", "SongBuilder.Detail.menuTitle", fallback: "Structure Part")
+    }
+    internal enum Main {
+      /// Add New Song
+      internal static let addNewSong = L10n.tr("Localizable", "SongBuilder.Main.addNewSong", fallback: "Add New Song")
+      /// Song
+      internal static let templateSongName = L10n.tr("Localizable", "SongBuilder.Main.templateSongName", fallback: "Song")
+      internal enum Alert {
+        /// Cancel
+        internal static let cancel = L10n.tr("Localizable", "SongBuilder.Main.Alert.cancel", fallback: "Cancel")
+        /// Song Name
+        internal static let placeholder = L10n.tr("Localizable", "SongBuilder.Main.Alert.placeholder", fallback: "Song Name")
+        /// Decide Later
+        internal static let proceedWithDummyName = L10n.tr("Localizable", "SongBuilder.Main.Alert.proceedWithDummyName", fallback: "Decide Later")
+        /// OK
+        internal static let proceedWithSongName = L10n.tr("Localizable", "SongBuilder.Main.Alert.proceedWithSongName", fallback: "OK")
+        /// Enter the Song Name
+        internal static let title = L10n.tr("Localizable", "SongBuilder.Main.Alert.title", fallback: "Enter the Song Name")
+      }
+    }
+  }
+  internal enum SongTabBar {
     internal enum Item {
-      /// Chord
-      internal static let chord = L10n.tr("Localizable", "TabBar.item.chord", fallback: "Chord")
-      /// Favorites
-      internal static let favorites = L10n.tr("Localizable", "TabBar.item.favorites", fallback: "Favorites")
-      /// Progression
-      internal static let progression = L10n.tr("Localizable", "TabBar.item.progression", fallback: "Progression")
-      /// Music Project
-      internal static let songBuilder = L10n.tr("Localizable", "TabBar.item.songBuilder", fallback: "Music Project")
+      /// Settings
+      internal static let configuration = L10n.tr("Localizable", "SongTabBar.Item.configuration", fallback: "Settings")
+      /// Instruments
+      internal static let instruments = L10n.tr("Localizable", "SongTabBar.Item.instruments", fallback: "Instruments")
+      /// Result
+      internal static let result = L10n.tr("Localizable", "SongTabBar.Item.result", fallback: "Result")
+      /// Structure
+      internal static let structure = L10n.tr("Localizable", "SongTabBar.Item.structure", fallback: "Structure")
     }
   }
 }

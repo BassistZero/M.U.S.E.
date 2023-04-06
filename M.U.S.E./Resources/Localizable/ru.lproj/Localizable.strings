@@ -51,3 +51,13 @@ ProgressionVersion.oneThreeFourFive = "I-III-IV-V";
 ProgressionVersion.oneTwoThreeFour = "I-II-III-IV";
 ProgressionVersion.oneSixFourFive = "I-VI-IV-V";
 ProgressionVersion.random = "Случайная";
+
+SongBuilder.Main.addNewSong = "Добавить Новую Песню";
+
+SongBuilder.Main.templateSongName = "Песня";
+
+SongBuilder.Main.Alert.title = "Введите Название Песни";
+SongBuilder.Main.Alert.placeholder = "Название Песни";
+SongBuilder.Main.Alert.cancel = "Отменить";
+SongBuilder.Main.Alert.proceedWithDummyName = "Решить Позже";
+SongBuilder.Main.Alert.proceedWithSongName = "ОК";
