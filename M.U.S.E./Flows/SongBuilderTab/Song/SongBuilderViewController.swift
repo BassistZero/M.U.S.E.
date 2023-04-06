@@ -27,14 +27,17 @@ private extension SongBuilderViewController {
 
     func setupSegmentedControl() {
         tabsSegmentedControl.setTitle(L10n.SongTabBar.Item.configuration, forSegmentAt: Tabs.configuration)
+        tabsSegmentedControl.setTitle(L10n.SongTabBar.Item.structure, forSegmentAt: Tabs.structure)
 
         tabsSegmentedControl.addTarget(self, action: #selector(changeTab), for: .valueChanged)
     }
 
     func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
 
         tableView.register(.init(nibName: "\(SetupTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(SetupTableViewCell.self)")
+        tableView.register(.init(nibName: "\(StructureTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(StructureTableViewCell.self)")
 
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
@@ -58,6 +61,22 @@ extension SongBuilderViewController: UITableViewDataSource {
 
 }
 
+// MARK: - UITableViewDelegate
+
+extension SongBuilderViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let identifier = getIdentifier() else { return .init() }
+
+        if identifier == "\(StructureTableViewCell.self)" {
+            return tableView.frame.height
+        }
+
+        return UITableView.automaticDimension
+    }
+
+}
+
 // MARK: - Actions
 
 @objc
@@ -76,6 +95,7 @@ private extension SongBuilderViewController {
     func getIdentifier() -> String? {
         switch tabsSegmentedControl.selectedSegmentIndex {
         case Tabs.configuration: return "\(SetupTableViewCell.self)"
+        case Tabs.structure: return "\(StructureTableViewCell.self)"
 
         default: return nil
         }
@@ -89,6 +109,7 @@ private extension SongBuilderViewController {
 
     enum Tabs {
         static let configuration = 0
+        static let structure = 1
     }
 
 }

@@ -41,6 +41,7 @@ MainTabBar.Item.progression = "Progression";
 MainTabBar.Item.favorites = "Favorites";
 
 SongTabBar.Item.configuration = "Settings";
+SongTabBar.Item.structure = "Structure";
 ProgressionType.minor = "Minor";
 ProgressionType.major = "Major";
 
@@ -62,3 +63,6 @@ SongBuilder.Main.Alert.placeholder = "Song Name";
 SongBuilder.Main.Alert.cancel = "Cancel";
 SongBuilder.Main.Alert.proceedWithDummyName = "Decide Later";
 SongBuilder.Main.Alert.proceedWithSongName = "OK";
+
+SongBuilder.Detail.addNewStructurePart = "Add New Structure Part";
+SongBuilder.Detail.menuTitle = "Structure Part";

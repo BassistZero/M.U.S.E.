@@ -41,6 +41,7 @@ MainTabBar.Item.progression = "Прогрессия";
 MainTabBar.Item.favorites = "Избранные";
 
 SongTabBar.Item.configuration = "Настройка";
+SongTabBar.Item.structure = "Структура";
 ProgressionType.minor = "Минор";
 ProgressionType.major = "Мажор";
 
@@ -62,3 +63,6 @@ SongBuilder.Main.Alert.placeholder = "Название Песни";
 SongBuilder.Main.Alert.cancel = "Отменить";
 SongBuilder.Main.Alert.proceedWithDummyName = "Решить Позже";
 SongBuilder.Main.Alert.proceedWithSongName = "ОК";
+
+SongBuilder.Detail.addNewStructurePart = "Добавить Новую Структуру";
+SongBuilder.Detail.menuTitle = "Структурная Часть";
