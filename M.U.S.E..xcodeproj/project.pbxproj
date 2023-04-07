@@ -340,14 +340,14 @@
 			path = StructurePartTableViewCell;
 			sourceTree = "<group>";
 		};
-		020F8E8729D34C24006B4E7A /* Songs */ = {
+		020F8E8729D34C24006B4E7A /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				020F8E9229D3515D006B4E7A /* Cells */,
 				020F8E8929D34C5B006B4E7A /* SongsViewController.swift */,
 				020F8E8A29D34C5B006B4E7A /* SongsViewController.xib */,
 			);
-			path = Songs;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		020F8E8829D34C2C006B4E7A /* Structure */ = {
@@ -399,8 +399,8 @@
 		022041C929C23F710038121C /* SongBuilderTab */ = {
 			isa = PBXGroup;
 			children = (
-				020F8E8729D34C24006B4E7A /* Songs */,
-				02E1839D29D4485900F968F1 /* Song */,
+				020F8E8729D34C24006B4E7A /* Main */,
+				02E1839D29D4485900F968F1 /* Detail */,
 			);
 			path = SongBuilderTab;
 			sourceTree = "<group>";
@@ -634,7 +634,7 @@
 			path = Samples;
 			sourceTree = "<group>";
 		};
-		02E1839D29D4485900F968F1 /* Song */ = {
+		02E1839D29D4485900F968F1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
 				02A9F15B29DEF50B00B6D46B /* SongBuilderViewController.swift */,
@@ -644,7 +644,7 @@
 				02A9F15F29DEF6E900B6D46B /* Instruments */,
 				02F2051C29DF0469005ECC1E /* Result */,
 			);
-			path = Song;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		02E183A029D44C2900F968F1 /* Setup */ = {
