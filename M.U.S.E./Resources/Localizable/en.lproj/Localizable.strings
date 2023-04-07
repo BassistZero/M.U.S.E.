@@ -70,13 +70,18 @@ StructurePart.outro = "Outro";
 
 SongBuilder.Main.addNewSong = "Add New Song";
 
+SongBuilder.Main.DeletionAlert.title = "Are you sure?";
+SongBuilder.Main.DeletionAlert.message = "This data will be erased for good";
+SongBuilder.Main.DeletionAlert.cancel = "Cancel";
+SongBuilder.Main.DeletionAlert.ok = "Yes, Delete It";
+
 SongBuilder.Main.templateSongName = "Song";
 
-SongBuilder.Main.Alert.title = "Enter the Song Name";
-SongBuilder.Main.Alert.placeholder = "Song Name";
-SongBuilder.Main.Alert.cancel = "Cancel";
-SongBuilder.Main.Alert.proceedWithDummyName = "Decide Later";
-SongBuilder.Main.Alert.proceedWithSongName = "OK";
+SongBuilder.Main.AddingAlert.title = "Enter the Song Name";
+SongBuilder.Main.AddingAlert.placeholder = "Song Name";
+SongBuilder.Main.AddingAlert.cancel = "Cancel";
+SongBuilder.Main.AddingAlert.proceedWithDummyName = "Decide Later";
+SongBuilder.Main.AddingAlert.proceedWithSongName = "OK";
 
 SongBuilder.Detail.addNewStructurePart = "Add New Structure Part";
 SongBuilder.Detail.menuTitle = "Structure Part";

@@ -140,17 +140,27 @@ internal enum L10n {
       internal static let addNewSong = L10n.tr("Localizable", "SongBuilder.Main.addNewSong", fallback: "Add New Song")
       /// Song
       internal static let templateSongName = L10n.tr("Localizable", "SongBuilder.Main.templateSongName", fallback: "Song")
-      internal enum Alert {
+      internal enum AddingAlert {
         /// Cancel
-        internal static let cancel = L10n.tr("Localizable", "SongBuilder.Main.Alert.cancel", fallback: "Cancel")
+        internal static let cancel = L10n.tr("Localizable", "SongBuilder.Main.AddingAlert.cancel", fallback: "Cancel")
         /// Song Name
-        internal static let placeholder = L10n.tr("Localizable", "SongBuilder.Main.Alert.placeholder", fallback: "Song Name")
+        internal static let placeholder = L10n.tr("Localizable", "SongBuilder.Main.AddingAlert.placeholder", fallback: "Song Name")
         /// Decide Later
-        internal static let proceedWithDummyName = L10n.tr("Localizable", "SongBuilder.Main.Alert.proceedWithDummyName", fallback: "Decide Later")
+        internal static let proceedWithDummyName = L10n.tr("Localizable", "SongBuilder.Main.AddingAlert.proceedWithDummyName", fallback: "Decide Later")
         /// OK
-        internal static let proceedWithSongName = L10n.tr("Localizable", "SongBuilder.Main.Alert.proceedWithSongName", fallback: "OK")
+        internal static let proceedWithSongName = L10n.tr("Localizable", "SongBuilder.Main.AddingAlert.proceedWithSongName", fallback: "OK")
         /// Enter the Song Name
-        internal static let title = L10n.tr("Localizable", "SongBuilder.Main.Alert.title", fallback: "Enter the Song Name")
+        internal static let title = L10n.tr("Localizable", "SongBuilder.Main.AddingAlert.title", fallback: "Enter the Song Name")
+      }
+      internal enum DeletionAlert {
+        /// Cancel
+        internal static let cancel = L10n.tr("Localizable", "SongBuilder.Main.DeletionAlert.cancel", fallback: "Cancel")
+        /// This data will be erased for good
+        internal static let message = L10n.tr("Localizable", "SongBuilder.Main.DeletionAlert.message", fallback: "This data will be erased for good")
+        /// Yes, Delete It
+        internal static let ok = L10n.tr("Localizable", "SongBuilder.Main.DeletionAlert.ok", fallback: "Yes, Delete It")
+        /// Are you sure?
+        internal static let title = L10n.tr("Localizable", "SongBuilder.Main.DeletionAlert.title", fallback: "Are you sure?")
       }
     }
   }

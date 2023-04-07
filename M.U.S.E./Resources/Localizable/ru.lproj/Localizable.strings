@@ -70,13 +70,18 @@ StructurePart.outro = "Концовка";
 
 SongBuilder.Main.addNewSong = "Добавить Новую Песню";
 
+SongBuilder.Main.DeletionAlert.title = "Вы уверены?";
+SongBuilder.Main.DeletionAlert.message = "Данные будут удалены навсегда";
+SongBuilder.Main.DeletionAlert.cancel = "Отменить";
+SongBuilder.Main.DeletionAlert.ok = "Да, Удалить";
+
 SongBuilder.Main.templateSongName = "Песня";
 
-SongBuilder.Main.Alert.title = "Введите Название Песни";
-SongBuilder.Main.Alert.placeholder = "Название Песни";
-SongBuilder.Main.Alert.cancel = "Отменить";
-SongBuilder.Main.Alert.proceedWithDummyName = "Решить Позже";
-SongBuilder.Main.Alert.proceedWithSongName = "ОК";
+SongBuilder.Main.AddingAlert.title = "Введите Название Песни";
+SongBuilder.Main.AddingAlert.placeholder = "Название Песни";
+SongBuilder.Main.AddingAlert.cancel = "Отменить";
+SongBuilder.Main.AddingAlert.proceedWithDummyName = "Решить Позже";
+SongBuilder.Main.AddingAlert.proceedWithSongName = "ОК";
 
 SongBuilder.Detail.addNewStructurePart = "Добавить Новую Структуру";
 SongBuilder.Detail.menuTitle = "Структурная Часть";
