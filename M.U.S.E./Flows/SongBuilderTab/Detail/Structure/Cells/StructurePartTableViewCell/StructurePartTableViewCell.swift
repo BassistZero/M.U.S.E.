@@ -10,6 +10,17 @@ final class StructurePartTableViewCell: UITableViewCell {
     @IBOutlet private weak var repeatingLabel: UILabel!
     @IBOutlet private weak var repeatingStepper: UIStepper!
 
+    // MARK: - Public Properties
+
+    var title: String? {
+        print(titleName)
+        return titleName
+    }
+
+    // MARK: - Private Properties
+
+    private var titleName = "Intro"
+
     // MARK: - UITableViewCell
 
     override func awakeFromNib() {
@@ -32,11 +43,17 @@ private extension StructurePartTableViewCell {
     func setupButtons() {
         var actions: [UIAction] = []
 
-        StructurePart.allCases.forEach { actions.append(.init(title: $0.description, state: .on, handler: { action in })) }
+        StructurePart.allCases.forEach { structurePart in
+            actions.append(.init(title: structurePart.description, state: .on, handler: { _ in
+                self.titleName = structurePart.description
+            }))
+
+        }
 
         let menu = UIMenu(title: L10n.SongBuilder.Detail.menuTitle, identifier: nil, options: [], children: actions)
 
         structurePartButton.menu = menu
+        structurePartButton.showsMenuAsPrimaryAction = true
     }
 
     func setupLabels() {
