@@ -52,8 +52,31 @@ struct Song {
         songParts.append(songPart)
     }
 
-    func getAllSongParts() -> [SongPart]? {
+    func getAllSongParts() -> [SongPart] {
         return songParts
+    }
+
+}
+
+// MARK: - CustomStringConvertible
+
+extension Song: CustomStringConvertible {
+
+    var description: String {
+        return
+            """
+            Name: \(name ?? "No name")
+            Genre: \(genre)
+            Key: \(key)
+            Time: \(time)
+            Tempo: \(tempo)
+            Structure: \(structure)
+            Instruments: \(instruments)
+
+            Song Parts:
+            
+            \(getAllSongParts())
+            """
     }
 
 }
