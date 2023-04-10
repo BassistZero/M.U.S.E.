@@ -11,7 +11,11 @@ final class ProgressionConfigurationView: UIView {
     @IBOutlet private weak var progressionTypeColor: UISegmentedControl!
     @IBOutlet private weak var progressionVersion: UISegmentedControl!
 
-    // MARK: - Properties
+    // MARK: - Public Events
+
+    var didTapped: (() -> Void)?
+
+    // MARK: - Public Properties
 
     var progression: Progression? {
         configureProgression()
@@ -41,10 +45,16 @@ final class ProgressionConfigurationView: UIView {
 private extension ProgressionConfigurationView {
 
     func configureAppearance() {
+        configureEvents()
         configureProgressionTypeText()
         configureProgressionTypeColorText()
         configureProgressionVersionText()
 
+    }
+
+    func configureEvents() {
+        notePickerView.didTapped = didTapped
+        progressionType.addTarget(self, action: #selector(updateSong), for: .valueChanged)
     }
 
     func configureProgressionTypeText() {
@@ -137,6 +147,17 @@ private extension ProgressionConfigurationView {
 
         addSubview(contentView)
         contentView.frame = bounds
+    }
+
+}
+
+// MARK: - Private Actions
+
+@objc
+private extension ProgressionConfigurationView {
+
+    func updateSong() {
+        didTapped?()
     }
 
 }

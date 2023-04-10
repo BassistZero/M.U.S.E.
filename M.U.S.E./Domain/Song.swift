@@ -1,4 +1,4 @@
-struct Song {
+final class Song {
 
     // MARK: - Public Properties
 
@@ -16,7 +16,7 @@ struct Song {
 
     // MARK: - Inits
 
-    init(instruments: [Instrument]? = nil, structure: [StructurePart]? = nil, named name: String, setup: Setup? = nil) {
+    init(instruments: [Instrument]? = nil, structure: [StructurePart]? = nil, named name: String? = nil, setup: Setup? = nil) {
         self.instruments = instruments
         self.structure = structure
         self.name = name
@@ -48,7 +48,7 @@ struct Song {
         return results
     }
 
-    mutating func addSongPart(_ songPart: SongPart) {
+    func addSongPart(_ songPart: SongPart) {
         songParts.append(songPart)
     }
 
@@ -65,13 +65,13 @@ extension Song: CustomStringConvertible {
     var description: String {
         return
             """
-            Name: \(name ?? "No name")
-            Genre: \(String(describing: genre))
-            Key: \(String(describing: key))
+            Name: \(name ?? "")
+            Genre: \(genre?.description ?? "")
+            Key: \(key?.description ?? "")
             Time: \(String(describing: time))
             Tempo: \(String(describing: tempo))
-            Structure: \(String(describing: structure))
-            Instruments: \(String(describing: instruments))
+            Structure: \(structure?.description.dropFirst().dropLast() ?? "")
+            Instruments: \(instruments?.description.dropFirst().dropLast() ?? "")
 
             Song Parts:
 

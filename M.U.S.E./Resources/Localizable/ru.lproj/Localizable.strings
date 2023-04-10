@@ -24,6 +24,12 @@ Interval.majorSixth = "Большая Секста";
 Interval.minorSeventh = "Малая Септима";
 Interval.majorSeventh = "Большая Септима";
 
+Key.major = "Мажор";
+Key.minor = "Минор";
+
+Genre.metal = "Метал";
+Genre.rock = "Рок";
+
 Instrument.guitar = "Гитара";
 Instrument.bass = "Бас";
 Instrument.keyboard = "Клавишные";

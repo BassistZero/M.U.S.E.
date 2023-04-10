@@ -10,6 +10,10 @@ final class NotePickerView: UIView {
     @IBOutlet private weak var fSharpBNotes: UISegmentedControl!
     @IBOutlet private weak var octavePicker: UISegmentedControl!
 
+    // MARK: - Public Events
+
+    var didTapped: (() -> Void)?
+
     // MARK: - Public Properties
 
     var selectedNoteValue: NoteValue = .c
@@ -19,7 +23,7 @@ final class NotePickerView: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureAppearance()
+        setupInitialState()
     }
 
     override init(frame: CGRect) {
@@ -70,21 +74,43 @@ final class NotePickerView: UIView {
         }
     }
 
-    // MARK: - Configuration
+}
 
-    private func configureAppearance() {
+// MARK: - Configuration
+
+private extension NotePickerView {
+
+    func setupInitialState() {
+        configureAppearance()
+
+        cFNotes.addTarget(self, action: #selector(updateNote), for: .valueChanged)
+        fSharpBNotes.addTarget(self, action: #selector(updateNote), for: .valueChanged)
+    }
+
+    func configureAppearance() {
         cFNotes.selectedSegmentIndex = 0
         fSharpBNotes.selectedSegmentIndex = UISegmentedControl.noSegment
         octavePicker.selectedSegmentIndex = 4
     }
 
-    private func commonInit() {
+    func commonInit() {
         let bundle = Bundle(for: NotePickerView.self)
         let nib = UINib(nibName: "\(NotePickerView.self)", bundle: bundle)
         nib.instantiate(withOwner: self)
 
         addSubview(contentView)
         contentView.frame = bounds
+    }
+
+}
+
+// MARK: - Private Actions
+
+@objc
+private extension NotePickerView {
+
+    func updateNote() {
+        didTapped?()
     }
 
 }

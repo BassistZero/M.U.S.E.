@@ -34,6 +34,8 @@ private extension SongBuilderViewController {
     func setupInitialState() {
         setupSegmentedControl()
         setupTableView()
+
+        song?.key = .init(value: .c, color: .minor)
     }
 
     func setupSegmentedControl() {

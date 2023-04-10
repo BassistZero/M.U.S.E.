@@ -32,6 +32,12 @@ internal enum L10n {
       internal static let rootNote = L10n.tr("Localizable", "ChordViewController.Text.rootNote", fallback: "Root")
     }
   }
+  internal enum Genre {
+    /// Metal
+    internal static let metal = L10n.tr("Localizable", "Genre.metal", fallback: "Metal")
+    /// Rock
+    internal static let rock = L10n.tr("Localizable", "Genre.rock", fallback: "Rock")
+  }
   internal enum Instrument {
     /// Bass
     internal static let bass = L10n.tr("Localizable", "Instrument.bass", fallback: "Bass")
@@ -67,6 +73,12 @@ internal enum L10n {
     internal static let tritone = L10n.tr("Localizable", "Interval.tritone", fallback: "Tritone")
     /// Unison
     internal static let unison = L10n.tr("Localizable", "Interval.unison", fallback: "Unison")
+  }
+  internal enum Key {
+    /// Major
+    internal static let major = L10n.tr("Localizable", "Key.major", fallback: "Major")
+    /// Minor
+    internal static let minor = L10n.tr("Localizable", "Key.minor", fallback: "Minor")
   }
   internal enum MainTabBar {
     internal enum Item {

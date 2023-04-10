@@ -24,6 +24,12 @@ Interval.majorSixth = "Major Sixth";
 Interval.minorSeventh = "Minor Seventh";
 Interval.majorSeventh = "Major Seventh";
 
+Key.major = "Major";
+Key.minor = "Minor";
+
+Genre.metal = "Metal";
+Genre.rock = "Rock";
+
 Instrument.guitar = "Guitar";
 Instrument.bass = "Bass";
 Instrument.keyboard = "Keyboard";
