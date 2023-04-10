@@ -16,6 +16,11 @@ final class MainTabBarController: UITabBarController {
 private extension MainTabBarController {
 
     func setupInitialState() {
+        configure()
+        configureAppearance()
+    }
+
+    func configure() {
         let songBuilderTab = UINavigationController(rootViewController: SongsViewController())
         let chordTab = ChordViewController()
         let progressionTab = ProgressionViewController()
@@ -30,7 +35,13 @@ private extension MainTabBarController {
         chordTab.tabBarItem.image = .init(systemName: "music.note")
 
         viewControllers = [songBuilderTab, progressionTab, chordTab]
+    }
 
+    func configureAppearance() {
+        tabBar.layer.borderWidth = 1
+        tabBar.layer.borderColor = UIColor.gray.cgColor
+        tabBar.layer.masksToBounds = true
+        tabBar.backgroundColor = .init(named: "systemWhite")
     }
 
 }
