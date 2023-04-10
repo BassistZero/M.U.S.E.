@@ -21,7 +21,7 @@ private extension MainTabBarController {
         let progressionTab = ProgressionViewController()
 
         songBuilderTab.tabBarItem.title = L10n.MainTabBar.Item.songBuilder
-        songBuilderTab.tabBarItem.image = .init(systemName: "compass.drawing")
+        songBuilderTab.tabBarItem.image = .init(systemName: "briefcase.fill")
 
         progressionTab.tabBarItem.title = L10n.MainTabBar.Item.progression
         progressionTab.tabBarItem.image = .init(systemName: "music.quarternote.3")

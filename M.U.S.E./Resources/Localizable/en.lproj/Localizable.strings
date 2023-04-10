@@ -35,7 +35,7 @@ ChordViewController.Switch.text = "Is polyphony:";
 ProgressionViewController.Buttons.generateProgression = "Generate Progression";
 ProgressionViewController.Buttons.playProgression = "Play Progression";
 
-MainTabBar.Item.songBuilder = "Music Project";
+MainTabBar.Item.songBuilder = "Song Projects";
 MainTabBar.Item.chord = "Chord";
 MainTabBar.Item.progression = "Progression";
 MainTabBar.Item.favorites = "Favorites";
