@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="StructurePartTableViewCell" customModule="M_U_S_E_" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="553" height="50"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="89" id="KGk-i7-Jjw" customClass="StructurePartTableViewCell" customModule="M_U_S_E_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="717" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="553" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="717" height="89"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIO-Ct-3IV">
-                        <rect key="frame" x="8" y="8" width="30" height="34"/>
+                        <rect key="frame" x="8" y="49" width="30" height="32"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <menu key="menu" id="dLS-0b-ZLA">
                             <children>
@@ -30,59 +30,72 @@
                         </menu>
                         <state key="normal" title="Intro"/>
                     </button>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nhF-B8-y7r">
-                        <rect key="frame" x="155" y="8" width="390" height="34"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zF2-zT-gb2">
-                                <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bar label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBJ-5y-xMo" userLabel="Bar Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="65.333333333333329" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-GE-quf" userLabel="Bar Stepper">
-                                        <rect key="frame" x="73.333333333333343" y="0.0" width="94" height="34"/>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qf2-ov-Fdm">
-                                <rect key="frame" x="175.33333333333331" y="0.0" width="214.66666666666669" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="repeating label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-1T-bf7" userLabel="Repeating Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nhT-Qp-dUc" userLabel="Repeating Stepper">
-                                        <rect key="frame" x="120.66666666666669" y="0.0" width="94" height="34"/>
-                                    </stepper>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBJ-5y-xMo" userLabel="Bar Label">
+                        <rect key="frame" x="399.33333333333331" y="54.666666666666657" width="25.333333333333314" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-GE-quf" userLabel="Bar Stepper">
+                        <rect key="frame" x="432.66666666666669" y="49" width="94.000000000000057" height="32"/>
+                    </stepper>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="repeating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-1T-bf7" userLabel="Repeating Label">
+                        <rect key="frame" x="534.66666666666663" y="54.666666666666657" width="72.333333333333371" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nhT-Qp-dUc" userLabel="Repeating Stepper">
+                        <rect key="frame" x="615" y="49" width="94" height="32"/>
+                    </stepper>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4O-YZ-nOT">
+                        <rect key="frame" x="623.66666666666663" y="8" width="77" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-0y-3bR">
+                        <rect key="frame" x="458.66666666666669" y="8" width="42" height="33"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="nhF-B8-y7r" secondAttribute="trailing" constant="8" id="BgO-2N-Juy"/>
-                    <constraint firstAttribute="bottom" secondItem="nhF-B8-y7r" secondAttribute="bottom" constant="8" id="Dbj-8M-thH"/>
+                    <constraint firstAttribute="trailing" secondItem="nhT-Qp-dUc" secondAttribute="trailing" constant="8" id="0yY-oj-VeI"/>
+                    <constraint firstItem="PvU-0y-3bR" firstAttribute="leading" secondItem="VRU-GE-quf" secondAttribute="trailing" constant="-68" id="4OY-oi-H5u"/>
                     <constraint firstAttribute="bottom" secondItem="XIO-Ct-3IV" secondAttribute="bottom" constant="8" id="ErQ-pb-XHI"/>
-                    <constraint firstItem="nhF-B8-y7r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XIO-Ct-3IV" secondAttribute="trailing" constant="8" id="KBu-W8-4tg"/>
+                    <constraint firstAttribute="bottom" secondItem="VRU-GE-quf" secondAttribute="bottom" constant="8" id="I29-ub-Cu1"/>
+                    <constraint firstItem="OYe-1T-bf7" firstAttribute="leading" secondItem="VRU-GE-quf" secondAttribute="trailing" constant="8" id="Kld-0i-Djp"/>
+                    <constraint firstItem="nhT-Qp-dUc" firstAttribute="leading" secondItem="OYe-1T-bf7" secondAttribute="trailing" constant="8" id="QEV-0u-xEm"/>
+                    <constraint firstItem="G4O-YZ-nOT" firstAttribute="centerX" secondItem="nhT-Qp-dUc" secondAttribute="centerX" id="QLf-2p-ugq"/>
+                    <constraint firstItem="G4O-YZ-nOT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SfN-oV-ePU"/>
+                    <constraint firstItem="XIO-Ct-3IV" firstAttribute="centerY" secondItem="VRU-GE-quf" secondAttribute="centerY" id="Sr5-2Z-7M6"/>
+                    <constraint firstItem="nhT-Qp-dUc" firstAttribute="top" secondItem="G4O-YZ-nOT" secondAttribute="bottom" constant="8" id="Tfk-S8-nM6"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G4O-YZ-nOT" secondAttribute="trailing" constant="8" id="Wr9-4J-uyw"/>
+                    <constraint firstItem="PvU-0y-3bR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ch1-RX-GYv"/>
+                    <constraint firstItem="VRU-GE-quf" firstAttribute="top" secondItem="PvU-0y-3bR" secondAttribute="bottom" constant="8" id="eiW-KX-4Cc"/>
+                    <constraint firstItem="VRU-GE-quf" firstAttribute="leading" secondItem="TBJ-5y-xMo" secondAttribute="trailing" constant="8" id="eoL-Cv-7ol"/>
+                    <constraint firstItem="OYe-1T-bf7" firstAttribute="centerY" secondItem="nhT-Qp-dUc" secondAttribute="centerY" id="k4t-uR-Tsn"/>
                     <constraint firstItem="XIO-Ct-3IV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nZQ-ud-lg4"/>
-                    <constraint firstItem="XIO-Ct-3IV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="naK-5p-dgc"/>
-                    <constraint firstItem="nhF-B8-y7r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="vYW-Wd-now"/>
+                    <constraint firstItem="XIO-Ct-3IV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="naK-5p-dgc"/>
+                    <constraint firstAttribute="bottom" secondItem="nhT-Qp-dUc" secondAttribute="bottom" constant="8" id="qmV-Bw-rk6"/>
+                    <constraint firstItem="TBJ-5y-xMo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XIO-Ct-3IV" secondAttribute="trailing" constant="8" id="suE-O2-Fit"/>
+                    <constraint firstItem="TBJ-5y-xMo" firstAttribute="centerY" secondItem="VRU-GE-quf" secondAttribute="centerY" id="uJL-Em-bSO"/>
+                    <constraint firstItem="PvU-0y-3bR" firstAttribute="centerX" secondItem="VRU-GE-quf" secondAttribute="centerX" id="xhJ-PS-KOJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="barNameLabel" destination="PvU-0y-3bR" id="hd5-F9-sAd"/>
                 <outlet property="barsLabel" destination="TBJ-5y-xMo" id="e3C-lB-QOx"/>
                 <outlet property="barsStepper" destination="VRU-GE-quf" id="NKe-c9-5Ej"/>
+                <outlet property="repeatingBarNameLabel" destination="G4O-YZ-nOT" id="XsG-C6-07w"/>
                 <outlet property="repeatingLabel" destination="OYe-1T-bf7" id="kqo-cX-4BI"/>
                 <outlet property="repeatingStepper" destination="nhT-Qp-dUc" id="zua-9p-kgJ"/>
                 <outlet property="structurePartButton" destination="XIO-Ct-3IV" id="8Qo-J9-1zw"/>
             </connections>
-            <point key="canvasLocation" x="316.79389312977099" y="22.535211267605636"/>
+            <point key="canvasLocation" x="191.6030534351145" y="-13.732394366197184"/>
         </tableViewCell>
     </objects>
 </document>

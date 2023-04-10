@@ -83,5 +83,9 @@ SongBuilder.Main.AddingAlert.cancel = "Cancel";
 SongBuilder.Main.AddingAlert.proceedWithDummyName = "Decide Later";
 SongBuilder.Main.AddingAlert.proceedWithSongName = "OK";
 
-SongBuilder.Detail.addNewStructurePart = "Add New Structure Part";
-SongBuilder.Detail.menuTitle = "Structure Part";
+SongBuilder.Detail.Structure.Main.addNewStructurePart = "Add New Structure Part";
+SongBuilder.Detail.Structure.Main.menuTitle = "Structure Part";
+SongBuilder.Detail.Structure.Main.barName = "Bars";
+SongBuilder.Detail.Structure.Main.repeatingBarName = "Repeating";
+
+SongBuilder.Detail.Structure.Detail.title = "Instruments of";

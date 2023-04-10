@@ -83,5 +83,9 @@ SongBuilder.Main.AddingAlert.cancel = "Отменить";
 SongBuilder.Main.AddingAlert.proceedWithDummyName = "Решить Позже";
 SongBuilder.Main.AddingAlert.proceedWithSongName = "ОК";
 
-SongBuilder.Detail.addNewStructurePart = "Добавить Новую Структуру";
-SongBuilder.Detail.menuTitle = "Структурная Часть";
+SongBuilder.Detail.Structure.Main.addNewStructurePart = "Добавить Новую Структуру";
+SongBuilder.Detail.Structure.Main.menuTitle = "Структурная Часть";
+SongBuilder.Detail.Structure.Main.barName = "Такты";
+SongBuilder.Detail.Structure.Main.repeatingBarName = "Повторения";
+
+SongBuilder.Detail.Structure.Detail.title = " Инструменты части:";

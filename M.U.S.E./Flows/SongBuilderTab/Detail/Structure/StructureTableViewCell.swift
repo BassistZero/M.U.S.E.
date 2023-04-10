@@ -15,7 +15,7 @@ final class StructureTableViewCell: UITableViewCell, SongBuilderTableViewCell {
 
     // MARK: - Private Properties
 
-    private var numberOfRows: [Int] = []
+    private var structureParts: [StructurePart] = []
 
     // MARK: - UIViewController
 
@@ -33,8 +33,6 @@ private extension StructureTableViewCell {
     func setupInitialState() {
         setupTableView()
         setupButtons()
-        print(song)
-        print(rootNavigationController)
     }
 
     func setupTableView() {
@@ -55,7 +53,7 @@ private extension StructureTableViewCell {
         configuration.imagePadding = 8
         configuration.cornerStyle = .large
 
-        var attributedTitle = AttributedString(stringLiteral: L10n.SongBuilder.Detail.addNewStructurePart)
+        var attributedTitle = AttributedString(stringLiteral: L10n.SongBuilder.Detail.Structure.Main.addNewStructurePart)
         attributedTitle.font = .systemFont(ofSize: 16)
 
         configuration.attributedTitle = attributedTitle
@@ -65,13 +63,6 @@ private extension StructureTableViewCell {
         addRowButton.addTarget(self, action: #selector(addNewRow), for: .touchUpInside)
     }
 
-    @objc
-    func addNewRow() {
-        numberOfRows += [0]
-        let indexPath = IndexPath(row: numberOfRows.count - 1, section: 0)
-        tableView.insertRows(at: [indexPath], with: .automatic)
-    }
-
 }
 
 // MARK: - UITableViewDataSource
@@ -79,7 +70,7 @@ private extension StructureTableViewCell {
 extension StructureTableViewCell: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        numberOfRows.count
+        structureParts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -98,9 +89,38 @@ extension StructureTableViewCell: UITableViewDataSource {
 extension StructureTableViewCell: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        handleRowSelection(on: tableView, for: indexPath)
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            handleStructurePartDeletion(on: tableView, for: indexPath)
+        }
+    }
+
+}
+
+// MARK: - Private Actions
+
+@objc
+private extension StructureTableViewCell {
+
+    func addNewRow() {
+        structureParts += [.intro]
+        let indexPath = IndexPath(row: structureParts.count - 1, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+    }
+
+}
+
+// MARK: - Private Methods
+
+private extension StructureTableViewCell {
+
+    func handleRowSelection(on tableView: UITableView, for indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(StructurePartTableViewCell.self)", for: indexPath)
+        let cell = tableView.cellForRow(at: indexPath)
 
         guard
             let cell = cell as? StructurePartTableViewCell,
@@ -108,23 +128,15 @@ extension StructureTableViewCell: UITableViewDelegate {
         else { return }
 
         let vc = UIViewController()
-        vc.view.backgroundColor = .systemBrown
-        vc.title = title
-
-        print(song)
-        print(rootNavigationController)
+        vc.view.backgroundColor = .init(named: "systemWhite")
+        vc.title = "\(L10n.SongBuilder.Detail.Structure.Detail.title) '\(title)'"
 
         rootNavigationController?.pushViewController(vc, animated: true)
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        switch editingStyle {
-        case .delete:
-            let index = indexPath.row
-            numberOfRows.remove(at: index)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        default: break
-        }
+    func handleStructurePartDeletion(on tableView: UITableView, for indexPath: IndexPath) {
+        structureParts.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 
 }

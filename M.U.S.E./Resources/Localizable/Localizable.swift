@@ -130,10 +130,22 @@ internal enum L10n {
   }
   internal enum SongBuilder {
     internal enum Detail {
-      /// Add New Structure Part
-      internal static let addNewStructurePart = L10n.tr("Localizable", "SongBuilder.Detail.addNewStructurePart", fallback: "Add New Structure Part")
-      /// Structure Part
-      internal static let menuTitle = L10n.tr("Localizable", "SongBuilder.Detail.menuTitle", fallback: "Structure Part")
+      internal enum Structure {
+        internal enum Detail {
+          /// Instruments of
+          internal static let title = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Detail.title", fallback: "Instruments of")
+        }
+        internal enum Main {
+          /// Add New Structure Part
+          internal static let addNewStructurePart = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.addNewStructurePart", fallback: "Add New Structure Part")
+          /// Bars
+          internal static let barName = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.barName", fallback: "Bars")
+          /// Structure Part
+          internal static let menuTitle = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.menuTitle", fallback: "Structure Part")
+          /// Repeating
+          internal static let repeatingBarName = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.repeatingBarName", fallback: "Repeating")
+        }
+      }
     }
     internal enum Main {
       /// Add New Song
