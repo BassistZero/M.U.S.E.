@@ -15,7 +15,11 @@ final class StructureTableViewCell: UITableViewCell, SongBuilderTableViewCell {
 
     // MARK: - Private Properties
 
-    private var structureParts: [StructurePart] = []
+    private var structureParts: [StructurePart] = [] {
+        didSet {
+            song?.structure = structureParts
+        }
+    }
 
     // MARK: - UIViewController
 
@@ -78,6 +82,10 @@ extension StructureTableViewCell: UITableViewDataSource {
 
         guard let cell = cell as? StructurePartTableViewCell else { return .init() }
         cell.accessoryType = .disclosureIndicator
+
+        cell.didChanged = { structurePart in
+            self.structureParts[indexPath.row] = structurePart
+        }
 
         return cell
     }

@@ -12,6 +12,10 @@ final class StructurePartTableViewCell: UITableViewCell {
     @IBOutlet private weak var repeatingLabel: UILabel!
     @IBOutlet private weak var repeatingStepper: UIStepper!
 
+    // MARK: - Public Events
+
+    var didChanged: ((StructurePart) -> Void)?
+
     // MARK: - Public Properties
 
     var title: String? {
@@ -20,7 +24,7 @@ final class StructurePartTableViewCell: UITableViewCell {
 
     // MARK: - Private Properties
 
-    private var titleName = "Intro"
+    private var titleName = L10n.StructurePart.intro
 
     // MARK: - UITableViewCell
 
@@ -46,6 +50,7 @@ private extension StructurePartTableViewCell {
 
         StructurePart.allCases.forEach { structurePart in
             actions.append(.init(title: structurePart.description, state: .on, handler: { _ in
+                self.didChanged?(structurePart)
                 self.titleName = structurePart.description
             }))
 
