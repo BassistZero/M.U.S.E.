@@ -66,15 +66,15 @@ extension Song: CustomStringConvertible {
         return
             """
             Name: \(name ?? "No name")
-            Genre: \(genre)
-            Key: \(key)
-            Time: \(time)
-            Tempo: \(tempo)
-            Structure: \(structure)
-            Instruments: \(instruments)
+            Genre: \(String(describing: genre))
+            Key: \(String(describing: key))
+            Time: \(String(describing: time))
+            Tempo: \(String(describing: tempo))
+            Structure: \(String(describing: structure))
+            Instruments: \(String(describing: instruments))
 
             Song Parts:
-            
+
             \(getAllSongParts())
             """
     }
