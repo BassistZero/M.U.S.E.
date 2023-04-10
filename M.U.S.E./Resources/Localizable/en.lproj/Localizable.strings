@@ -24,6 +24,11 @@ Interval.majorSixth = "Major Sixth";
 Interval.minorSeventh = "Minor Seventh";
 Interval.majorSeventh = "Major Seventh";
 
+Instrument.guitar = "Guitar";
+Instrument.bass = "Bass";
+Instrument.keyboard = "Keyboard";
+Instrument.drums = "Drums";
+
 ChordViewController.Text.chord = "Chord";
 ChordViewController.Text.intervals = "Intervals";
 ChordViewController.Text.rootNote = "Root";
@@ -89,3 +94,10 @@ SongBuilder.Detail.Structure.Main.barName = "Bars";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Repeating";
 
 SongBuilder.Detail.Structure.Detail.title = "Instruments of";
+
+SongBuilder.Detail.Instruments.addNewInstrument = "Add New Instrument";
+SongBuilder.Detail.Instruments.partsName = "Parts";
+SongBuilder.Detail.Instruments.emptyParts = "Empty";
+
+SongBuilder.Detail.Instruments.AddingAlert.title = "Choose The Instrument";
+SongBuilder.Detail.Instruments.AddingAlert.cancel = "Cancel";

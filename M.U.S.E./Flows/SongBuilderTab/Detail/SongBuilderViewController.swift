@@ -91,14 +91,11 @@ extension SongBuilderViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let identifier = getIdentifier() else { return .init() }
 
-        switch identifier {
-        case "\(ResultTableViewCell.self)": fallthrough
-        case "\(StructureTableViewCell.self)":
-            return tableView.frame.height
-        default: break
+        if identifier == "\(SetupTableViewCell.self)" {
+            return UITableView.automaticDimension
         }
 
-        return UITableView.automaticDimension
+        return tableView.frame.height
     }
 
 }

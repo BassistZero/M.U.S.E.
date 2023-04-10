@@ -24,6 +24,11 @@ Interval.majorSixth = "Большая Секста";
 Interval.minorSeventh = "Малая Септима";
 Interval.majorSeventh = "Большая Септима";
 
+Instrument.guitar = "Гитара";
+Instrument.bass = "Бас";
+Instrument.keyboard = "Клавишные";
+Instrument.drums = "Барабаны";
+
 ChordViewController.Text.chord = "Аккорд";
 ChordViewController.Text.intervals = "Интервалы";
 ChordViewController.Text.rootNote = "Основной Тон";
@@ -89,3 +94,10 @@ SongBuilder.Detail.Structure.Main.barName = "Такты";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Повторения";
 
 SongBuilder.Detail.Structure.Detail.title = " Инструменты части:";
+
+SongBuilder.Detail.Instruments.addNewInstrument = "Добавить Новый Инструмент";
+SongBuilder.Detail.Instruments.partsName = "Части";
+SongBuilder.Detail.Instruments.emptyParts = "Пусто";
+
+SongBuilder.Detail.Instruments.AddingAlert.title = "Выберите Инструмент";
+SongBuilder.Detail.Instruments.AddingAlert.cancel = "Отмена";

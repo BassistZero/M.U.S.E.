@@ -32,6 +32,16 @@ internal enum L10n {
       internal static let rootNote = L10n.tr("Localizable", "ChordViewController.Text.rootNote", fallback: "Root")
     }
   }
+  internal enum Instrument {
+    /// Bass
+    internal static let bass = L10n.tr("Localizable", "Instrument.bass", fallback: "Bass")
+    /// Drums
+    internal static let drums = L10n.tr("Localizable", "Instrument.drums", fallback: "Drums")
+    /// Guitar
+    internal static let guitar = L10n.tr("Localizable", "Instrument.guitar", fallback: "Guitar")
+    /// Keyboard
+    internal static let keyboard = L10n.tr("Localizable", "Instrument.keyboard", fallback: "Keyboard")
+  }
   internal enum Interval {
     /// Fifth
     internal static let fifth = L10n.tr("Localizable", "Interval.fifth", fallback: "Fifth")
@@ -130,6 +140,20 @@ internal enum L10n {
   }
   internal enum SongBuilder {
     internal enum Detail {
+      internal enum Instruments {
+        /// Add New Instrument
+        internal static let addNewInstrument = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.addNewInstrument", fallback: "Add New Instrument")
+        /// Empty
+        internal static let emptyParts = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.emptyParts", fallback: "Empty")
+        /// Parts
+        internal static let partsName = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.partsName", fallback: "Parts")
+        internal enum AddingAlert {
+          /// Cancel
+          internal static let cancel = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.AddingAlert.cancel", fallback: "Cancel")
+          /// Choose The Instrument
+          internal static let title = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.AddingAlert.title", fallback: "Choose The Instrument")
+        }
+      }
       internal enum Structure {
         internal enum Detail {
           /// Instruments of

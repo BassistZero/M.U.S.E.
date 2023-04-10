@@ -49,6 +49,8 @@
 		02A9F16229DEF70B00B6D46B /* InstrumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */; };
 		02A9F16329DEF70B00B6D46B /* InstrumentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */; };
 		02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */; };
+		02DA832029E3F8910052C59A /* InstrumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */; };
+		02DA832129E3F8910052C59A /* InstrumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */; };
 		02DA832429E40D2A0052C59A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DA832329E40D2A0052C59A /* Colors.xcassets */; };
 		02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */; };
 		02DDDDC7299F617800D207B8 /* ProgressionConfigurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */; };
@@ -206,6 +208,8 @@
 		02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsTableViewCell.swift; sourceTree = "<group>"; };
 		02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentsTableViewCell.xib; sourceTree = "<group>"; };
 		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
+		02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentTableViewCell.swift; sourceTree = "<group>"; };
+		02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentTableViewCell.xib; sourceTree = "<group>"; };
 		02DA832329E40D2A0052C59A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionConfigurationView.swift; sourceTree = "<group>"; };
 		02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressionConfigurationView.xib; sourceTree = "<group>"; };
@@ -527,6 +531,7 @@
 		02A9F15F29DEF6E900B6D46B /* Instruments */ = {
 			isa = PBXGroup;
 			children = (
+				02DA831D29E3F5FF0052C59A /* Cells */,
 				02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */,
 				02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */,
 			);
@@ -634,6 +639,15 @@
 				E8E309AE28F9DEFD007FF597 /* G7.mp3 */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		02DA831D29E3F5FF0052C59A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */,
+				02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		02DA832229E40D210052C59A /* Colors */ = {
@@ -845,6 +859,7 @@
 				E8E30A4528F9DEFF007FF597 /* A5.mp3 in Resources */,
 				E8E30A5028F9DEFF007FF597 /* F#6.mp3 in Resources */,
 				E8E30A5328F9DEFF007FF597 /* G#7.mp3 in Resources */,
+				02DA832129E3F8910052C59A /* InstrumentTableViewCell.xib in Resources */,
 				02A9F15E29DEF50B00B6D46B /* SongBuilderViewController.xib in Resources */,
 				02F48AD429DF0A6E006D4C5C /* ResultTableViewCell.xib in Resources */,
 				E8E30A5128F9DEFF007FF597 /* F0.mp3 in Resources */,
@@ -971,6 +986,7 @@
 				028DE88029C470C9003671D0 /* Instrument.swift in Sources */,
 				028DE87529C46E42003671D0 /* BeatLength.swift in Sources */,
 				022041CE29C23FD90038121C /* SceneDelegate.swift in Sources */,
+				02DA832029E3F8910052C59A /* InstrumentTableViewCell.swift in Sources */,
 				020F8E9029D34E20006B4E7A /* SongTableViewCell.swift in Sources */,
 				02F48AD329DF0A6E006D4C5C /* ResultTableViewCell.swift in Sources */,
 				028DE87129C46D3E003671D0 /* Setup.swift in Sources */,
