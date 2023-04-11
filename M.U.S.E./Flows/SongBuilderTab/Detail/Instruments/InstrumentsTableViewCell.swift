@@ -11,6 +11,7 @@ final class InstrumentsTableViewCell: UITableViewCell, SongBuilderTableViewCell 
 
     private var instruments: [Instrument] = [] {
         didSet {
+            addInstrumentButton.isEnabled = instruments.sorted() == Instrument.allCases.sorted() ? false : true
             song?.instruments = instruments
         }
     }
@@ -107,7 +108,15 @@ private extension InstrumentsTableViewCell {
     func addNewInstrument() {
         let alertController = UIAlertController(title: L10n.SongBuilder.Detail.Instruments.AddingAlert.title, message: nil, preferredStyle: .actionSheet)
 
-        for instrument in Instrument.allCases {
+        guard let song else { return }
+
+        var availableInstruments = Instrument.allCases
+
+        if let instruments = song.instruments {
+            availableInstruments = Instrument.allCases.filter { !instruments.contains($0) }
+        }
+
+        for instrument in availableInstruments {
             let addInstrumentAction = UIAlertAction(title: instrument.description, style: .default) { _ in
                 self.instruments += [instrument]
                 let indexPath = IndexPath(row: self.instruments.count - 1, section: 0)

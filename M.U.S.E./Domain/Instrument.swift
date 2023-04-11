@@ -21,3 +21,7 @@ extension Instrument: CustomStringConvertible {
     }
 
 }
+
+// MARK: - Comparable
+
+extension Instrument: Comparable { }
