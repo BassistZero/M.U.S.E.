@@ -6,16 +6,26 @@ struct Time {
         up * down.rawValue
     }
 
-    // MARK: - Private Properties
+    // MARK: - Public Properties
 
-    private let up: Int
-    private let down: BeatLength
+    var up: Int
+    var down: BeatLength
 
     // MARK: - Inits
 
     init(up: Int, down: BeatLength) {
         self.up = up
         self.down = down
+    }
+
+}
+
+// MARK: - CustomStringConvertible
+
+extension Time: CustomStringConvertible {
+
+    var description: String {
+        return "\(up)/\(down.description)"
     }
 
 }

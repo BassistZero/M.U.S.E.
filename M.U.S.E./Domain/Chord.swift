@@ -84,6 +84,10 @@ extension Chord: CustomStringConvertible {
 
 }
 
+// MARK: - Equatable
+
+extension Chord: Equatable { }
+
 // MARK: - getChordType
 
 private extension Chord {

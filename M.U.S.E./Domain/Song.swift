@@ -2,35 +2,31 @@ final class Song {
 
     // MARK: - Public Properties
 
-    var instruments: [Instrument]?
-    var structure: [StructurePart]?
+    var instruments: [Instrument]
+    var structure: [StructurePart]
     var name: String?
     var key: Key?
     var time: Time?
     var tempo: Int?
-    var genre: Genre?
-
-    // MARK: - Private Properties
-
-    private var songParts: [SongPart] = []
+//    var genre: Genre?
+    var scale: Scale?
+    var songParts: [SongPart] = []
 
     // MARK: - Inits
 
-    init(instruments: [Instrument]? = nil, structure: [StructurePart]? = nil, named name: String? = nil, setup: Setup? = nil) {
+    init(instruments: [Instrument] = [], structure: [StructurePart] = [], named name: String? = nil, setup: Setup? = Setup(key: .init(value: .c, color: .minor), time: .init(up: 4, down: .quarter), tempo: 120, genre: .rock)) {
         self.instruments = instruments
         self.structure = structure
         self.name = name
         key = setup?.key
         time = setup?.time
         tempo = setup?.tempo
-        genre = setup?.genre
+//        genre = setup?.genre
     }
 
     // MARK: - Public Methods
 
     func getSongParts(for instruments: [Instrument]) -> [[SongPart]]? {
-        guard let structure else { return nil }
-
         var results: [[SongPart]] = []
 
         for instrument in instruments {
@@ -56,6 +52,16 @@ final class Song {
         return songParts
     }
 
+    func getSongPartsString(from songParts: [SongPart]) -> String {
+        var result = ""
+
+        songParts.forEach { songPart in
+            result.append(songPart.description + "\n\n")
+        }
+
+        return result
+    }
+
 }
 
 // MARK: - CustomStringConvertible
@@ -63,19 +69,22 @@ final class Song {
 extension Song: CustomStringConvertible {
 
     var description: String {
+        let songParts = getAllSongParts()
+
+        let songPartsString = !songParts.isEmpty ? getSongPartsString(from: songParts) : "Empty"
+
         return
             """
             Name: \(name ?? "")
-            Genre: \(genre?.description ?? "")
-            Key: \(key?.description ?? "")
-            Time: \(String(describing: time))
-            Tempo: \(String(describing: tempo))
-            Structure: \(structure?.description.dropFirst().dropLast() ?? "")
-            Instruments: \(instruments?.description.dropFirst().dropLast() ?? "")
+            Key: \(key?.description ?? "Empty")
+            Time: \(time?.description ?? "Empty")
+            Tempo: \(tempo?.description ?? "Empty")
+            Structure: \(structure.description.dropFirst().dropLast())
+            Instruments: \(instruments.description.dropFirst().dropLast())
 
             Song Parts:
 
-            \(getAllSongParts())
+            \(songPartsString)
             """
     }
 

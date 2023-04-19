@@ -1,10 +1,11 @@
-struct Progression {
+class Progression {
 
     var chords = [Chord]()
 
     let root: Note
     let scale: Scale
     let version: ProgressionVersion
+    var scaleSteps: [ScaleStep]?
 
     init(root: Note, type: ScaleType, version: ProgressionVersion) {
         self.root = root
@@ -16,21 +17,61 @@ struct Progression {
 
 }
 
+// MARK: - Public Methods
+
+extension Progression {
+
+    static func blacklistBadProgressions() {
+        for first in ScaleStep.allCases.sorted() {
+            for second in ScaleStep.allCases.sorted() {
+                for third in ScaleStep.allCases.sorted() {
+                    for fourth in ScaleStep.allCases.sorted() {
+
+                        let steps = [first, second, third, fourth]
+
+                        if !steps.contains(.one) || !steps.contains(.five) ||
+                                steps[0] == steps[1] && steps[0] == steps[2] ||
+                                steps[1] == steps[2] && steps[1] == steps[3] ||
+                                steps[0] == .two || steps[0] == .seven ||
+                            steps[3] == .seven && (steps[2] != .two || steps[2] != .three) {
+                            if !ScaleStepsBlacklist.shared.contains(steps) {
+                                ScaleStepsBlacklist.shared.add(steps)
+                            }
+                        }
+
+                        var resultString = ""
+
+                        for (offset, step) in steps.enumerated() {
+                            if offset == steps.count - 1 {
+                                resultString.append("\(step)")
+                                continue
+                            }
+
+                            resultString.append("\(step) -> ")
+                        }
+
+                        print(steps)
+                    }
+                }
+            }
+        }
+
+        print(ScaleStepsBlacklist.shared.blacklistCount)
+    }
+
+}
+
 // MARK: - Private Methods
 
 private extension Progression {
 
     func getChords() -> [Chord] {
-
         switch version {
-        case .oneTwoThreeFour:
-            return configureChords(first: .one, second: .two, third: .three, fourth: .four)
-        case .oneSixFourFive:
-            return configureChords(first: .one, second: .six, third: .four, fourth: .five)
-        case .oneThreeFourFive:
-            return configureChords(first: .one, second: .three, third: .four, fourth: .five)
-        case .random:
-            return configureChords(first: .allCases.randomElement() ?? .one, second: .allCases.randomElement() ?? .one, third: .allCases.randomElement() ?? .one, fourth: .allCases.randomElement() ?? .one)
+        case .oneTwoThreeFour: return configureOneTwoThreeFour()
+        case .oneSixFourFive: return configureOneSixFourFive()
+        case .oneThreeFourFive: return configureOneThreeFourFive()
+        case .oneFiveFourOne: return configureOneFiveFourOne()
+        case .random: return configureRandom()
         }
     }
 
@@ -40,7 +81,70 @@ private extension Progression {
         let chord3 = getSimpleChord(from: third)
         let chord4 = getSimpleChord(from: fourth)
 
+        scaleSteps = [first, second, third, fourth]
+
         let chords = [chord1, chord2, chord3, chord4]
+
+        return chords
+    }
+
+    func configureRandom() -> [Chord] {
+        var first = ScaleStep.allCases.randomElement() ?? .one
+        var second = ScaleStep.allCases.randomElement() ?? .one
+        var third = ScaleStep.allCases.randomElement() ?? .one
+        var fourth = ScaleStep.allCases.randomElement() ?? .one
+
+        var steps: [ScaleStep] = [first, second, third, fourth]
+
+        while
+            !steps.contains(.one) || !steps.contains(.five)
+            ||
+            (steps[0] == steps[1] && steps[0] == steps[2])
+            ||
+            (steps[1] == steps[2] && steps[1] == steps[3])
+        {
+            if !ScaleStepsBlacklist.shared.contains(steps) {
+                ScaleStepsBlacklist.shared.add(steps)
+            }
+
+            first = ScaleStep.allCases.randomElement() ?? .one
+            second = ScaleStep.allCases.randomElement() ?? .one
+            third = ScaleStep.allCases.randomElement() ?? .one
+            fourth = ScaleStep.allCases.randomElement() ?? .one
+
+            steps = [first, second, third, fourth]
+        }
+
+        while ScaleStepsBlacklist.shared.contains(steps) {
+
+            while
+                !steps.contains(.one) || !steps.contains(.five)
+                ||
+                (steps[0] == steps[1] && steps[0] == steps[2])
+                ||
+                (steps[1] == steps[2] && steps[1] == steps[3])
+            {
+                if !ScaleStepsBlacklist.shared.contains(steps) {
+                    ScaleStepsBlacklist.shared.add(steps)
+                }
+
+                first = ScaleStep.allCases.randomElement() ?? .one
+                second = ScaleStep.allCases.randomElement() ?? .one
+                third = ScaleStep.allCases.randomElement() ?? .one
+                fourth = ScaleStep.allCases.randomElement() ?? .one
+
+                steps = [first, second, third, fourth]
+            }
+
+            first = ScaleStep.allCases.randomElement() ?? .one
+            second = ScaleStep.allCases.randomElement() ?? .one
+            third = ScaleStep.allCases.randomElement() ?? .one
+            fourth = ScaleStep.allCases.randomElement() ?? .one
+
+            steps = [first, second, third, fourth]
+        }
+
+        let chords = configureChords(first: first, second: second, third: third, fourth: fourth)
 
         return chords
     }
@@ -56,6 +160,22 @@ private extension Progression {
         return chord
     }
 
+    func configureOneTwoThreeFour() -> [Chord] {
+        configureChords(first: .one, second: .two, third: .three, fourth: .four)
+    }
+
+    func configureOneSixFourFive() -> [Chord] {
+        configureChords(first: .one, second: .six, third: .four, fourth: .five)
+    }
+
+    func configureOneThreeFourFive() -> [Chord] {
+        configureChords(first: .one, second: .three, third: .four, fourth: .five)
+    }
+
+    func configureOneFiveFourOne() -> [Chord] {
+        configureChords(first: .one, second: .five, third: .four, fourth: .one)
+    }
+
 }
 
 // MARK: - CustomStringConvertible
@@ -63,16 +183,24 @@ private extension Progression {
 extension Progression: CustomStringConvertible {
 
     var description: String {
-        var progressionString = ""
+        var chordsString = ""
+        var scaleStepsString = ""
 
         for (offset, chord) in chords.enumerated() {
             if offset == chords.count - 1 {
-                progressionString.append("\(chord)")
+                chordsString.append("\(chord)")
+                scaleStepsString.append("\(scaleSteps?[offset] ?? .one)")
                 continue
             }
 
-            progressionString.append("\(chord) -> ")
+            chordsString.append("\(chord) -> ")
+            scaleStepsString.append("\(scaleSteps?[offset] ?? .one) -> ")
         }
+
+        let progressionString = """
+            \(chordsString)
+            \(scaleStepsString)
+            """
 
         return progressionString
     }

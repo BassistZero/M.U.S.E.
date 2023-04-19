@@ -21,3 +21,24 @@ enum BeatLength: Int {
     case twoHundredFiftySixthTriplet = 2
 
 }
+
+// MARK: - CustomStringConvertible
+
+extension BeatLength: CustomStringConvertible {
+
+    var description: String {
+        switch self {
+        case .whole: return "1"
+        case .half: return "2"
+        case .quarter: return "4"
+        case .eighth: return "8"
+        case .sixteenth: return "16"
+        case .thirtySecond: return "32"
+        case .sixtyFourth: return "64"
+        case .oneHundredTwentyEighth: return "128"
+        case .twoHundredFiftySixth: return "256"
+        default: return ""
+        }
+    }
+
+}
