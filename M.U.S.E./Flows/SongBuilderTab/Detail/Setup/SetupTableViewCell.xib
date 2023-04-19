@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="329" id="LKS-Te-o2a" customClass="SetupTableViewCell" customModule="M_U_S_E_" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="493" height="329"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="404" id="LKS-Te-o2a" customClass="SetupTableViewCell" customModule="M_U_S_E_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="493" height="404"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LKS-Te-o2a" id="Hzv-k3-AIj">
-                <rect key="frame" x="0.0" y="0.0" width="493" height="329"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LKS-Te-o2a" id="Hzv-k3-AIj">
+                <rect key="frame" x="0.0" y="0.0" width="493" height="404"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rry-rb-E2H" customClass="ProgressionConfigurationView" customModule="M_U_S_E_" customModuleProvider="target">
@@ -24,18 +24,75 @@
                             <constraint firstAttribute="height" constant="276" id="qa1-dH-67d"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHd-nK-ani">
+                        <rect key="frame" x="19.999999999999996" y="316" width="56.666666666666657" height="27.666666666666686"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*value*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttz-fh-7Y8">
+                        <rect key="frame" x="84.666666666666671" y="319.66666666666669" width="55.333333333333329" height="20.333333333333314"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="120" translatesAutoresizingMaskIntoConstraints="NO" id="flp-3b-ggp">
+                        <rect key="frame" x="148" y="314" width="94" height="32"/>
+                    </stepper>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="Size:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nz-7C-rgF">
+                        <rect key="frame" x="19.999999999999996" y="363.66666666666669" width="36.666666666666657" height="20.333333333333314"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-dD-iyL">
+                        <rect key="frame" x="64.666666666666671" y="356.66666666666669" width="43.666666666666671" height="34.333333333333314"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="up"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj9-Hk-cNE">
+                        <rect key="frame" x="121.33333333333331" y="356.66666666666669" width="65.666666666666686" height="34.333333333333314"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="down"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTp-jv-LMl">
+                        <rect key="frame" x="112.33333333333333" y="363.66666666666669" width="5" height="20.333333333333314"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Rry-rb-E2H" secondAttribute="bottom" constant="20" id="2C0-6Q-3O8"/>
+                    <constraint firstItem="6Nz-7C-rgF" firstAttribute="leading" secondItem="Hzv-k3-AIj" secondAttribute="leading" constant="20" id="0pd-Kn-ELK"/>
+                    <constraint firstItem="U7H-dD-iyL" firstAttribute="centerY" secondItem="6Nz-7C-rgF" secondAttribute="centerY" id="4ni-Tv-aXV"/>
+                    <constraint firstItem="dj9-Hk-cNE" firstAttribute="leading" secondItem="gTp-jv-LMl" secondAttribute="trailing" constant="4" id="ARc-NB-Isj"/>
                     <constraint firstAttribute="trailing" secondItem="Rry-rb-E2H" secondAttribute="trailing" constant="20" id="De5-Us-7Fv"/>
+                    <constraint firstItem="Ttz-fh-7Y8" firstAttribute="centerY" secondItem="YHd-nK-ani" secondAttribute="centerY" id="IYs-w3-Bya"/>
+                    <constraint firstItem="dj9-Hk-cNE" firstAttribute="centerY" secondItem="6Nz-7C-rgF" secondAttribute="centerY" id="Iml-pS-4dF"/>
+                    <constraint firstItem="6Nz-7C-rgF" firstAttribute="top" secondItem="YHd-nK-ani" secondAttribute="bottom" constant="20" id="R4i-XY-T7j"/>
+                    <constraint firstItem="gTp-jv-LMl" firstAttribute="leading" secondItem="U7H-dD-iyL" secondAttribute="trailing" constant="4" id="V5k-VY-xNC"/>
+                    <constraint firstItem="U7H-dD-iyL" firstAttribute="leading" secondItem="6Nz-7C-rgF" secondAttribute="trailing" constant="8" id="XCq-Ma-bgj"/>
+                    <constraint firstItem="YHd-nK-ani" firstAttribute="leading" secondItem="Hzv-k3-AIj" secondAttribute="leading" constant="20" id="XlD-3l-mHq"/>
+                    <constraint firstItem="Ttz-fh-7Y8" firstAttribute="leading" secondItem="YHd-nK-ani" secondAttribute="trailing" constant="8" id="eL2-J6-8cy"/>
+                    <constraint firstAttribute="bottom" secondItem="6Nz-7C-rgF" secondAttribute="bottom" constant="20" id="ea0-bK-RfD"/>
+                    <constraint firstItem="YHd-nK-ani" firstAttribute="top" secondItem="Rry-rb-E2H" secondAttribute="bottom" constant="20" id="ilQ-oj-uZu"/>
+                    <constraint firstItem="gTp-jv-LMl" firstAttribute="centerY" secondItem="6Nz-7C-rgF" secondAttribute="centerY" id="jDH-96-bzx"/>
+                    <constraint firstItem="flp-3b-ggp" firstAttribute="leading" secondItem="Ttz-fh-7Y8" secondAttribute="trailing" constant="8" id="nDZ-6a-dFb"/>
                     <constraint firstItem="Rry-rb-E2H" firstAttribute="top" secondItem="Hzv-k3-AIj" secondAttribute="top" constant="20" id="qnz-pa-qWZ"/>
                     <constraint firstItem="Rry-rb-E2H" firstAttribute="leading" secondItem="Hzv-k3-AIj" secondAttribute="leading" constant="20" id="rGD-qR-xg3"/>
+                    <constraint firstItem="flp-3b-ggp" firstAttribute="centerY" secondItem="YHd-nK-ani" secondAttribute="centerY" id="vdv-6o-2lS"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="configurationView" destination="Rry-rb-E2H" id="m3J-mw-YWW"/>
+                <outlet property="downTimeButton" destination="dj9-Hk-cNE" id="Nut-6C-LGU"/>
+                <outlet property="sizeNameLabel" destination="6Nz-7C-rgF" id="KFh-qq-0ew"/>
+                <outlet property="tempoLabel" destination="Ttz-fh-7Y8" id="ljx-3W-1BR"/>
+                <outlet property="tempoNameLabel" destination="YHd-nK-ani" id="Dtx-ZX-Xcy"/>
+                <outlet property="tempoStepper" destination="flp-3b-ggp" id="oVT-Mw-MpO"/>
+                <outlet property="upTimeButton" destination="U7H-dD-iyL" id="OQT-uT-5mN"/>
             </connections>
-            <point key="canvasLocation" x="159.54198473282443" y="-460.21126760563385"/>
+            <point key="canvasLocation" x="159.54198473282443" y="-433.80281690140845"/>
         </tableViewCell>
     </objects>
     <resources>
