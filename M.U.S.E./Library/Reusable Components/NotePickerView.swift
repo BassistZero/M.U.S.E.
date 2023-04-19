@@ -104,6 +104,22 @@ private extension NotePickerView {
 
 }
 
+// MARK: - Public Methods
+
+extension NotePickerView {
+
+    func updateTopSection(with noteValue: NoteValue) {
+        cFNotes.selectedSegmentIndex = noteValue.rawValue
+        fSharpBNotes.selectedSegmentIndex = UISegmentedControl.noSegment
+    }
+
+    func updateBottomSection(with noteValue: NoteValue) {
+        fSharpBNotes.selectedSegmentIndex = noteValue.rawValue
+        cFNotes.selectedSegmentIndex = UISegmentedControl.noSegment
+    }
+
+}
+
 // MARK: - Private Actions
 
 @objc

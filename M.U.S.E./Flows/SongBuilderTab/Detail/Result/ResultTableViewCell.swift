@@ -1,6 +1,6 @@
 import UIKit
 
-final class ResultTableViewCell: UITableViewCell, SongBuilderTableViewCell {
+final class ResultTableViewCell: UITableViewCell, SongBuilderPart {
 
     var song: Song? {
         didSet {

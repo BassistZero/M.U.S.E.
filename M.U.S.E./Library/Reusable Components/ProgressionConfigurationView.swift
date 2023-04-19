@@ -72,7 +72,8 @@ private extension ProgressionConfigurationView {
         progressionVersion.setTitle(L10n.ProgressionVersion.oneThreeFourFive, forSegmentAt: 0)
         progressionVersion.setTitle(L10n.ProgressionVersion.oneTwoThreeFour, forSegmentAt: 1)
         progressionVersion.setTitle(L10n.ProgressionVersion.oneSixFourFive, forSegmentAt: 2)
-        progressionVersion.setTitle(L10n.ProgressionVersion.random, forSegmentAt: 3)
+        progressionVersion.setTitle(L10n.ProgressionVersion.oneFiveFourOne, forSegmentAt: 3)
+        progressionVersion.setTitle(L10n.ProgressionVersion.random, forSegmentAt: 4)
     }
 
     func configureProgression() -> Progression {
@@ -94,16 +95,12 @@ private extension ProgressionConfigurationView {
 
     func configureVersion() -> ProgressionVersion {
         switch progressionVersion.selectedSegmentIndex {
-        case 0:
-            return .oneThreeFourFive
-        case 1:
-            return .oneTwoThreeFour
-        case 2:
-            return .oneSixFourFive
-        case 3:
-            return .random
-        default:
-            return .random
+        case 0: return .oneThreeFourFive
+        case 1: return .oneTwoThreeFour
+        case 2: return .oneSixFourFive
+        case 3: return .oneFiveFourOne
+        case 4: return .random
+        default: return .random
         }
     }
 
@@ -147,6 +144,24 @@ private extension ProgressionConfigurationView {
 
         addSubview(contentView)
         contentView.frame = bounds
+    }
+
+}
+
+// MARK: - Public Methods
+
+extension ProgressionConfigurationView {
+
+    func updateNoteValue(to noteValue: NoteValue) {
+        if noteValue.rawValue <= 5 {
+            notePickerView.updateTopSection(with: noteValue)
+        } else {
+            notePickerView.updateBottomSection(with: noteValue)
+        }
+    }
+
+    func hideProgressionVersions() {
+        progressionVersion.isHidden = true
     }
 
 }

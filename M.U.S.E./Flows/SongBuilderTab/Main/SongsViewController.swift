@@ -149,9 +149,13 @@ private extension SongsViewController {
 
         let indexPath = IndexPath(row: songs.count - 1, section: 0)
         songsTableView.insertRows(at: [indexPath], with: .automatic)
+
+        handleRowSelection(on: .init(), for: indexPath)
     }
 
     func handleRowSelection(on tableView: UITableView, for indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
         let initialViewController = SongBuilderViewController()
 
         let song = songs[indexPath.row]
@@ -160,7 +164,6 @@ private extension SongsViewController {
         initialViewController.title = song.name
 
         navigationController?.pushViewController(initialViewController, animated: true)
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     func handleSongDeletion(on tableView: UITableView, for indexPath: IndexPath) {

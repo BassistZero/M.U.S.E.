@@ -1,6 +1,6 @@
 import UIKit
 
-final class InstrumentsTableViewCell: UITableViewCell, SongBuilderTableViewCell {
+final class InstrumentsTableViewCell: UITableViewCell, SongBuilderPart {
 
     // MARK: - Private Outlets
 
@@ -112,7 +112,7 @@ private extension InstrumentsTableViewCell {
 
         var availableInstruments = Instrument.allCases
 
-        if let instruments = song.instruments {
+        if !instruments.isEmpty {
             availableInstruments = Instrument.allCases.filter { !instruments.contains($0) }
         }
 

@@ -1,6 +1,6 @@
 import UIKit
 
-protocol SongBuilderTableViewCell: UITableViewCell {
+protocol SongBuilderPart: UIResponder {
 
     var song: Song? { get set }
     var rootNavigationController: UINavigationController? { get set }
@@ -76,10 +76,12 @@ extension SongBuilderViewController: UITableViewDataSource {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
 
-        guard let cell = cell as? SongBuilderTableViewCell else { return cell }
+        guard let cell = cell as? SongBuilderPart else { return cell }
 
         cell.rootNavigationController = navigationController
         cell.song = song
+
+        guard let cell = cell as? UITableViewCell else { return .init() }
 
         return cell
     }

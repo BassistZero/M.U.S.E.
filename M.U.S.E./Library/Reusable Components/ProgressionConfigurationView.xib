@@ -51,6 +51,7 @@
                         <segment title="I-III-IV-V"/>
                         <segment title="I-II-III-IV"/>
                         <segment title="I-VI-IV-V"/>
+                        <segment title="I-V-IV-I"/>
                         <segment title="Random"/>
                     </segments>
                 </segmentedControl>
