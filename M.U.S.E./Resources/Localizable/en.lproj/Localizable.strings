@@ -24,6 +24,14 @@ Interval.majorSixth = "Major Sixth";
 Interval.minorSeventh = "Minor Seventh";
 Interval.majorSeventh = "Major Seventh";
 
+ScaleStep.one = "I";
+ScaleStep.two = "II";
+ScaleStep.three = "III";
+ScaleStep.four = "IV";
+ScaleStep.five = "V";
+ScaleStep.six = "VI";
+ScaleStep.seven = "VII";
+
 Key.major = "Major";
 Key.minor = "Minor";
 
@@ -67,6 +75,7 @@ ProgressionTypeColor.melodic = "Melodic";
 ProgressionVersion.oneThreeFourFive = "I-III-IV-V";
 ProgressionVersion.oneTwoThreeFour = "I-II-III-IV";
 ProgressionVersion.oneSixFourFive = "I-VI-IV-V";
+ProgressionVersion.oneFiveFourOne = "I-V-IV-I";
 ProgressionVersion.random = "Random";
 
 StructurePart.intro = "Intro";
@@ -95,12 +104,20 @@ SongBuilder.Main.AddingAlert.cancel = "Cancel";
 SongBuilder.Main.AddingAlert.proceedWithDummyName = "Decide Later";
 SongBuilder.Main.AddingAlert.proceedWithSongName = "OK";
 
+SongBuilder.Detail.Configuration.tempoName = "Tempo";
+SongBuilder.Detail.Configuration.timeName = "Size";
+SongBuilder.Detail.Configuration.upButton = "";
+SongBuilder.Detail.Configuration.downButton = "";
+
 SongBuilder.Detail.Structure.Main.addNewStructurePart = "Add New Structure Part";
 SongBuilder.Detail.Structure.Main.menuTitle = "Structure Part";
 SongBuilder.Detail.Structure.Main.barName = "Bars";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Repeating";
 
-SongBuilder.Detail.Structure.Detail.title = "Instruments of";
+SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName = "Instruments";
+SongBuilder.Detail.Structure.Detail.AssignedInstruments.emptyInstruments = "No Instruments";
+
+SongBuilder.Detail.Structure.Detail.StructurePartProgression.titleName = "Progression";
 
 SongBuilder.Detail.Instruments.addNewInstrument = "Add New Instrument";
 SongBuilder.Detail.Instruments.partsName = "Parts";

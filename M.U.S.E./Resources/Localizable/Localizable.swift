@@ -133,6 +133,8 @@ internal enum L10n {
     internal static let natural = L10n.tr("Localizable", "ProgressionTypeColor.natural", fallback: "Natural")
   }
   internal enum ProgressionVersion {
+    /// I-V-IV-I
+    internal static let oneFiveFourOne = L10n.tr("Localizable", "ProgressionVersion.oneFiveFourOne", fallback: "I-V-IV-I")
     /// I-VI-IV-V
     internal static let oneSixFourFive = L10n.tr("Localizable", "ProgressionVersion.oneSixFourFive", fallback: "I-VI-IV-V")
     /// I-III-IV-V
@@ -152,8 +154,34 @@ internal enum L10n {
       internal static let playProgression = L10n.tr("Localizable", "ProgressionViewController.Buttons.playProgression", fallback: "Play Progression")
     }
   }
+  internal enum ScaleStep {
+    /// V
+    internal static let five = L10n.tr("Localizable", "ScaleStep.five", fallback: "V")
+    /// IV
+    internal static let four = L10n.tr("Localizable", "ScaleStep.four", fallback: "IV")
+    /// I
+    internal static let one = L10n.tr("Localizable", "ScaleStep.one", fallback: "I")
+    /// VII
+    internal static let seven = L10n.tr("Localizable", "ScaleStep.seven", fallback: "VII")
+    /// VI
+    internal static let six = L10n.tr("Localizable", "ScaleStep.six", fallback: "VI")
+    /// III
+    internal static let three = L10n.tr("Localizable", "ScaleStep.three", fallback: "III")
+    /// II
+    internal static let two = L10n.tr("Localizable", "ScaleStep.two", fallback: "II")
+  }
   internal enum SongBuilder {
     internal enum Detail {
+      internal enum Configuration {
+        /// 
+        internal static let downButton = L10n.tr("Localizable", "SongBuilder.Detail.Configuration.downButton", fallback: "")
+        /// Tempo
+        internal static let tempoName = L10n.tr("Localizable", "SongBuilder.Detail.Configuration.tempoName", fallback: "Tempo")
+        /// Size
+        internal static let timeName = L10n.tr("Localizable", "SongBuilder.Detail.Configuration.timeName", fallback: "Size")
+        /// 
+        internal static let upButton = L10n.tr("Localizable", "SongBuilder.Detail.Configuration.upButton", fallback: "")
+      }
       internal enum Instruments {
         /// Add New Instrument
         internal static let addNewInstrument = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.addNewInstrument", fallback: "Add New Instrument")
@@ -170,8 +198,16 @@ internal enum L10n {
       }
       internal enum Structure {
         internal enum Detail {
-          /// Instruments of
-          internal static let title = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Detail.title", fallback: "Instruments of")
+          internal enum AssignedInstruments {
+            /// No Instruments
+            internal static let emptyInstruments = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Detail.AssignedInstruments.emptyInstruments", fallback: "No Instruments")
+            /// Instruments
+            internal static let titleName = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName", fallback: "Instruments")
+          }
+          internal enum StructurePartProgression {
+            /// Progression
+            internal static let titleName = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Detail.StructurePartProgression.titleName", fallback: "Progression")
+          }
         }
         internal enum Main {
           /// Add New Structure Part

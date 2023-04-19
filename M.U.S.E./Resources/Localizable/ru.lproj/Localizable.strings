@@ -24,6 +24,14 @@ Interval.majorSixth = "Большая Секста";
 Interval.minorSeventh = "Малая Септима";
 Interval.majorSeventh = "Большая Септима";
 
+ScaleStep.one = "I";
+ScaleStep.two = "II";
+ScaleStep.three = "III";
+ScaleStep.four = "IV";
+ScaleStep.five = "V";
+ScaleStep.six = "VI";
+ScaleStep.seven = "VII";
+
 Key.major = "Мажор";
 Key.minor = "Минор";
 
@@ -67,6 +75,7 @@ ProgressionTypeColor.melodic = "Мелодический";
 ProgressionVersion.oneThreeFourFive = "I-III-IV-V";
 ProgressionVersion.oneTwoThreeFour = "I-II-III-IV";
 ProgressionVersion.oneSixFourFive = "I-VI-IV-V";
+ProgressionVersion.oneFiveFourOne = "I-V-IV-I";
 ProgressionVersion.random = "Случайная";
 
 StructurePart.intro = "Вступление";
@@ -95,12 +104,20 @@ SongBuilder.Main.AddingAlert.cancel = "Отменить";
 SongBuilder.Main.AddingAlert.proceedWithDummyName = "Решить Позже";
 SongBuilder.Main.AddingAlert.proceedWithSongName = "ОК";
 
+SongBuilder.Detail.Configuration.tempoName = "Темп";
+SongBuilder.Detail.Configuration.timeName = "Размер";
+SongBuilder.Detail.Configuration.upButton = "";
+SongBuilder.Detail.Configuration.downButton = "";
+
 SongBuilder.Detail.Structure.Main.addNewStructurePart = "Добавить Новую Структуру";
 SongBuilder.Detail.Structure.Main.menuTitle = "Структурная Часть";
 SongBuilder.Detail.Structure.Main.barName = "Такты";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Повторения";
 
-SongBuilder.Detail.Structure.Detail.title = " Инструменты части:";
+SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName = "Инструменты";
+SongBuilder.Detail.Structure.Detail.AssignedInstruments.emptyInstruments = "Нет инструментов";
+
+SongBuilder.Detail.Structure.Detail.StructurePartProgression.titleName = "Прогрессия";
 
 SongBuilder.Detail.Instruments.addNewInstrument = "Добавить Новый Инструмент";
 SongBuilder.Detail.Instruments.partsName = "Части";
