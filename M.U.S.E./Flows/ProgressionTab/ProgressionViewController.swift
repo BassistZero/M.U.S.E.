@@ -9,6 +9,7 @@ final class ProgressionViewController: UIViewController {
     @IBOutlet private weak var polyphonySwitch: UISwitch!
     @IBOutlet private weak var generateProgressionButton: UIButton!
     @IBOutlet private weak var playProgressionButton: UIButton!
+    @IBOutlet private weak var blacklistProgressionButton: UIButton!
 
     // MARK: - Private Properties
 
@@ -41,6 +42,7 @@ private extension ProgressionViewController {
     func configureButtonsText() {
         generateProgressionButton.setTitle(L10n.ProgressionViewController.Buttons.generateProgression, for: .normal)
         playProgressionButton.setTitle(L10n.ProgressionViewController.Buttons.playProgression, for: .normal)
+        blacklistProgressionButton.setTitle(L10n.ProgressionViewController.Buttons.blacklistProgression, for: .normal)
     }
 
     func configureProgressionView() {
@@ -60,10 +62,15 @@ extension ProgressionViewController {
 
     @IBAction func GenerateProgression(_ sender: UIButton) {
         configureProgressionView()
+//        Progression.blacklistBadProgressions()
     }
 
     @IBAction func playProgression(_ sender: UIButton) {
         playProgression()
+    }
+
+    @IBAction func blacklistProgression(_ sender: UIButton) {
+        blacklistProgression()
     }
 
 }
@@ -86,6 +93,12 @@ private extension ProgressionViewController {
         if let progression = progression {
             progressionPlayer?.play(progression: progression)
         }
+    }
+
+    func blacklistProgression() {
+        guard let scaleSteps = progression?.scaleSteps else { print("no scale steps found"); return }
+
+        ScaleStepsBlacklist.shared.add(scaleSteps)
     }
 
 }

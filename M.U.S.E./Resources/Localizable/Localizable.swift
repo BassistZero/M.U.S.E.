@@ -144,6 +144,8 @@ internal enum L10n {
   }
   internal enum ProgressionViewController {
     internal enum Buttons {
+      /// Don't Suggest the Progression
+      internal static let blacklistProgression = L10n.tr("Localizable", "ProgressionViewController.Buttons.blacklistProgression", fallback: "Don't Suggest the Progression")
       /// Generate Progression
       internal static let generateProgression = L10n.tr("Localizable", "ProgressionViewController.Buttons.generateProgression", fallback: "Generate Progression")
       /// Play Progression

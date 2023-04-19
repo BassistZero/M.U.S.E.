@@ -45,6 +45,7 @@ ChordViewController.Switch.text = "Полифония:";
 
 ProgressionViewController.Buttons.generateProgression = "Новая Прогрессия";
 ProgressionViewController.Buttons.playProgression = "Сыграть Прогрессию";
+ProgressionViewController.Buttons.blacklistProgression = "Больше Не Предлагать Эту Прогрессию";
 
 MainTabBar.Item.songBuilder = "Проекты Песен";
 MainTabBar.Item.chord = "Аккорд";

@@ -49,6 +49,7 @@
 		02A9F16229DEF70B00B6D46B /* InstrumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */; };
 		02A9F16329DEF70B00B6D46B /* InstrumentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */; };
 		02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */; };
+		02D786C529EAD16E001423C2 /* ScaleStepsBlacklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D786C429EAD16E001423C2 /* ScaleStepsBlacklist.swift */; };
 		02DA832029E3F8910052C59A /* InstrumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */; };
 		02DA832129E3F8910052C59A /* InstrumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */; };
 		02DA832429E40D2A0052C59A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DA832329E40D2A0052C59A /* Colors.xcassets */; };
@@ -208,6 +209,7 @@
 		02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsTableViewCell.swift; sourceTree = "<group>"; };
 		02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentsTableViewCell.xib; sourceTree = "<group>"; };
 		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
+		02D786C429EAD16E001423C2 /* ScaleStepsBlacklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleStepsBlacklist.swift; sourceTree = "<group>"; };
 		02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentTableViewCell.swift; sourceTree = "<group>"; };
 		02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentTableViewCell.xib; sourceTree = "<group>"; };
 		02DA832329E40D2A0052C59A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -523,9 +525,18 @@
 		0272961F29DC30FC0089D6F6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0272962029DC311C0089D6F6 /* Utilities */,
 				027102C52814745E00694F3E /* Reusable Components */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		0272962029DC311C0089D6F6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				02D786C429EAD16E001423C2 /* ScaleStepsBlacklist.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		02A9F15F29DEF6E900B6D46B /* Instruments */ = {
@@ -1013,6 +1024,7 @@
 				022B901A2818839F009ED3F7 /* Chord.swift in Sources */,
 				028DE87B29C4704C003671D0 /* StructurePart.swift in Sources */,
 				027D6BA32939F87F00A7E99B /* ProgressionPlayer.swift in Sources */,
+				02D786C529EAD16E001423C2 /* ScaleStepsBlacklist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

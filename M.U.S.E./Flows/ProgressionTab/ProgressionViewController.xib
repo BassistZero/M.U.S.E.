@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressionViewController" customModule="M_U_S_E_" customModuleProvider="target">
             <connections>
+                <outlet property="blacklistProgressionButton" destination="S93-vV-3iF" id="jG8-d3-GQK"/>
                 <outlet property="generateProgressionButton" destination="dea-7M-rfy" id="AJ2-qq-cqK"/>
                 <outlet property="playProgressionButton" destination="Bt7-23-WRN" id="t5F-4F-IgL"/>
                 <outlet property="polyphonySwitch" destination="axB-E4-zDa" id="Lw1-CJ-v9A"/>
@@ -52,12 +53,23 @@
                     <rect key="frame" x="20" y="431.66666666666669" width="51" height="31"/>
                 </switch>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="C -&gt; D -&gt; E -&gt; G" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OFx-3Z-7ax">
-                    <rect key="frame" x="20" y="484.66666666666674" width="353" height="313.33333333333326"/>
+                    <rect key="frame" x="20" y="484.66666666666674" width="353" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="xI3-CJ-iuJ"/>
+                    </constraints>
                     <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S93-vV-3iF">
+                    <rect key="frame" x="20" y="564.66666666666663" width="353" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Don't Suggest the Progression"/>
+                    <connections>
+                        <action selector="blacklistProgression:" destination="-1" eventType="touchUpInside" id="oqb-CO-Hkp"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,13 +77,15 @@
                 <constraint firstItem="dea-7M-rfy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="0G3-y8-4Y9"/>
                 <constraint firstItem="axB-E4-zDa" firstAttribute="centerY" secondItem="Bt7-23-WRN" secondAttribute="centerY" id="0PO-vz-BF1"/>
                 <constraint firstItem="dea-7M-rfy" firstAttribute="top" secondItem="yWi-NO-Q6h" secondAttribute="bottom" constant="20" id="881-IM-avP"/>
+                <constraint firstItem="S93-vV-3iF" firstAttribute="top" secondItem="OFx-3Z-7ax" secondAttribute="bottom" constant="20" id="BMc-DJ-UtV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="S93-vV-3iF" secondAttribute="trailing" constant="20" id="FxL-73-yxs"/>
                 <constraint firstItem="Bt7-23-WRN" firstAttribute="top" secondItem="dea-7M-rfy" secondAttribute="bottom" constant="20" id="KCA-km-7Wo"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dea-7M-rfy" secondAttribute="trailing" constant="20" id="S2W-IF-jX1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OFx-3Z-7ax" secondAttribute="trailing" constant="20" id="ShS-PV-fMa"/>
                 <constraint firstItem="yWi-NO-Q6h" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="UfN-Bb-Bdq"/>
+                <constraint firstItem="S93-vV-3iF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="W7O-gR-1SV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Bt7-23-WRN" secondAttribute="trailing" constant="20" id="Xkw-18-JOS"/>
                 <constraint firstItem="axB-E4-zDa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gp3-Fk-vFS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OFx-3Z-7ax" secondAttribute="bottom" constant="20" id="ile-3h-sH4"/>
                 <constraint firstItem="Bt7-23-WRN" firstAttribute="leading" secondItem="axB-E4-zDa" secondAttribute="trailing" constant="20" id="juY-sW-Rh1"/>
                 <constraint firstItem="yWi-NO-Q6h" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="kLD-1l-kqs"/>
                 <constraint firstItem="OFx-3Z-7ax" firstAttribute="top" secondItem="Bt7-23-WRN" secondAttribute="bottom" constant="20" id="naA-d5-8LT"/>
