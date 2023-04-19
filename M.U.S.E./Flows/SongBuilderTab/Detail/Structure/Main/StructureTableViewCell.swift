@@ -1,6 +1,6 @@
 import UIKit
 
-final class StructureTableViewCell: UITableViewCell, SongBuilderTableViewCell {
+final class StructureTableViewCell: UITableViewCell, SongBuilderPart {
 
     // MARK: - Private Outlets
 
@@ -15,9 +15,10 @@ final class StructureTableViewCell: UITableViewCell, SongBuilderTableViewCell {
 
     // MARK: - Private Properties
 
-    private var structureParts: [StructurePart] = [] {
+    private var songParts: [SongPart] = [] {
         didSet {
-            song?.structure = structureParts
+            song?.structure = songParts.map { $0.structurePart }
+            song?.songParts = songParts
         }
     }
 
@@ -74,7 +75,7 @@ private extension StructureTableViewCell {
 extension StructureTableViewCell: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        structureParts.count
+        songParts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,7 +85,7 @@ extension StructureTableViewCell: UITableViewDataSource {
         cell.accessoryType = .disclosureIndicator
 
         cell.didChanged = { structurePart in
-            self.structureParts[indexPath.row] = structurePart
+            self.songParts[indexPath.row].structurePart = structurePart
         }
 
         return cell
@@ -114,8 +115,8 @@ extension StructureTableViewCell: UITableViewDelegate {
 private extension StructureTableViewCell {
 
     func addNewRow() {
-        structureParts += [.intro]
-        let indexPath = IndexPath(row: structureParts.count - 1, section: 0)
+        songParts.append(.init(structurePart: .intro))
+        let indexPath = IndexPath(row: songParts.count - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
 
@@ -135,15 +136,16 @@ private extension StructureTableViewCell {
             let title = cell.title
         else { return }
 
-        let vc = UIViewController()
-        vc.view.backgroundColor = .init(named: "systemWhite")
-        vc.title = "\(L10n.SongBuilder.Detail.Structure.Detail.title) '\(title)'"
+        let vc = StructurePartDetailsViewController()
+        vc.title = "\(title)"
+        vc.song = song
+        vc.rootNavigationController = rootNavigationController
 
-        rootNavigationController?.pushViewController(vc, animated: true)
+        rootNavigationController?.present(vc, animated: true)
     }
 
     func handleStructurePartDeletion(on tableView: UITableView, for indexPath: IndexPath) {
-        structureParts.remove(at: indexPath.row)
+        songParts.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 

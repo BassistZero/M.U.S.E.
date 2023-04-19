@@ -41,8 +41,8 @@ private extension StructurePartTableViewCell {
 
     func setupInitialState() {
         setupButtons()
-        setupLabels()
         setupSteppers()
+        setupLabels()
     }
 
     func setupButtons() {
@@ -69,10 +69,10 @@ private extension StructurePartTableViewCell {
         repeatingBarNameLabel.text = L10n.SongBuilder.Detail.Structure.Main.repeatingBarName
         repeatingBarNameLabel.font = .boldSystemFont(ofSize: 12)
 
-        barsLabel.text = "\(1)"
+        barsLabel.text = "\(Int(barsStepper.value))"
         barsLabel.font = .systemFont(ofSize: 14)
 
-        repeatingLabel.text = "\(1)"
+        repeatingLabel.text = "\(Int(repeatingStepper.value))"
         repeatingLabel.font = .systemFont(ofSize: 14)
     }
 
@@ -83,6 +83,8 @@ private extension StructurePartTableViewCell {
             stepper?.autorepeat = true
             stepper?.maximumValue = 100
         }
+
+        barsStepper.value = 4
 
         barsStepper.addTarget(self, action: #selector(updateBarLabel), for: .valueChanged)
         repeatingStepper.addTarget(self, action: #selector(updateRepeatingLabel), for: .valueChanged)

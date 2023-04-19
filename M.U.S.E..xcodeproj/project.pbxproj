@@ -28,6 +28,14 @@
 		0251473829CC93BA002EAA90 /* StructurePartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251473629CC93BA002EAA90 /* StructurePartTableViewCell.swift */; };
 		0251473929CC93BA002EAA90 /* StructurePartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0251473729CC93BA002EAA90 /* StructurePartTableViewCell.xib */; };
 		02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02572C11298BC44D003B5070 /* NotePickerView.swift */; };
+		025B326D29E549F50001A948 /* StructurePartDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B326B29E549F50001A948 /* StructurePartDetailsViewController.swift */; };
+		025B326E29E549F50001A948 /* StructurePartDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B326C29E549F50001A948 /* StructurePartDetailsViewController.xib */; };
+		025B327129E54D590001A948 /* AssignedInstrumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */; };
+		025B327229E54D590001A948 /* AssignedInstrumentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */; };
+		025B327629E55A970001A948 /* StructurePartProgressionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B327429E55A960001A948 /* StructurePartProgressionTableViewCell.swift */; };
+		025B327729E55A970001A948 /* StructurePartProgressionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B327529E55A970001A948 /* StructurePartProgressionTableViewCell.xib */; };
+		025B327D29E5603B0001A948 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B327B29E5603B0001A948 /* TitleTableViewCell.swift */; };
+		025B327E29E5603B0001A948 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B327C29E5603B0001A948 /* TitleTableViewCell.xib */; };
 		027102B22814743000694F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102B12814743000694F3E /* AppDelegate.swift */; };
 		027102B62814743000694F3E /* ChordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102B52814743000694F3E /* ChordViewController.swift */; };
 		027102BE2814743200694F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027102BC2814743200694F3E /* LaunchScreen.storyboard */; };
@@ -186,6 +194,14 @@
 		0251473629CC93BA002EAA90 /* StructurePartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartTableViewCell.swift; sourceTree = "<group>"; };
 		0251473729CC93BA002EAA90 /* StructurePartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StructurePartTableViewCell.xib; sourceTree = "<group>"; };
 		02572C11298BC44D003B5070 /* NotePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePickerView.swift; sourceTree = "<group>"; };
+		025B326B29E549F50001A948 /* StructurePartDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartDetailsViewController.swift; sourceTree = "<group>"; };
+		025B326C29E549F50001A948 /* StructurePartDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StructurePartDetailsViewController.xib; sourceTree = "<group>"; };
+		025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignedInstrumentsTableViewCell.swift; sourceTree = "<group>"; };
+		025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignedInstrumentsTableViewCell.xib; sourceTree = "<group>"; };
+		025B327429E55A960001A948 /* StructurePartProgressionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartProgressionTableViewCell.swift; sourceTree = "<group>"; };
+		025B327529E55A970001A948 /* StructurePartProgressionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StructurePartProgressionTableViewCell.xib; sourceTree = "<group>"; };
+		025B327B29E5603B0001A948 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		025B327C29E5603B0001A948 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		027102AE2814743000694F3E /* M.U.S.E..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M.U.S.E..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027102B12814743000694F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027102B52814743000694F3E /* ChordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordViewController.swift; sourceTree = "<group>"; };
@@ -361,9 +377,8 @@
 		020F8E8829D34C2C006B4E7A /* Structure */ = {
 			isa = PBXGroup;
 			children = (
-				0251473529CC9398002EAA90 /* Cells */,
-				022FF1CC29C23A5900CEDD5E /* StructureTableViewCell.swift */,
-				022041C129C23A750038121C /* StructureTableViewCell.xib */,
+				025B326829E549D50001A948 /* Main */,
+				025B326929E549D80001A948 /* Detail */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -435,6 +450,62 @@
 			isa = PBXGroup;
 			children = (
 				020F8E8629D34B71006B4E7A /* StructurePartTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		025B326829E549D50001A948 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0251473529CC9398002EAA90 /* Cells */,
+				022FF1CC29C23A5900CEDD5E /* StructureTableViewCell.swift */,
+				022041C129C23A750038121C /* StructureTableViewCell.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		025B326929E549D80001A948 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				025B326A29E549E40001A948 /* Cells */,
+				025B326B29E549F50001A948 /* StructurePartDetailsViewController.swift */,
+				025B326C29E549F50001A948 /* StructurePartDetailsViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		025B326A29E549E40001A948 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				025B327329E55A570001A948 /* AssignedInstrumentsTableViewCell */,
+				025B327829E55A9A0001A948 /* StructurePartProgressionTableViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		025B327329E55A570001A948 /* AssignedInstrumentsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */,
+				025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */,
+			);
+			path = AssignedInstrumentsTableViewCell;
+			sourceTree = "<group>";
+		};
+		025B327829E55A9A0001A948 /* StructurePartProgressionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				025B327429E55A960001A948 /* StructurePartProgressionTableViewCell.swift */,
+				025B327529E55A970001A948 /* StructurePartProgressionTableViewCell.xib */,
+			);
+			path = StructurePartProgressionTableViewCell;
+			sourceTree = "<group>";
+		};
+		025B327A29E560270001A948 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				025B327B29E5603B0001A948 /* TitleTableViewCell.swift */,
+				025B327C29E5603B0001A948 /* TitleTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -850,6 +921,7 @@
 				E8E30A2628F9DEFF007FF597 /* C6.mp3 in Resources */,
 				E8E30A3A28F9DEFF007FF597 /* G#2.mp3 in Resources */,
 				E8E30A6228F9DEFF007FF597 /* F#3.mp3 in Resources */,
+				025B327729E55A970001A948 /* StructurePartProgressionTableViewCell.xib in Resources */,
 				E8E30A4328F9DEFF007FF597 /* G4.mp3 in Resources */,
 				E8E30A1C28F9DEFF007FF597 /* C0.mp3 in Resources */,
 				E8E30A5628F9DEFF007FF597 /* D#7.mp3 in Resources */,
@@ -884,15 +956,18 @@
 				E8E30A0728F9DEFF007FF597 /* F#5.mp3 in Resources */,
 				E8E30A1028F9DEFF007FF597 /* A6.mp3 in Resources */,
 				02F2D94428312D6E0084F8A1 /* Localizable.strings in Resources */,
+				025B327E29E5603B0001A948 /* TitleTableViewCell.xib in Resources */,
 				E8E30A2928F9DEFF007FF597 /* A#5.mp3 in Resources */,
 				E8E30A3528F9DEFF007FF597 /* G#1.mp3 in Resources */,
 				E8E30A5228F9DEFF007FF597 /* G#3.mp3 in Resources */,
 				02A9F16329DEF70B00B6D46B /* InstrumentsTableViewCell.xib in Resources */,
 				E8E30A2E28F9DEFF007FF597 /* E3.mp3 in Resources */,
 				E8E30A0628F9DEFF007FF597 /* G5.mp3 in Resources */,
+				025B326E29E549F50001A948 /* StructurePartDetailsViewController.xib in Resources */,
 				E8E30A2028F9DEFF007FF597 /* E1.mp3 in Resources */,
 				E8E30A2528F9DEFF007FF597 /* D3.mp3 in Resources */,
 				E8E30A1528F9DEFF007FF597 /* G#0.mp3 in Resources */,
+				025B327229E54D590001A948 /* AssignedInstrumentsTableViewCell.xib in Resources */,
 				020F8E8C29D34C5B006B4E7A /* SongsViewController.xib in Resources */,
 				E8E30A3E28F9DEFF007FF597 /* D#2.mp3 in Resources */,
 				E8E30A2328F9DEFF007FF597 /* E6.mp3 in Resources */,
@@ -1001,12 +1076,15 @@
 				020F8E9029D34E20006B4E7A /* SongTableViewCell.swift in Sources */,
 				02F48AD329DF0A6E006D4C5C /* ResultTableViewCell.swift in Sources */,
 				028DE87129C46D3E003671D0 /* Setup.swift in Sources */,
+				025B326D29E549F50001A948 /* StructurePartDetailsViewController.swift in Sources */,
+				025B327D29E5603B0001A948 /* TitleTableViewCell.swift in Sources */,
 				028DE87329C46E1E003671D0 /* Genre.swift in Sources */,
 				02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */,
 				02218D5E28368884004C30B2 /* MainTabBarController.swift in Sources */,
 				0251473829CC93BA002EAA90 /* StructurePartTableViewCell.swift in Sources */,
 				02A9F15D29DEF50B00B6D46B /* SongBuilderViewController.swift in Sources */,
 				0217354A292275FB006A67B5 /* Progression.swift in Sources */,
+				025B327629E55A970001A948 /* StructurePartProgressionTableViewCell.swift in Sources */,
 				022B901828187C07009ED3F7 /* Interval.swift in Sources */,
 				028DE86F29C46B18003671D0 /* Song.swift in Sources */,
 				0217355229227E63006A67B5 /* ScaleType.swift in Sources */,
@@ -1023,6 +1101,7 @@
 				0217355029227E21006A67B5 /* Scale.swift in Sources */,
 				022B901A2818839F009ED3F7 /* Chord.swift in Sources */,
 				028DE87B29C4704C003671D0 /* StructurePart.swift in Sources */,
+				025B327129E54D590001A948 /* AssignedInstrumentsTableViewCell.swift in Sources */,
 				027D6BA32939F87F00A7E99B /* ProgressionPlayer.swift in Sources */,
 				02D786C529EAD16E001423C2 /* ScaleStepsBlacklist.swift in Sources */,
 			);
