@@ -36,19 +36,15 @@ final class ChordViewController: UIViewController {
 extension ChordViewController: UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+        3
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == valuePickerView {
-            return NoteValue.allCases.count
+        switch pickerView {
+        case valuePickerView: return NoteValue.allCases.count
+        case octavePickerView: return Octave.allCases.count
+        default: return 0
         }
-
-        if pickerView == octavePickerView {
-            return Octave.allCases.count
-        }
-
-        return 0
     }
 
 }
@@ -58,15 +54,11 @@ extension ChordViewController: UIPickerViewDataSource {
 extension ChordViewController: UIPickerViewDelegate {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == valuePickerView {
-            return Note(value: .init(rawValue: row) ?? .c).value.description
+        switch pickerView {
+        case valuePickerView: return Note(value: .init(rawValue: row) ?? .c).value.description
+        case octavePickerView: return Octave(rawValue: row)?.rawValue.description
+        default: return "error"
         }
-
-        if pickerView == octavePickerView {
-            return Octave(rawValue: row)?.rawValue.description
-        }
-
-        return "error"
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
