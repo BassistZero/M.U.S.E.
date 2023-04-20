@@ -82,6 +82,7 @@ private extension NotePickerView {
 
     func setupInitialState() {
         configureAppearance()
+        configureTitles()
 
         cFNotes.addTarget(self, action: #selector(updateNote), for: .valueChanged)
         fSharpBNotes.addTarget(self, action: #selector(updateNote), for: .valueChanged)
@@ -91,6 +92,22 @@ private extension NotePickerView {
         cFNotes.selectedSegmentIndex = 0
         fSharpBNotes.selectedSegmentIndex = UISegmentedControl.noSegment
         octavePicker.selectedSegmentIndex = 4
+    }
+
+    func configureTitles() {
+        cFNotes.setTitle(NoteValue.c.description, forSegmentAt: Self.c)
+        cFNotes.setTitle(NoteValue.cSharp.description, forSegmentAt: Self.cSharp)
+        cFNotes.setTitle(NoteValue.d.description, forSegmentAt: Self.d)
+        cFNotes.setTitle(NoteValue.dSharp.description, forSegmentAt: Self.dSharp)
+        cFNotes.setTitle(NoteValue.e.description, forSegmentAt: Self.e)
+        cFNotes.setTitle(NoteValue.f.description, forSegmentAt: Self.f)
+
+        fSharpBNotes.setTitle(NoteValue.fSharp.description, forSegmentAt: Self.fSharp)
+        fSharpBNotes.setTitle(NoteValue.g.description, forSegmentAt: Self.g)
+        fSharpBNotes.setTitle(NoteValue.gSharp.description, forSegmentAt: Self.gSharp)
+        fSharpBNotes.setTitle(NoteValue.a.description, forSegmentAt: Self.a)
+        fSharpBNotes.setTitle(NoteValue.aSharp.description, forSegmentAt: Self.aSharp)
+        fSharpBNotes.setTitle(NoteValue.b.description, forSegmentAt: Self.b)
     }
 
     func commonInit() {
@@ -128,5 +145,25 @@ private extension NotePickerView {
     func updateNote() {
         didTapped?()
     }
+
+}
+
+// MARK: - Indices
+
+private extension NotePickerView {
+
+    static let c = 0
+    static let cSharp = 1
+    static let d = 2
+    static let dSharp = 3
+    static let e = 4
+    static let f = 5
+
+    static let fSharp = 0
+    static let g = 1
+    static let gSharp = 2
+    static let a = 3
+    static let aSharp = 4
+    static let b = 5
 
 }

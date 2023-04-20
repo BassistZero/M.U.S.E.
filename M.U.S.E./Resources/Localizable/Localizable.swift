@@ -95,28 +95,28 @@ internal enum L10n {
   internal enum Note {
     /// A
     internal static let a = L10n.tr("Localizable", "Note.a", fallback: "A")
-    /// A#
-    internal static let aSharp = L10n.tr("Localizable", "Note.aSharp", fallback: "A#")
+    /// A♯
+    internal static let aSharp = L10n.tr("Localizable", "Note.aSharp", fallback: "A♯")
     /// B
     internal static let b = L10n.tr("Localizable", "Note.b", fallback: "B")
     /// C
     internal static let c = L10n.tr("Localizable", "Note.c", fallback: "C")
-    /// C#
-    internal static let cSharp = L10n.tr("Localizable", "Note.cSharp", fallback: "C#")
+    /// C♯
+    internal static let cSharp = L10n.tr("Localizable", "Note.cSharp", fallback: "C♯")
     /// D
     internal static let d = L10n.tr("Localizable", "Note.d", fallback: "D")
-    /// D#
-    internal static let dSharp = L10n.tr("Localizable", "Note.dSharp", fallback: "D#")
+    /// D♯
+    internal static let dSharp = L10n.tr("Localizable", "Note.dSharp", fallback: "D♯")
     /// E
     internal static let e = L10n.tr("Localizable", "Note.e", fallback: "E")
     /// F
     internal static let f = L10n.tr("Localizable", "Note.f", fallback: "F")
-    /// F#
-    internal static let fSharp = L10n.tr("Localizable", "Note.fSharp", fallback: "F#")
+    /// F♯
+    internal static let fSharp = L10n.tr("Localizable", "Note.fSharp", fallback: "F♯")
     /// G
     internal static let g = L10n.tr("Localizable", "Note.g", fallback: "G")
-    /// G#
-    internal static let gSharp = L10n.tr("Localizable", "Note.gSharp", fallback: "G#")
+    /// G♯
+    internal static let gSharp = L10n.tr("Localizable", "Note.gSharp", fallback: "G♯")
   }
   internal enum ProgressionType {
     /// Major
@@ -271,14 +271,6 @@ internal enum L10n {
     internal static let intro = L10n.tr("Localizable", "StructurePart.intro", fallback: "Intro")
     /// Outro
     internal static let outro = L10n.tr("Localizable", "StructurePart.outro", fallback: "Outro")
-    /// Pre-Chorus
-    internal static let preChorus = L10n.tr("Localizable", "StructurePart.preChorus", fallback: "Pre-Chorus")
-    /// Pre-Outro
-    internal static let preOutro = L10n.tr("Localizable", "StructurePart.preOutro", fallback: "Pre-Outro")
-    /// Pre-Solo
-    internal static let preSolo = L10n.tr("Localizable", "StructurePart.preSolo", fallback: "Pre-Solo")
-    /// Pre-Verse
-    internal static let preVerse = L10n.tr("Localizable", "StructurePart.preVerse", fallback: "Pre-Verse")
     /// Solo
     internal static let solo = L10n.tr("Localizable", "StructurePart.solo", fallback: "Solo")
     /// Verse

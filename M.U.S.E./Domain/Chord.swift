@@ -79,7 +79,24 @@ private extension Chord {
 extension Chord: CustomStringConvertible {
 
     var description: String {
-        return "\(rootNote.value)\(type.description)"
+        var value: String
+
+        switch rootNote.value {
+        case .c: value = "C"
+        case .cSharp: value = "C♯"
+        case .d: value = "D"
+        case .dSharp: value = "D♯"
+        case .e: value = "E"
+        case .f: value = "F"
+        case .fSharp: value = "F♯"
+        case .g: value = "G"
+        case .gSharp: value = "G♯"
+        case .a: value = "A"
+        case .aSharp: value = "A♯"
+        case .b: value = "B"
+        }
+
+        return "\(value)\(type.description)"
     }
 
 }

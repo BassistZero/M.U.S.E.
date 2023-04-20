@@ -1,15 +1,15 @@
-Note.c = "C";
-Note.cSharp = "C#";
-Note.d = "D";
-Note.dSharp = "D#";
-Note.e = "E";
-Note.f = "F";
-Note.fSharp = "F#";
-Note.g = "G";
-Note.gSharp = "G#";
-Note.a = "A";
-Note.aSharp = "A#";
-Note.b = "B";
+Note.c = "До";
+Note.cSharp = "До♯";
+Note.d = "Ре";
+Note.dSharp = "Ре♯";
+Note.e = "Ми";
+Note.f = "Фа";
+Note.fSharp = "Фа♯";
+Note.g = "Соль";
+Note.gSharp = "Соль♯";
+Note.a = "Ля";
+Note.aSharp = "Ля♯";
+Note.b = "Си";
 
 Interval.unison = "Унисон";
 Interval.minorSecond = "Малая Секунда";
@@ -79,14 +79,10 @@ ProgressionVersion.oneFiveFourOne = "I-V-IV-I";
 ProgressionVersion.random = "Случайная";
 
 StructurePart.intro = "Вступление";
-StructurePart.preVerse = "Пред-Куплет";
 StructurePart.verse = "Куплет";
-StructurePart.preChorus = "Пред-Припев";
 StructurePart.chorus = "Припев";
 StructurePart.bridge = "Проигрыш";
-StructurePart.preSolo = "Пред-Соло";
 StructurePart.solo = "Соло";
-StructurePart.preOutro = "Пред-Концовка";
 StructurePart.outro = "Концовка";
 
 SongBuilder.Main.addNewSong = "Добавить Новую Песню";

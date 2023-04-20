@@ -1,14 +1,14 @@
 Note.c = "C";
-Note.cSharp = "C#";
+Note.cSharp = "C♯";
 Note.d = "D";
-Note.dSharp = "D#";
+Note.dSharp = "D♯";
 Note.e = "E";
 Note.f = "F";
-Note.fSharp = "F#";
+Note.fSharp = "F♯";
 Note.g = "G";
-Note.gSharp = "G#";
+Note.gSharp = "G♯";
 Note.a = "A";
-Note.aSharp = "A#";
+Note.aSharp = "A♯";
 Note.b = "B";
 
 Interval.unison = "Unison";
@@ -79,14 +79,10 @@ ProgressionVersion.oneFiveFourOne = "I-V-IV-I";
 ProgressionVersion.random = "Random";
 
 StructurePart.intro = "Intro";
-StructurePart.preVerse = "Pre-Verse";
 StructurePart.verse = "Verse";
-StructurePart.preChorus = "Pre-Chorus";
 StructurePart.chorus = "Chorus";
 StructurePart.bridge = "Bridge";
-StructurePart.preSolo = "Pre-Solo";
 StructurePart.solo = "Solo";
-StructurePart.preOutro = "Pre-Outro";
 StructurePart.outro = "Outro";
 
 SongBuilder.Main.addNewSong = "Add New Song";

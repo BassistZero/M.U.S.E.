@@ -144,9 +144,9 @@ private extension ChordViewController {
 
     func updateUI() {
         if chord.notes == chord.sortedNotes {
-            chordLabel.text = "\(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.rootNote.value)\(chord.type)"
+            chordLabel.text = "\(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.description)"
         } else {
-            chordLabel.text = "\(L10n.ChordViewController.Text.rootNote): \(chord.rootNote)\n \(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.rootNote.value)\(chord.type)"
+            chordLabel.text = "\(L10n.ChordViewController.Text.rootNote): \(chord.rootNote)\n \(L10n.ChordViewController.Text.intervals): \(chord.intervals)\n\(L10n.ChordViewController.Text.chord): \(chord.description)"
         }
     }
 
