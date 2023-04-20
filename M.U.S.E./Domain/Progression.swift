@@ -22,6 +22,11 @@ class Progression {
 extension Progression {
 
     static func blacklistBadProgressions() {
+        let stable: [ScaleStep] = [.one, .three, .five]
+        let nonStable: [ScaleStep] = [.two, .four, .six, .seven]
+
+        var allScaleSteps: [[ScaleStep]] = []
+
         for first in ScaleStep.allCases.sorted() {
             for second in ScaleStep.allCases.sorted() {
                 for third in ScaleStep.allCases.sorted() {
@@ -29,14 +34,28 @@ extension Progression {
 
                         let steps = [first, second, third, fourth]
 
-                        if !steps.contains(.one) || !steps.contains(.five) ||
-                                steps[0] == steps[1] && steps[0] == steps[2] ||
-                                steps[1] == steps[2] && steps[1] == steps[3] ||
-                                steps[0] == .two || steps[0] == .seven ||
-                            steps[3] == .seven && (steps[2] != .two || steps[2] != .three) {
+                        allScaleSteps.append(steps)
+
+                        if
+                            !steps.contains(.one) || !steps.contains(.five)
+                            ||
+                            steps[0] == steps[1] && steps[0] == steps[2]
+                            ||
+                            steps[0] == steps[2] && steps[0] == steps[3]
+                            ||
+                            steps[0] == steps[1] && steps[0] == steps[3]
+                            ||
+                            steps[1] == steps[2] && steps[1] == steps[3]
+                            ||
+                            steps[0] == steps[1] && steps[0] == steps[2] && steps[0] == steps[3]
+                            ||
+                            steps[0] == .two || steps[0] == .seven
+                            ||
+                            (!stable.contains(steps[3]) || !stable.contains(steps[0])) {
                             if !ScaleStepsBlacklist.shared.contains(steps) {
                                 ScaleStepsBlacklist.shared.add(steps)
                             }
+                            print("banned")
                         }
 
                         var resultString = ""
@@ -56,7 +75,9 @@ extension Progression {
             }
         }
 
-        print(ScaleStepsBlacklist.shared.blacklistCount)
+        let allCasesCount = allScaleSteps.count
+
+        print("Allowed: \(allCasesCount) - \(ScaleStepsBlacklist.shared.blacklistCount) = \(allCasesCount - ScaleStepsBlacklist.shared.blacklistCount)")
     }
 
 }

@@ -111,7 +111,7 @@ SongBuilder.Detail.Configuration.downButton = "";
 
 SongBuilder.Detail.Structure.Main.addNewStructurePart = "Add New Structure Part";
 SongBuilder.Detail.Structure.Main.menuTitle = "Structure Part";
-SongBuilder.Detail.Structure.Main.barName = "Bars";
+SongBuilder.Detail.Structure.Main.reuseName = "Reusing";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Repeating";
 
 SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName = "Instruments";

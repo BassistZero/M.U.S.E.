@@ -38,12 +38,18 @@ private extension StructurePartProgressionTableViewCell {
         guard let songPart, let noteValue = songPart.progression?.chords.first?.rootNote.value else { return }
         progressionConfigurationView.updateNoteValue(to: noteValue)
 
-
+        self.songPart?.progression = progressionConfigurationView.progression
+        progressionLabel.text = self.songPart?.description
     }
 
     func updatePart() {
+        print(songPart?.description ?? "fuck it")
+
         guard let songPart, let noteValue = songPart.progression?.chords.first?.rootNote.value else { return }
         progressionConfigurationView.updateNoteValue(to: noteValue)
+
+        self.songPart?.progression = progressionConfigurationView.progression
+        progressionLabel.text = self.songPart?.description
     }
 
 }

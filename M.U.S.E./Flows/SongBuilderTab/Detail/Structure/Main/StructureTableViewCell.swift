@@ -5,8 +5,8 @@ final class StructureTableViewCell: UITableViewCell, SongBuilderPart {
     // MARK: - Private Outlets
 
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var addRowButton: UIButton!
-    @IBOutlet private weak var addRowButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var addSongPartButton: UIButton!
+    @IBOutlet private weak var addSongPartButtonBottomConstraint: NSLayoutConstraint!
 
     // MARK: - SongBuilderTableViewCell
 
@@ -46,10 +46,12 @@ private extension StructureTableViewCell {
 
         tableView.register(.init(nibName: "\(StructurePartTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(StructurePartTableViewCell.self)")
 
-        let buttonHeight = addRowButton.frame.height
-        let buttonBottomSpacer = addRowButtonBottomConstraint.constant
+        let buttonHeight = addSongPartButton.frame.height
+        let buttonBottomSpacer = addSongPartButtonBottomConstraint.constant
 
         tableView.contentInset = .init(top: 0, left: 0, bottom: buttonHeight + buttonBottomSpacer, right: 0)
+
+        tableView.isEditing = true
     }
 
     func setupButtons() {
@@ -63,9 +65,9 @@ private extension StructureTableViewCell {
 
         configuration.attributedTitle = attributedTitle
 
-        addRowButton.configuration = configuration
+        addSongPartButton.configuration = configuration
 
-        addRowButton.addTarget(self, action: #selector(addNewRow), for: .touchUpInside)
+        addSongPartButton.addTarget(self, action: #selector(addNewSongPart), for: .touchUpInside)
     }
 
 }
@@ -88,6 +90,8 @@ extension StructureTableViewCell: UITableViewDataSource {
             self.songParts[indexPath.row].structurePart = structurePart
         }
 
+        cell.songPart = songParts[indexPath.row]
+
         return cell
     }
 
@@ -107,6 +111,24 @@ extension StructureTableViewCell: UITableViewDelegate {
         }
     }
 
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        .none
+    }
+
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        false
+    }
+
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
+
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObject = songParts[sourceIndexPath.row]
+        songParts.remove(at: sourceIndexPath.row)
+        songParts.insert(movedObject, at: destinationIndexPath.row)
+    }
+
 }
 
 // MARK: - Private Actions
@@ -114,7 +136,7 @@ extension StructureTableViewCell: UITableViewDelegate {
 @objc
 private extension StructureTableViewCell {
 
-    func addNewRow() {
+    func addNewSongPart() {
         songParts.append(.init(structurePart: .intro))
         let indexPath = IndexPath(row: songParts.count - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)

@@ -39,8 +39,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="addRowButton" destination="F4B-OV-z0j" id="J5f-cr-dJV"/>
-                <outlet property="addRowButtonBottomConstraint" destination="SMJ-8o-KMj" id="K0q-EX-VuB"/>
+                <outlet property="addSongPartButton" destination="F4B-OV-z0j" id="J5f-cr-dJV"/>
+                <outlet property="addSongPartButtonBottomConstraint" destination="SMJ-8o-KMj" id="K0q-EX-VuB"/>
                 <outlet property="tableView" destination="07M-Ql-y5N" id="PbC-JD-rs1"/>
             </connections>
             <point key="canvasLocation" x="-131.29770992366412" y="-548.23943661971839"/>

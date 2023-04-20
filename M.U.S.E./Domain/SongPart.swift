@@ -1,9 +1,16 @@
-struct SongPart {
+final class SongPart {
 
-    var bars: [Bar]?
-    var instrument: Instrument?
+    var instrumentParts: [InstrumentPart]
     var structurePart: StructurePart
     var progression: Progression?
+    var isReusing: Bool
+
+    init(instrumentParts: [InstrumentPart] = [], instrument: Instrument? = nil, structurePart: StructurePart, progression: Progression? = nil, isReusing: Bool = true) {
+        self.instrumentParts = instrumentParts
+        self.structurePart = structurePart
+        self.progression = progression
+        self.isReusing = isReusing
+    }
 
 }
 
@@ -12,15 +19,14 @@ struct SongPart {
 extension SongPart: CustomStringConvertible {
 
     var description: String {
-        let barString = bars?.description ?? "Empty"
-        let instrumentString = instrument?.description ?? "Empty"
+        let instrumentPartsString = instrumentParts.isEmpty ? "Empty" : instrumentParts.description.dropFirst().dropLast()
         let progressionString = progression?.description ?? "Empty"
 
         return """
-            bars: \(barString)
-            instrument: \(instrumentString)
+            instrumentParts: \(instrumentPartsString)
             structure part: \(structurePart)
             progression: \(progressionString)
+            Reusing: \(isReusing)
             """
     }
 

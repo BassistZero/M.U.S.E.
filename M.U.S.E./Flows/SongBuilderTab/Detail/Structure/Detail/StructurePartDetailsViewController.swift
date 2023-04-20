@@ -158,7 +158,8 @@ private extension StructurePartDetailsViewController {
 
         guard let cell = cell as? StructurePartProgressionTableViewCell else { return .init() }
 
-        cell.songPart
+        let index = indexPath.row - 1
+        cell.songPart = song?.songParts[index]
 
         return cell
     }

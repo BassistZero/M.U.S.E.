@@ -111,7 +111,7 @@ SongBuilder.Detail.Configuration.downButton = "";
 
 SongBuilder.Detail.Structure.Main.addNewStructurePart = "Добавить Новую Структуру";
 SongBuilder.Detail.Structure.Main.menuTitle = "Структурная Часть";
-SongBuilder.Detail.Structure.Main.barName = "Такты";
+SongBuilder.Detail.Structure.Main.reuseName = "Переиспользуется";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Повторения";
 
 SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName = "Инструменты";

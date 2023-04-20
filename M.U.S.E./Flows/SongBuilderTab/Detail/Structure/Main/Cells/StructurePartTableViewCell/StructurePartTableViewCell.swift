@@ -5,9 +5,8 @@ final class StructurePartTableViewCell: UITableViewCell {
     // MARK: - Private Outlets
 
     @IBOutlet private weak var structurePartButton: UIButton!
-    @IBOutlet private weak var barNameLabel: UILabel!
-    @IBOutlet private weak var barsLabel: UILabel!
-    @IBOutlet private weak var barsStepper: UIStepper!
+    @IBOutlet private weak var reuseNameLabel: UILabel!
+    @IBOutlet private weak var isReusingSwitch: UISwitch!
     @IBOutlet private weak var repeatingBarNameLabel: UILabel!
     @IBOutlet private weak var repeatingLabel: UILabel!
     @IBOutlet private weak var repeatingStepper: UIStepper!
@@ -20,6 +19,13 @@ final class StructurePartTableViewCell: UITableViewCell {
 
     var title: String? {
         return titleName
+    }
+
+    var songPart: SongPart? {
+        didSet {
+            guard let songPart else { return }
+            isReusingSwitch.isOn = songPart.isReusing
+        }
     }
 
     // MARK: - Private Properties
@@ -43,6 +49,7 @@ private extension StructurePartTableViewCell {
         setupButtons()
         setupSteppers()
         setupLabels()
+        setupSwitches()
     }
 
     func setupButtons() {
@@ -63,36 +70,40 @@ private extension StructurePartTableViewCell {
     }
 
     func setupLabels() {
-        barNameLabel.text = L10n.SongBuilder.Detail.Structure.Main.barName
-        barNameLabel.font = .boldSystemFont(ofSize: 12)
+        reuseNameLabel.text = L10n.SongBuilder.Detail.Structure.Main.reuseName
+        reuseNameLabel.font = .boldSystemFont(ofSize: 12)
 
         repeatingBarNameLabel.text = L10n.SongBuilder.Detail.Structure.Main.repeatingBarName
         repeatingBarNameLabel.font = .boldSystemFont(ofSize: 12)
-
-        barsLabel.text = "\(Int(barsStepper.value))"
-        barsLabel.font = .systemFont(ofSize: 14)
 
         repeatingLabel.text = "\(Int(repeatingStepper.value))"
         repeatingLabel.font = .systemFont(ofSize: 14)
     }
 
     func setupSteppers() {
-        [barsStepper, repeatingStepper].forEach { stepper in
-            stepper?.minimumValue = 1
-            stepper?.stepValue = 1
-            stepper?.autorepeat = true
-            stepper?.maximumValue = 100
-        }
+        repeatingStepper.minimumValue = 1
+        repeatingStepper.stepValue = 1
+        repeatingStepper.autorepeat = true
+        repeatingStepper.maximumValue = 16
+        repeatingStepper.value = 4
 
-        barsStepper.value = 4
-
-        barsStepper.addTarget(self, action: #selector(updateBarLabel), for: .valueChanged)
         repeatingStepper.addTarget(self, action: #selector(updateRepeatingLabel), for: .valueChanged)
     }
 
+    func setupSwitches() {
+        isReusingSwitch.addTarget(self, action: #selector(reusingTapped), for: .valueChanged)
+    }
+
+}
+
+// MARK: - Private Actions
+
+@objc
+private extension StructurePartTableViewCell {
+
     @objc
-    private func updateBarLabel() {
-        barsLabel.text = String(Int(barsStepper.value))
+    private func reusingTapped() {
+        songPart?.isReusing = isReusingSwitch.isOn
     }
 
     @objc

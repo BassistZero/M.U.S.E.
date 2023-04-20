@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIO-Ct-3IV">
-                        <rect key="frame" x="8" y="49" width="30" height="32"/>
+                        <rect key="frame" x="8" y="52" width="30" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <menu key="menu" id="dLS-0b-ZLA">
                             <children>
@@ -30,17 +30,8 @@
                         </menu>
                         <state key="normal" title="Intro"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="bar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBJ-5y-xMo" userLabel="Bar Label">
-                        <rect key="frame" x="399.33333333333331" y="54.666666666666657" width="25.333333333333314" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-GE-quf" userLabel="Bar Stepper">
-                        <rect key="frame" x="432.66666666666669" y="49" width="94.000000000000057" height="32"/>
-                    </stepper>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="repeating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-1T-bf7" userLabel="Repeating Label">
-                        <rect key="frame" x="534.66666666666663" y="54.666666666666657" width="72.333333333333371" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYe-1T-bf7" userLabel="Repeating Label">
+                        <rect key="frame" x="596.33333333333337" y="54.666666666666657" width="10.666666666666629" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -54,45 +45,43 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-0y-3bR">
-                        <rect key="frame" x="458.66666666666669" y="8" width="42" height="33"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reusing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvU-0y-3bR" userLabel="Reusing Name Label">
+                        <rect key="frame" x="515.33333333333337" y="8" width="61" height="33"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00g-qq-djG">
+                        <rect key="frame" x="521.33333333333337" y="49" width="51" height="32"/>
+                    </switch>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="nhT-Qp-dUc" secondAttribute="trailing" constant="8" id="0yY-oj-VeI"/>
-                    <constraint firstItem="PvU-0y-3bR" firstAttribute="leading" secondItem="VRU-GE-quf" secondAttribute="trailing" constant="-68" id="4OY-oi-H5u"/>
+                    <constraint firstItem="OYe-1T-bf7" firstAttribute="leading" secondItem="PvU-0y-3bR" secondAttribute="trailing" constant="20" id="4PQ-Ze-S1j"/>
+                    <constraint firstItem="00g-qq-djG" firstAttribute="centerY" secondItem="nhT-Qp-dUc" secondAttribute="centerY" id="BYJ-pY-a4Y"/>
                     <constraint firstAttribute="bottom" secondItem="XIO-Ct-3IV" secondAttribute="bottom" constant="8" id="ErQ-pb-XHI"/>
-                    <constraint firstAttribute="bottom" secondItem="VRU-GE-quf" secondAttribute="bottom" constant="8" id="I29-ub-Cu1"/>
-                    <constraint firstItem="OYe-1T-bf7" firstAttribute="leading" secondItem="VRU-GE-quf" secondAttribute="trailing" constant="8" id="Kld-0i-Djp"/>
+                    <constraint firstItem="00g-qq-djG" firstAttribute="top" secondItem="PvU-0y-3bR" secondAttribute="bottom" constant="8" id="Jmr-H7-VGc"/>
                     <constraint firstItem="nhT-Qp-dUc" firstAttribute="leading" secondItem="OYe-1T-bf7" secondAttribute="trailing" constant="8" id="QEV-0u-xEm"/>
                     <constraint firstItem="G4O-YZ-nOT" firstAttribute="centerX" secondItem="nhT-Qp-dUc" secondAttribute="centerX" id="QLf-2p-ugq"/>
                     <constraint firstItem="G4O-YZ-nOT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="SfN-oV-ePU"/>
-                    <constraint firstItem="XIO-Ct-3IV" firstAttribute="centerY" secondItem="VRU-GE-quf" secondAttribute="centerY" id="Sr5-2Z-7M6"/>
                     <constraint firstItem="nhT-Qp-dUc" firstAttribute="top" secondItem="G4O-YZ-nOT" secondAttribute="bottom" constant="8" id="Tfk-S8-nM6"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G4O-YZ-nOT" secondAttribute="trailing" constant="8" id="Wr9-4J-uyw"/>
+                    <constraint firstAttribute="bottom" secondItem="00g-qq-djG" secondAttribute="bottom" constant="8" id="XYJ-Gc-xSE"/>
                     <constraint firstItem="PvU-0y-3bR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ch1-RX-GYv"/>
-                    <constraint firstItem="VRU-GE-quf" firstAttribute="top" secondItem="PvU-0y-3bR" secondAttribute="bottom" constant="8" id="eiW-KX-4Cc"/>
-                    <constraint firstItem="VRU-GE-quf" firstAttribute="leading" secondItem="TBJ-5y-xMo" secondAttribute="trailing" constant="8" id="eoL-Cv-7ol"/>
                     <constraint firstItem="OYe-1T-bf7" firstAttribute="centerY" secondItem="nhT-Qp-dUc" secondAttribute="centerY" id="k4t-uR-Tsn"/>
                     <constraint firstItem="XIO-Ct-3IV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="nZQ-ud-lg4"/>
                     <constraint firstItem="XIO-Ct-3IV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="naK-5p-dgc"/>
+                    <constraint firstItem="PvU-0y-3bR" firstAttribute="centerX" secondItem="00g-qq-djG" secondAttribute="centerX" id="nfV-Fo-oEY"/>
                     <constraint firstAttribute="bottom" secondItem="nhT-Qp-dUc" secondAttribute="bottom" constant="8" id="qmV-Bw-rk6"/>
-                    <constraint firstItem="TBJ-5y-xMo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XIO-Ct-3IV" secondAttribute="trailing" constant="8" id="suE-O2-Fit"/>
-                    <constraint firstItem="TBJ-5y-xMo" firstAttribute="centerY" secondItem="VRU-GE-quf" secondAttribute="centerY" id="uJL-Em-bSO"/>
-                    <constraint firstItem="PvU-0y-3bR" firstAttribute="centerX" secondItem="VRU-GE-quf" secondAttribute="centerX" id="xhJ-PS-KOJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="barNameLabel" destination="PvU-0y-3bR" id="hd5-F9-sAd"/>
-                <outlet property="barsLabel" destination="TBJ-5y-xMo" id="e3C-lB-QOx"/>
-                <outlet property="barsStepper" destination="VRU-GE-quf" id="NKe-c9-5Ej"/>
+                <outlet property="isReusingSwitch" destination="00g-qq-djG" id="Quq-MY-fwd"/>
                 <outlet property="repeatingBarNameLabel" destination="G4O-YZ-nOT" id="XsG-C6-07w"/>
                 <outlet property="repeatingLabel" destination="OYe-1T-bf7" id="kqo-cX-4BI"/>
                 <outlet property="repeatingStepper" destination="nhT-Qp-dUc" id="zua-9p-kgJ"/>
+                <outlet property="reuseNameLabel" destination="PvU-0y-3bR" id="hd5-F9-sAd"/>
                 <outlet property="structurePartButton" destination="XIO-Ct-3IV" id="8Qo-J9-1zw"/>
             </connections>
             <point key="canvasLocation" x="191.6030534351145" y="-13.732394366197184"/>

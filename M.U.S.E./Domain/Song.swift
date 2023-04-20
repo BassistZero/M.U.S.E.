@@ -26,24 +26,6 @@ final class Song {
 
     // MARK: - Public Methods
 
-    func getSongParts(for instruments: [Instrument]) -> [[SongPart]]? {
-        var results: [[SongPart]] = []
-
-        for instrument in instruments {
-            for structurePart in structure {
-                let songPart = songParts.filter { $0.instrument == instrument && $0.structurePart == structurePart }
-
-                guard !songPart.isEmpty else { continue }
-
-                results.append(songPart)
-            }
-        }
-
-        guard !results.isEmpty else { return nil }
-
-        return results
-    }
-
     func addSongPart(_ songPart: SongPart) {
         songParts.append(songPart)
     }
