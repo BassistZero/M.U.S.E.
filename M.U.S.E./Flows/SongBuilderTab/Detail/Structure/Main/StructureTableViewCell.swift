@@ -52,6 +52,7 @@ private extension StructureTableViewCell {
         tableView.contentInset = .init(top: 0, left: 0, bottom: buttonHeight + buttonBottomSpacer, right: 0)
 
         tableView.isEditing = true
+        tableView.allowsSelectionDuringEditing = true
     }
 
     func setupButtons() {
@@ -84,7 +85,6 @@ extension StructureTableViewCell: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(StructurePartTableViewCell.self)", for: indexPath)
 
         guard let cell = cell as? StructurePartTableViewCell else { return .init() }
-        cell.accessoryType = .disclosureIndicator
 
         cell.didChanged = { structurePart in
             self.songParts[indexPath.row].structurePart = structurePart
