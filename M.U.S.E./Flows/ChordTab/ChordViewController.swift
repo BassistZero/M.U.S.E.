@@ -163,11 +163,7 @@ private extension ChordViewController {
     func playChord() {
         let delay = 0.5
 
-        if polyphonySwitch.isOn {
-            self.chordPlayer.play(chord: self.chord)
-        } else {
-            self.chordPlayer.play(chord: self.chord, delay: delay)
-        }
+        polyphonySwitch.isOn ? chordPlayer.play(chord) : chordPlayer.play(chord, delay: delay)
     }
 
 }

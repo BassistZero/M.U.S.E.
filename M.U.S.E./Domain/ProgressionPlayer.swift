@@ -51,7 +51,7 @@ private extension ProgressionPlayer {
     }
 
     func playProgression(progression: Progression, notesDelay: Double) {
-        players[offset].play(chord: progression.chords[offset], delay: notesDelay)
+        players[offset].play(progression.chords[offset], delay: notesDelay)
     }
 
     func updateOffset() {
