@@ -101,13 +101,11 @@ private extension StructurePartTableViewCell {
 @objc
 private extension StructurePartTableViewCell {
 
-    @objc
-    private func reusingTapped() {
+    func reusingTapped() {
         songPart?.isReusing = isReusingSwitch.isOn
     }
 
-    @objc
-    private func updateRepeatingLabel() {
+    func updateRepeatingLabel() {
         repeatingLabel.text = String(Int(repeatingStepper.value))
     }
 

@@ -41,7 +41,6 @@ private extension SongBuilderViewController {
     func setupSegmentedControl() {
         tabsSegmentedControl.setTitle(L10n.SongTabBar.Item.configuration, forSegmentAt: Tabs.configuration)
         tabsSegmentedControl.setTitle(L10n.SongTabBar.Item.structure, forSegmentAt: Tabs.structure)
-        tabsSegmentedControl.setTitle(L10n.SongTabBar.Item.instruments, forSegmentAt: Tabs.instruments)
         tabsSegmentedControl.setTitle(L10n.SongTabBar.Item.result, forSegmentAt: Tabs.result)
 
         tabsSegmentedControl.addTarget(self, action: #selector(changeTab), for: .valueChanged)
@@ -53,7 +52,6 @@ private extension SongBuilderViewController {
 
         tableView.register(.init(nibName: "\(SetupTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(SetupTableViewCell.self)")
         tableView.register(.init(nibName: "\(StructureTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(StructureTableViewCell.self)")
-        tableView.register(.init(nibName: "\(InstrumentsTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(InstrumentsTableViewCell.self)")
         tableView.register(.init(nibName: "\(ResultTableViewCell.self)", bundle: .main), forCellReuseIdentifier: "\(ResultTableViewCell.self)")
 
         tableView.separatorStyle = .none
@@ -123,7 +121,6 @@ private extension SongBuilderViewController {
         switch tabsSegmentedControl.selectedSegmentIndex {
         case Tabs.configuration: return "\(SetupTableViewCell.self)"
         case Tabs.structure: return "\(StructureTableViewCell.self)"
-        case Tabs.instruments: return "\(InstrumentsTableViewCell.self)"
         case Tabs.result: return "\(ResultTableViewCell.self)"
 
         default: return nil
@@ -139,8 +136,7 @@ private extension SongBuilderViewController {
     enum Tabs {
         static let configuration = 0
         static let structure = 1
-        static let instruments = 2
-        static let result = 3
+        static let result = 2
     }
 
 }
