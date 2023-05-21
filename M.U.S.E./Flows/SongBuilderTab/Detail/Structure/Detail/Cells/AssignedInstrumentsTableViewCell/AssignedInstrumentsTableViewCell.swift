@@ -1,6 +1,6 @@
 import UIKit
 
-final class AssignedInstrumentsTableViewCell: UITableViewCell {
+final class AssignedInstrumentsTableViewCell: UITableViewCell, SongBuilderPart {
 
     // MARK: - Private Outlets
 
@@ -13,11 +13,17 @@ final class AssignedInstrumentsTableViewCell: UITableViewCell {
 
     // MARK: - Public Properties
 
-    var instruments: [Instrument] = [] {
+    var instrumentParts: [InstrumentPart] = [] {
         didSet {
             configureLabels()
         }
     }
+    var progression: Progression?
+
+    // MARK: - SongBuilderPart
+
+    var song: Song?
+    var rootNavigationController: UINavigationController?
 
     // MARK: - UITableViewCell
 
@@ -39,7 +45,7 @@ private extension AssignedInstrumentsTableViewCell {
     }
 
     func configureLabels() {
-        instrumentsNameLabel.text = instruments.isEmpty
+        instrumentsNameLabel.text = instrumentParts.isEmpty
         ? L10n.SongBuilder.Detail.Structure.Detail.AssignedInstruments.emptyInstruments
         : L10n.SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName
 
@@ -56,8 +62,8 @@ private extension AssignedInstrumentsTableViewCell {
 
     func configureEvents() {
         handleAddingInstrument = { instrument in
-            self.instruments.append(instrument)
-            let indexPath = IndexPath(row: self.instruments.count - 1, section: 0)
+            self.instrumentParts.append(InstrumentPart(instrument: instrument))
+            let indexPath = IndexPath(row: self.instrumentParts.count - 1, section: 0)
             self.instrumentsTableView.insertRows(at: [indexPath], with: .automatic)
         }
     }
@@ -69,7 +75,7 @@ private extension AssignedInstrumentsTableViewCell {
 extension AssignedInstrumentsTableViewCell: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        instruments.count
+        instrumentParts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,7 +83,7 @@ extension AssignedInstrumentsTableViewCell: UITableViewDataSource {
 
         guard let cell = cell as? TitleTableViewCell else { return .init() }
 
-        cell.title = instruments[indexPath.row].description
+        cell.title = instrumentParts[indexPath.row].instrument.description
 
         return cell
     }
@@ -90,6 +96,12 @@ extension AssignedInstrumentsTableViewCell: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        let vc = InstrumentPartViewController()
+
+        vc.instrumentPart = instrumentParts[indexPath.row]
+        vc.progression
+
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -105,7 +117,7 @@ extension AssignedInstrumentsTableViewCell: UITableViewDelegate {
 private extension AssignedInstrumentsTableViewCell {
 
     func handleInstrumentDeletion(on tableView: UITableView, for indexPath: IndexPath) {
-        instruments.remove(at: indexPath.row)
+        instrumentParts.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 

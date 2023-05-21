@@ -28,6 +28,8 @@
 		0251473829CC93BA002EAA90 /* StructurePartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251473629CC93BA002EAA90 /* StructurePartTableViewCell.swift */; };
 		0251473929CC93BA002EAA90 /* StructurePartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0251473729CC93BA002EAA90 /* StructurePartTableViewCell.xib */; };
 		02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02572C11298BC44D003B5070 /* NotePickerView.swift */; };
+		025B326D29E549F50001A948 /* SongPartDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B326B29E549F50001A948 /* SongPartDetailsViewController.swift */; };
+		025B326E29E549F50001A948 /* SongPartDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B326C29E549F50001A948 /* SongPartDetailsViewController.xib */; };
 		025B327129E54D590001A948 /* AssignedInstrumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */; };
 		025B327229E54D590001A948 /* AssignedInstrumentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */; };
 		025B327629E55A970001A948 /* StructurePartProgressionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B327429E55A960001A948 /* StructurePartProgressionTableViewCell.swift */; };
@@ -39,6 +41,8 @@
 		027102BE2814743200694F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027102BC2814743200694F3E /* LaunchScreen.storyboard */; };
 		027102D0281479D600694F3E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027102CF281479D600694F3E /* Note.swift */; };
 		0271B40B29F16B8500A27C92 /* InstrumentPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271B40A29F16B8500A27C92 /* InstrumentPart.swift */; };
+		0271B41129F1C68D00A27C92 /* InstrumentPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0271B40F29F1C68D00A27C92 /* InstrumentPartViewController.swift */; };
+		0271B41229F1C68D00A27C92 /* InstrumentPartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0271B41029F1C68D00A27C92 /* InstrumentPartViewController.xib */; };
 		027D6BA32939F87F00A7E99B /* ProgressionPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027D6BA22939F87F00A7E99B /* ProgressionPlayer.swift */; };
 		028DE86F29C46B18003671D0 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DE86E29C46B18003671D0 /* Song.swift */; };
 		028DE87129C46D3E003671D0 /* Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DE87029C46D3E003671D0 /* Setup.swift */; };
@@ -189,6 +193,8 @@
 		0251473629CC93BA002EAA90 /* StructurePartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartTableViewCell.swift; sourceTree = "<group>"; };
 		0251473729CC93BA002EAA90 /* StructurePartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StructurePartTableViewCell.xib; sourceTree = "<group>"; };
 		02572C11298BC44D003B5070 /* NotePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePickerView.swift; sourceTree = "<group>"; };
+		025B326B29E549F50001A948 /* SongPartDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongPartDetailsViewController.swift; sourceTree = "<group>"; };
+		025B326C29E549F50001A948 /* SongPartDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongPartDetailsViewController.xib; sourceTree = "<group>"; };
 		025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignedInstrumentsTableViewCell.swift; sourceTree = "<group>"; };
 		025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignedInstrumentsTableViewCell.xib; sourceTree = "<group>"; };
 		025B327429E55A960001A948 /* StructurePartProgressionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartProgressionTableViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 		027102BF2814743200694F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027102CF281479D600694F3E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		0271B40A29F16B8500A27C92 /* InstrumentPart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentPart.swift; sourceTree = "<group>"; };
+		0271B40F29F1C68D00A27C92 /* InstrumentPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentPartViewController.swift; sourceTree = "<group>"; };
+		0271B41029F1C68D00A27C92 /* InstrumentPartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentPartViewController.xib; sourceTree = "<group>"; };
 		027D6BA22939F87F00A7E99B /* ProgressionPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionPlayer.swift; sourceTree = "<group>"; };
 		028DE86E29C46B18003671D0 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		028DE87029C46D3E003671D0 /* Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setup.swift; sourceTree = "<group>"; };
@@ -458,6 +466,8 @@
 			isa = PBXGroup;
 			children = (
 				025B326A29E549E40001A948 /* Cells */,
+				025B326B29E549F50001A948 /* SongPartDetailsViewController.swift */,
+				025B326C29E549F50001A948 /* SongPartDetailsViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -474,6 +484,7 @@
 		025B327329E55A570001A948 /* AssignedInstrumentsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				0271B40C29F1C66700A27C92 /* InstrumentPartViewController */,
 				025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */,
 				025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */,
 			);
@@ -583,9 +594,19 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		0271B40C29F1C66700A27C92 /* InstrumentPartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0271B40F29F1C68D00A27C92 /* InstrumentPartViewController.swift */,
+				0271B41029F1C68D00A27C92 /* InstrumentPartViewController.xib */,
+			);
+			path = InstrumentPartViewController;
+			sourceTree = "<group>";
+		};
 		0272961F29DC30FC0089D6F6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0272962129DC31330089D6F6 /* Extensions */,
 				0272962029DC311C0089D6F6 /* Utilities */,
 				027102C52814745E00694F3E /* Reusable Components */,
 			);
@@ -600,9 +621,11 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		0272962129DC31330089D6F6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		02B5EB4028EAF17E00D6AF94 /* Samples */ = {
@@ -923,6 +946,7 @@
 				E8E30A5D28F9DEFF007FF597 /* E7.mp3 in Resources */,
 				E8E30A1128F9DEFF007FF597 /* F#7.mp3 in Resources */,
 				E8E30A2F28F9DEFF007FF597 /* F6.mp3 in Resources */,
+				0271B41229F1C68D00A27C92 /* InstrumentPartViewController.xib in Resources */,
 				E8E30A2128F9DEFF007FF597 /* D0.mp3 in Resources */,
 				E8E30A1828F9DEFF007FF597 /* C#4.mp3 in Resources */,
 				02E183A429D44C3900F968F1 /* SetupTableViewCell.xib in Resources */,
@@ -936,6 +960,7 @@
 				E8E30A5228F9DEFF007FF597 /* G#3.mp3 in Resources */,
 				E8E30A2E28F9DEFF007FF597 /* E3.mp3 in Resources */,
 				E8E30A0628F9DEFF007FF597 /* G5.mp3 in Resources */,
+				025B326E29E549F50001A948 /* SongPartDetailsViewController.xib in Resources */,
 				E8E30A2028F9DEFF007FF597 /* E1.mp3 in Resources */,
 				E8E30A2528F9DEFF007FF597 /* D3.mp3 in Resources */,
 				E8E30A1528F9DEFF007FF597 /* G#0.mp3 in Resources */,
@@ -1032,6 +1057,7 @@
 			files = (
 				022B901628187BD7009ED3F7 /* Octave.swift in Sources */,
 				027102B62814743000694F3E /* ChordViewController.swift in Sources */,
+				0271B41129F1C68D00A27C92 /* InstrumentPartViewController.swift in Sources */,
 				0217355429227F32006A67B5 /* ScaleStep.swift in Sources */,
 				02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */,
 				02E183A329D44C3900F968F1 /* SetupTableViewCell.swift in Sources */,
@@ -1047,6 +1073,7 @@
 				020F8E9029D34E20006B4E7A /* SongTableViewCell.swift in Sources */,
 				02F48AD329DF0A6E006D4C5C /* ResultTableViewCell.swift in Sources */,
 				028DE87129C46D3E003671D0 /* Setup.swift in Sources */,
+				025B326D29E549F50001A948 /* SongPartDetailsViewController.swift in Sources */,
 				025B327D29E5603B0001A948 /* TitleTableViewCell.swift in Sources */,
 				028DE87329C46E1E003671D0 /* Genre.swift in Sources */,
 				02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */,

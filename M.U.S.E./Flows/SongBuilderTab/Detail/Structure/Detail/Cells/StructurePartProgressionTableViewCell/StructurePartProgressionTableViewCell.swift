@@ -8,9 +8,13 @@ final class StructurePartProgressionTableViewCell: UITableViewCell {
     @IBOutlet private weak var progressionLabel: UILabel!
     @IBOutlet private weak var progressionConfigurationView: ProgressionConfigurationView!
 
+    // MARK: - Public Events
+
+    var handleProgressionUpdate: ((Progression) -> Void)?
+
     // MARK: - Public Properties
 
-    var songPart: SongPart?
+    var progression: Progression?
 
     // MARK: - UITableViewCell
 
@@ -35,21 +39,21 @@ private extension StructurePartProgressionTableViewCell {
             self.updatePart()
         }
 
-        guard let songPart, let noteValue = songPart.progression?.chords.first?.rootNote.value else { return }
+        guard let noteValue = progression?.chords.first?.rootNote.value else { return }
         progressionConfigurationView.updateNoteValue(to: noteValue)
 
-        self.songPart?.progression = progressionConfigurationView.progression
-        progressionLabel.text = self.songPart?.description
+        progression = progressionConfigurationView.progression
+        progressionLabel.text = progression?.description
     }
 
     func updatePart() {
-        print(songPart?.description ?? "fuck it")
+        print(progression?.description ?? "Empty")
 
-        guard let songPart, let noteValue = songPart.progression?.chords.first?.rootNote.value else { return }
+        guard let noteValue = progression?.chords.first?.rootNote.value else { return }
         progressionConfigurationView.updateNoteValue(to: noteValue)
 
-        self.songPart?.progression = progressionConfigurationView.progression
-        progressionLabel.text = self.songPart?.description
+        progression = progressionConfigurationView.progression
+        progressionLabel.text = progression?.description
     }
 
 }
