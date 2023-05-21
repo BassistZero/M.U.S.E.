@@ -1,7 +1,7 @@
 struct Beat {
 
     var length: BeatLength
-    var note: Note?
+    var chord: Chord?
     var options: [String]?
 
 }

@@ -23,7 +23,6 @@ extension Progression {
 
     static func blacklistBadProgressions() {
         let stable: [ScaleStep] = [.one, .three, .five]
-        let nonStable: [ScaleStep] = [.two, .four, .six, .seven]
 
         var allScaleSteps: [[ScaleStep]] = []
 

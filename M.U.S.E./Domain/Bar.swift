@@ -17,11 +17,11 @@ struct Bar {
             }
         }
     }
+    weak var song: Song?
 
     // MARK: - Private Properties
 
     private var _beats: [Beat] = []
-    private var song: Song?
 
     // MARK: - Public Methods
 
