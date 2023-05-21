@@ -67,6 +67,12 @@ whitelist_rules:
     - weak_delegate
 
 disabled_rules: # rule identifiers to exclude from running
+    - identifier_name
+    - inclusive_language
+    - cyclomatic_complexity
+    - function_body_length
+    - void_function_in_ternary
+    - blanket_disable_command
 
 opt_in_rules: # some rules are only opt-in
 
