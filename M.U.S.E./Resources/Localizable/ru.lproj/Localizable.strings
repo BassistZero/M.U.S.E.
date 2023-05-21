@@ -60,9 +60,8 @@ MainTabBar.Item.chord = "Аккорд";
 MainTabBar.Item.progression = "Прогрессия";
 MainTabBar.Item.favorites = "Избранные";
 
-SongTabBar.Item.configuration = "⚙️";
+SongTabBar.Item.configuration = "Конфигурация";
 SongTabBar.Item.structure = "Структура";
-SongTabBar.Item.instruments = "🎸🎹🥁";
 SongTabBar.Item.result = "Итог";
 
 ProgressionType.minor = "Минор";
@@ -106,18 +105,16 @@ SongBuilder.Detail.Configuration.upButton = "";
 SongBuilder.Detail.Configuration.downButton = "";
 
 SongBuilder.Detail.Structure.Main.addNewStructurePart = "Добавить Новую Структуру";
+SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing = "Изменить";
+SongBuilder.Detail.Structure.Main.EditStructurePart.editing = "Готово";
 SongBuilder.Detail.Structure.Main.menuTitle = "Структурная Часть";
 SongBuilder.Detail.Structure.Main.reuseName = "Переиспользуется";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Повторения";
 
 SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName = "Инструменты";
 SongBuilder.Detail.Structure.Detail.AssignedInstruments.emptyInstruments = "Нет инструментов";
-
 SongBuilder.Detail.Structure.Detail.StructurePartProgression.titleName = "Прогрессия";
 
-SongBuilder.Detail.Instruments.addNewInstrument = "Добавить Новый Инструмент";
-SongBuilder.Detail.Instruments.partsName = "Части";
-SongBuilder.Detail.Instruments.emptyParts = "Пусто";
-
-SongBuilder.Detail.Instruments.AddingAlert.title = "Выберите Инструмент";
-SongBuilder.Detail.Instruments.AddingAlert.cancel = "Отмена";
+SongBuilder.Detail.Structure.addNewInstrument = "Добавить Новый Инструмент";
+SongBuilder.Detail.Structure.AddingAlert.title = "Выберите Инструмент";
+SongBuilder.Detail.Structure.AddingAlert.cancel = "Отмена";

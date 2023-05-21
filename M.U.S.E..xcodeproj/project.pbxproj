@@ -28,8 +28,6 @@
 		0251473829CC93BA002EAA90 /* StructurePartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0251473629CC93BA002EAA90 /* StructurePartTableViewCell.swift */; };
 		0251473929CC93BA002EAA90 /* StructurePartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0251473729CC93BA002EAA90 /* StructurePartTableViewCell.xib */; };
 		02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02572C11298BC44D003B5070 /* NotePickerView.swift */; };
-		025B326D29E549F50001A948 /* StructurePartDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B326B29E549F50001A948 /* StructurePartDetailsViewController.swift */; };
-		025B326E29E549F50001A948 /* StructurePartDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B326C29E549F50001A948 /* StructurePartDetailsViewController.xib */; };
 		025B327129E54D590001A948 /* AssignedInstrumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */; };
 		025B327229E54D590001A948 /* AssignedInstrumentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */; };
 		025B327629E55A970001A948 /* StructurePartProgressionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B327429E55A960001A948 /* StructurePartProgressionTableViewCell.swift */; };
@@ -55,12 +53,8 @@
 		028DE88629C473C0003671D0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028DE88529C473C0003671D0 /* Time.swift */; };
 		02A9F15D29DEF50B00B6D46B /* SongBuilderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9F15B29DEF50B00B6D46B /* SongBuilderViewController.swift */; };
 		02A9F15E29DEF50B00B6D46B /* SongBuilderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A9F15C29DEF50B00B6D46B /* SongBuilderViewController.xib */; };
-		02A9F16229DEF70B00B6D46B /* InstrumentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */; };
-		02A9F16329DEF70B00B6D46B /* InstrumentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */; };
 		02B5EBBA28EAF21400D6AF94 /* ChordPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */; };
 		02D786C529EAD16E001423C2 /* ScaleStepsBlacklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D786C429EAD16E001423C2 /* ScaleStepsBlacklist.swift */; };
-		02DA832029E3F8910052C59A /* InstrumentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */; };
-		02DA832129E3F8910052C59A /* InstrumentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */; };
 		02DA832429E40D2A0052C59A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DA832329E40D2A0052C59A /* Colors.xcassets */; };
 		02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */; };
 		02DDDDC7299F617800D207B8 /* ProgressionConfigurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */; };
@@ -195,8 +189,6 @@
 		0251473629CC93BA002EAA90 /* StructurePartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartTableViewCell.swift; sourceTree = "<group>"; };
 		0251473729CC93BA002EAA90 /* StructurePartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StructurePartTableViewCell.xib; sourceTree = "<group>"; };
 		02572C11298BC44D003B5070 /* NotePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePickerView.swift; sourceTree = "<group>"; };
-		025B326B29E549F50001A948 /* StructurePartDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartDetailsViewController.swift; sourceTree = "<group>"; };
-		025B326C29E549F50001A948 /* StructurePartDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StructurePartDetailsViewController.xib; sourceTree = "<group>"; };
 		025B326F29E54D590001A948 /* AssignedInstrumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignedInstrumentsTableViewCell.swift; sourceTree = "<group>"; };
 		025B327029E54D590001A948 /* AssignedInstrumentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignedInstrumentsTableViewCell.xib; sourceTree = "<group>"; };
 		025B327429E55A960001A948 /* StructurePartProgressionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePartProgressionTableViewCell.swift; sourceTree = "<group>"; };
@@ -224,12 +216,8 @@
 		028DE88529C473C0003671D0 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		02A9F15B29DEF50B00B6D46B /* SongBuilderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongBuilderViewController.swift; sourceTree = "<group>"; };
 		02A9F15C29DEF50B00B6D46B /* SongBuilderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongBuilderViewController.xib; sourceTree = "<group>"; };
-		02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsTableViewCell.swift; sourceTree = "<group>"; };
-		02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentsTableViewCell.xib; sourceTree = "<group>"; };
 		02B5EBB928EAF21400D6AF94 /* ChordPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordPlayer.swift; sourceTree = "<group>"; };
 		02D786C429EAD16E001423C2 /* ScaleStepsBlacklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleStepsBlacklist.swift; sourceTree = "<group>"; };
-		02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentTableViewCell.swift; sourceTree = "<group>"; };
-		02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InstrumentTableViewCell.xib; sourceTree = "<group>"; };
 		02DA832329E40D2A0052C59A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		02DDDDC4299F616400D207B8 /* ProgressionConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressionConfigurationView.swift; sourceTree = "<group>"; };
 		02DDDDC6299F617800D207B8 /* ProgressionConfigurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressionConfigurationView.xib; sourceTree = "<group>"; };
@@ -470,8 +458,6 @@
 			isa = PBXGroup;
 			children = (
 				025B326A29E549E40001A948 /* Cells */,
-				025B326B29E549F50001A948 /* StructurePartDetailsViewController.swift */,
-				025B326C29E549F50001A948 /* StructurePartDetailsViewController.xib */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -614,14 +600,9 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		02A9F15F29DEF6E900B6D46B /* Instruments */ = {
 			isa = PBXGroup;
 			children = (
-				02DA831D29E3F5FF0052C59A /* Cells */,
-				02A9F16029DEF70B00B6D46B /* InstrumentsTableViewCell.swift */,
-				02A9F16129DEF70B00B6D46B /* InstrumentsTableViewCell.xib */,
 			);
-			path = Instruments;
 			sourceTree = "<group>";
 		};
 		02B5EB4028EAF17E00D6AF94 /* Samples */ = {
@@ -727,15 +708,6 @@
 			path = Samples;
 			sourceTree = "<group>";
 		};
-		02DA831D29E3F5FF0052C59A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				02DA831E29E3F8910052C59A /* InstrumentTableViewCell.swift */,
-				02DA831F29E3F8910052C59A /* InstrumentTableViewCell.xib */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		02DA832229E40D210052C59A /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -751,7 +723,6 @@
 				02A9F15C29DEF50B00B6D46B /* SongBuilderViewController.xib */,
 				02E183A029D44C2900F968F1 /* Setup */,
 				020F8E8829D34C2C006B4E7A /* Structure */,
-				02A9F15F29DEF6E900B6D46B /* Instruments */,
 				02F2051C29DF0469005ECC1E /* Result */,
 			);
 			path = Detail;
@@ -946,7 +917,6 @@
 				E8E30A4528F9DEFF007FF597 /* A5.mp3 in Resources */,
 				E8E30A5028F9DEFF007FF597 /* F#6.mp3 in Resources */,
 				E8E30A5328F9DEFF007FF597 /* G#7.mp3 in Resources */,
-				02DA832129E3F8910052C59A /* InstrumentTableViewCell.xib in Resources */,
 				02A9F15E29DEF50B00B6D46B /* SongBuilderViewController.xib in Resources */,
 				02F48AD429DF0A6E006D4C5C /* ResultTableViewCell.xib in Resources */,
 				E8E30A5128F9DEFF007FF597 /* F0.mp3 in Resources */,
@@ -964,10 +934,8 @@
 				E8E30A2928F9DEFF007FF597 /* A#5.mp3 in Resources */,
 				E8E30A3528F9DEFF007FF597 /* G#1.mp3 in Resources */,
 				E8E30A5228F9DEFF007FF597 /* G#3.mp3 in Resources */,
-				02A9F16329DEF70B00B6D46B /* InstrumentsTableViewCell.xib in Resources */,
 				E8E30A2E28F9DEFF007FF597 /* E3.mp3 in Resources */,
 				E8E30A0628F9DEFF007FF597 /* G5.mp3 in Resources */,
-				025B326E29E549F50001A948 /* StructurePartDetailsViewController.xib in Resources */,
 				E8E30A2028F9DEFF007FF597 /* E1.mp3 in Resources */,
 				E8E30A2528F9DEFF007FF597 /* D3.mp3 in Resources */,
 				E8E30A1528F9DEFF007FF597 /* G#0.mp3 in Resources */,
@@ -1067,7 +1035,6 @@
 				0217355429227F32006A67B5 /* ScaleStep.swift in Sources */,
 				02572C12298BC44D003B5070 /* NotePickerView.swift in Sources */,
 				02E183A329D44C3900F968F1 /* SetupTableViewCell.swift in Sources */,
-				02A9F16229DEF70B00B6D46B /* InstrumentsTableViewCell.swift in Sources */,
 				022FF1CE29C23A5900CEDD5E /* StructureTableViewCell.swift in Sources */,
 				028DE88429C47280003671D0 /* Beat.swift in Sources */,
 				028DE87929C47023003671D0 /* SongPart.swift in Sources */,
@@ -1076,12 +1043,10 @@
 				028DE88029C470C9003671D0 /* Instrument.swift in Sources */,
 				028DE87529C46E42003671D0 /* BeatLength.swift in Sources */,
 				022041CE29C23FD90038121C /* SceneDelegate.swift in Sources */,
-				02DA832029E3F8910052C59A /* InstrumentTableViewCell.swift in Sources */,
 				0271B40B29F16B8500A27C92 /* InstrumentPart.swift in Sources */,
 				020F8E9029D34E20006B4E7A /* SongTableViewCell.swift in Sources */,
 				02F48AD329DF0A6E006D4C5C /* ResultTableViewCell.swift in Sources */,
 				028DE87129C46D3E003671D0 /* Setup.swift in Sources */,
-				025B326D29E549F50001A948 /* StructurePartDetailsViewController.swift in Sources */,
 				025B327D29E5603B0001A948 /* TitleTableViewCell.swift in Sources */,
 				028DE87329C46E1E003671D0 /* Genre.swift in Sources */,
 				02DDDDC5299F616400D207B8 /* ProgressionConfigurationView.swift in Sources */,

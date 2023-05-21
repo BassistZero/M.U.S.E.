@@ -182,21 +182,15 @@ internal enum L10n {
         /// 
         internal static let upButton = L10n.tr("Localizable", "SongBuilder.Detail.Configuration.upButton", fallback: "")
       }
-      internal enum Instruments {
+      internal enum Structure {
         /// Add New Instrument
-        internal static let addNewInstrument = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.addNewInstrument", fallback: "Add New Instrument")
-        /// Empty
-        internal static let emptyParts = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.emptyParts", fallback: "Empty")
-        /// Parts
-        internal static let partsName = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.partsName", fallback: "Parts")
+        internal static let addNewInstrument = L10n.tr("Localizable", "SongBuilder.Detail.Structure.addNewInstrument", fallback: "Add New Instrument")
         internal enum AddingAlert {
           /// Cancel
-          internal static let cancel = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.AddingAlert.cancel", fallback: "Cancel")
+          internal static let cancel = L10n.tr("Localizable", "SongBuilder.Detail.Structure.AddingAlert.cancel", fallback: "Cancel")
           /// Choose The Instrument
-          internal static let title = L10n.tr("Localizable", "SongBuilder.Detail.Instruments.AddingAlert.title", fallback: "Choose The Instrument")
+          internal static let title = L10n.tr("Localizable", "SongBuilder.Detail.Structure.AddingAlert.title", fallback: "Choose The Instrument")
         }
-      }
-      internal enum Structure {
         internal enum Detail {
           internal enum AssignedInstruments {
             /// No Instruments
@@ -218,6 +212,12 @@ internal enum L10n {
           internal static let repeatingBarName = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.repeatingBarName", fallback: "Repeating")
           /// Reusing
           internal static let reuseName = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.reuseName", fallback: "Reusing")
+          internal enum EditStructurePart {
+            /// Done
+            internal static let editing = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.EditStructurePart.editing", fallback: "Done")
+            /// Edit
+            internal static let notEditing = L10n.tr("Localizable", "SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing", fallback: "Edit")
+          }
         }
       }
     }
@@ -252,10 +252,8 @@ internal enum L10n {
   }
   internal enum SongTabBar {
     internal enum Item {
-      /// ⚙️
-      internal static let configuration = L10n.tr("Localizable", "SongTabBar.Item.configuration", fallback: "⚙️")
-      /// 🎸🎹🥁
-      internal static let instruments = L10n.tr("Localizable", "SongTabBar.Item.instruments", fallback: "🎸🎹🥁")
+      /// Configuration
+      internal static let configuration = L10n.tr("Localizable", "SongTabBar.Item.configuration", fallback: "Configuration")
       /// Result
       internal static let result = L10n.tr("Localizable", "SongTabBar.Item.result", fallback: "Result")
       /// Structure

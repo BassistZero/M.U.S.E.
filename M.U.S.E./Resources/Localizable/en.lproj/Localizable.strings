@@ -60,9 +60,8 @@ MainTabBar.Item.chord = "Chord";
 MainTabBar.Item.progression = "Progression";
 MainTabBar.Item.favorites = "Favorites";
 
-SongTabBar.Item.configuration = "⚙️";
+SongTabBar.Item.configuration = "Configuration";
 SongTabBar.Item.structure = "Structure";
-SongTabBar.Item.instruments = "🎸🎹🥁";
 SongTabBar.Item.result = "Result";
 
 ProgressionType.minor = "Minor";
@@ -106,18 +105,16 @@ SongBuilder.Detail.Configuration.upButton = "";
 SongBuilder.Detail.Configuration.downButton = "";
 
 SongBuilder.Detail.Structure.Main.addNewStructurePart = "Add New Structure Part";
+SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing = "Edit";
+SongBuilder.Detail.Structure.Main.EditStructurePart.editing = "Done";
 SongBuilder.Detail.Structure.Main.menuTitle = "Structure Part";
 SongBuilder.Detail.Structure.Main.reuseName = "Reusing";
 SongBuilder.Detail.Structure.Main.repeatingBarName = "Repeating";
 
 SongBuilder.Detail.Structure.Detail.AssignedInstruments.titleName = "Instruments";
 SongBuilder.Detail.Structure.Detail.AssignedInstruments.emptyInstruments = "No Instruments";
-
 SongBuilder.Detail.Structure.Detail.StructurePartProgression.titleName = "Progression";
 
-SongBuilder.Detail.Instruments.addNewInstrument = "Add New Instrument";
-SongBuilder.Detail.Instruments.partsName = "Parts";
-SongBuilder.Detail.Instruments.emptyParts = "Empty";
-
-SongBuilder.Detail.Instruments.AddingAlert.title = "Choose The Instrument";
-SongBuilder.Detail.Instruments.AddingAlert.cancel = "Cancel";
+SongBuilder.Detail.Structure.addNewInstrument = "Add New Instrument";
+SongBuilder.Detail.Structure.AddingAlert.title = "Choose The Instrument";
+SongBuilder.Detail.Structure.AddingAlert.cancel = "Cancel";
