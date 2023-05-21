@@ -7,6 +7,7 @@ final class StructureTableViewCell: UITableViewCell, SongBuilderPart {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var addSongPartButton: UIButton!
     @IBOutlet private weak var addSongPartButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var editSongPartsButton: UIButton!
 
     // MARK: - SongBuilderTableViewCell
 
@@ -19,6 +20,11 @@ final class StructureTableViewCell: UITableViewCell, SongBuilderPart {
         didSet {
             song?.structure = songParts.map { $0.structurePart }
             song?.songParts = songParts
+        }
+    }
+    private var isSongPartsEditing = false {
+        didSet {
+            isSongPartsEditing ? configureEditing() : configureNotEditing()
         }
     }
 
@@ -51,7 +57,6 @@ private extension StructureTableViewCell {
 
         tableView.contentInset = .init(top: 0, left: 0, bottom: buttonHeight + buttonBottomSpacer, right: 0)
 
-        tableView.isEditing = true
         tableView.allowsSelectionDuringEditing = true
     }
 
@@ -69,6 +74,16 @@ private extension StructureTableViewCell {
         addSongPartButton.configuration = configuration
 
         addSongPartButton.addTarget(self, action: #selector(addNewSongPart), for: .touchUpInside)
+
+        var editAttributedTitle = AttributedString(stringLiteral: L10n.SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing)
+        editAttributedTitle.font = .systemFont(ofSize: 16)
+
+        configuration.attributedTitle = editAttributedTitle
+        configuration.image = nil
+
+        editSongPartsButton.configuration = configuration
+
+        editSongPartsButton.addTarget(self, action: #selector(editSongPart), for: .touchUpInside)
     }
 
 }
@@ -112,7 +127,7 @@ extension StructureTableViewCell: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        .none
+        .delete
     }
 
     func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
@@ -142,6 +157,10 @@ private extension StructureTableViewCell {
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
 
+    func editSongPart() {
+        isSongPartsEditing.toggle()
+    }
+
 }
 
 // MARK: - Private Methods
@@ -158,7 +177,7 @@ private extension StructureTableViewCell {
             let title = cell.title
         else { return }
 
-        let vc = StructurePartDetailsViewController()
+        let vc = SongPartDetailsViewController()
         vc.title = "\(title)"
         vc.song = song
         vc.rootNavigationController = rootNavigationController
@@ -169,6 +188,16 @@ private extension StructureTableViewCell {
     func handleStructurePartDeletion(on tableView: UITableView, for indexPath: IndexPath) {
         songParts.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+
+    func configureEditing() {
+        editSongPartsButton.setTitle(L10n.SongBuilder.Detail.Structure.Main.EditStructurePart.editing, for: .normal)
+        tableView.isEditing = true
+    }
+
+    func configureNotEditing() {
+        editSongPartsButton.setTitle(L10n.SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing, for: .normal)
+        tableView.isEditing = false
     }
 
 }
