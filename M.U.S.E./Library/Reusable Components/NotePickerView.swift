@@ -86,6 +86,7 @@ private extension NotePickerView {
 
         cFNotes.addTarget(self, action: #selector(updateNote), for: .valueChanged)
         fSharpBNotes.addTarget(self, action: #selector(updateNote), for: .valueChanged)
+        octavePicker.addTarget(self, action: #selector(updateNote), for: .valueChanged)
     }
 
     func configureAppearance() {

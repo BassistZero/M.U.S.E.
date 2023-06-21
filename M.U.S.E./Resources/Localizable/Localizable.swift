@@ -79,6 +79,14 @@ internal enum L10n {
     internal static let major = L10n.tr("Localizable", "Key.major", fallback: "Major")
     /// Minor
     internal static let minor = L10n.tr("Localizable", "Key.minor", fallback: "Minor")
+    internal enum Major {
+      /// Major
+      internal static let plain = L10n.tr("Localizable", "Key.Major.plain", fallback: "Major")
+    }
+    internal enum Minor {
+      /// Minor
+      internal static let plain = L10n.tr("Localizable", "Key.Minor.plain", fallback: "Minor")
+    }
   }
   internal enum MainTabBar {
     internal enum Item {
@@ -117,6 +125,54 @@ internal enum L10n {
     internal static let g = L10n.tr("Localizable", "Note.g", fallback: "G")
     /// G♯
     internal static let gSharp = L10n.tr("Localizable", "Note.gSharp", fallback: "G♯")
+    internal enum A {
+      /// A
+      internal static let plain = L10n.tr("Localizable", "Note.a.plain", fallback: "A")
+    }
+    internal enum ASharp {
+      /// A#
+      internal static let plain = L10n.tr("Localizable", "Note.aSharp.plain", fallback: "A#")
+    }
+    internal enum B {
+      /// B
+      internal static let plain = L10n.tr("Localizable", "Note.b.plain", fallback: "B")
+    }
+    internal enum C {
+      /// C
+      internal static let plain = L10n.tr("Localizable", "Note.c.plain", fallback: "C")
+    }
+    internal enum CSharp {
+      /// C#
+      internal static let plain = L10n.tr("Localizable", "Note.cSharp.plain", fallback: "C#")
+    }
+    internal enum D {
+      /// D
+      internal static let plain = L10n.tr("Localizable", "Note.d.plain", fallback: "D")
+    }
+    internal enum DSharp {
+      /// D#
+      internal static let plain = L10n.tr("Localizable", "Note.dSharp.plain", fallback: "D#")
+    }
+    internal enum E {
+      /// E
+      internal static let plain = L10n.tr("Localizable", "Note.e.plain", fallback: "E")
+    }
+    internal enum F {
+      /// F
+      internal static let plain = L10n.tr("Localizable", "Note.f.plain", fallback: "F")
+    }
+    internal enum FSharp {
+      /// F#
+      internal static let plain = L10n.tr("Localizable", "Note.fSharp.plain", fallback: "F#")
+    }
+    internal enum G {
+      /// G
+      internal static let plain = L10n.tr("Localizable", "Note.g.plain", fallback: "G")
+    }
+    internal enum GSharp {
+      /// G#
+      internal static let plain = L10n.tr("Localizable", "Note.gSharp.plain", fallback: "G#")
+    }
   }
   internal enum ProgressionType {
     /// Major

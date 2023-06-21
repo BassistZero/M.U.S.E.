@@ -22,7 +22,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4B-OV-z0j" userLabel="Add Row Button">
-                        <rect key="frame" x="20" y="466.66666666666669" width="75" height="34.333333333333314"/>
+                        <rect key="frame" x="20" y="466" width="75" height="35"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     </button>
@@ -34,7 +34,6 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="abC-Ch-bS1" secondAttribute="bottom" constant="20" id="7cO-MK-Prx"/>
-                    <constraint firstItem="abC-Ch-bS1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F4B-OV-z0j" secondAttribute="trailing" constant="20" id="8nn-lJ-cAA"/>
                     <constraint firstAttribute="bottom" secondItem="07M-Ql-y5N" secondAttribute="bottom" id="Of1-Aj-CAh"/>
                     <constraint firstItem="07M-Ql-y5N" firstAttribute="leading" secondItem="VBy-d0-Tza" secondAttribute="leading" id="P56-6j-SYB"/>
                     <constraint firstAttribute="bottom" secondItem="F4B-OV-z0j" secondAttribute="bottom" constant="20" id="SMJ-8o-KMj"/>

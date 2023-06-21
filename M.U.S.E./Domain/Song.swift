@@ -14,7 +14,12 @@ final class Song {
 
     // MARK: - Inits
 
-    init(instruments: [Instrument] = [], structure: [StructurePart] = [], named name: String? = nil, setup: Setup? = Setup(key: .init(value: .c, color: .minor), time: .init(up: 4, down: .quarter), tempo: 120, genre: .rock)) {
+    init(
+        instruments: [Instrument] = [],
+        structure: [StructurePart] = [],
+        named name: String? = nil,
+        setup: Setup? = Setup(key: .init(value: .c, color: .minor), time: .init(up: 4, down: .quarter), tempo: 120, genre: .rock)
+    ) {
         self.instruments = instruments
         self.structure = structure
         self.name = name
@@ -34,7 +39,7 @@ final class Song {
         return songParts
     }
 
-    func getSongPartsString(from songParts: [SongPart]) -> String {
+    func getSongPartsString() -> String {
         var result = ""
 
         songParts.forEach { songPart in
@@ -53,20 +58,22 @@ extension Song: CustomStringConvertible {
     var description: String {
         let songParts = getAllSongParts()
 
-        let songPartsString = !songParts.isEmpty ? getSongPartsString(from: songParts) : "Empty"
+        let songPartsString = !songParts.isEmpty ? getSongPartsString() : ""
 
         return
             """
-            Name: \(name ?? "")
-            Key: \(key?.description ?? "Empty")
-            Time: \(time?.description ?? "Empty")
-            Tempo: \(tempo?.description ?? "Empty")
-            Structure: \(structure.description.dropFirst().dropLast())
-            Instruments: \(instruments.description.dropFirst().dropLast())
-
-            Song Parts:
-
+            T: \(name ?? "")
+            M: \(time?.description ?? "Empty")
+            L: 1/8
+            K: \(key?.description ?? "Empty")
+            Q: \(tempo?.description ?? "Empty")
             \(songPartsString)
+            |AAgAgaAg|
+
+            L: 1/1
+            M: 4/4
+            K: clef=perc
+            |[gF]/8 [g]/8 [gc]/8 [g]/8 [gF]/8 [g]/8 [gc]/8 [g]/8|
             """
     }
 

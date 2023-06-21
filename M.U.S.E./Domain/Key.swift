@@ -36,7 +36,7 @@ extension Key {
 extension Key: CustomStringConvertible {
 
     var description: String {
-        return "\(value) \(color)"
+        "\(value.plainSymbols) \(color.plain)"
     }
 
 }
@@ -47,6 +47,13 @@ extension Key.KeyColor: CustomStringConvertible {
         switch self {
         case .major: return L10n.Key.major
         case .minor: return L10n.Key.minor
+        }
+    }
+
+    var plain: String {
+        switch self {
+        case .major: return L10n.Key.Major.plain
+        case .minor: return L10n.Key.Minor.plain
         }
     }
 

@@ -133,7 +133,9 @@ private extension SetupTableViewCell {
 private extension SetupTableViewCell {
 
     func updateTempo() {
-        tempoLabel.text = "\(Int(tempoStepper.value))"
+        let newTempo = Int(tempoStepper.value)
+        tempoLabel.text = "\(newTempo)"
+        song?.tempo = newTempo
     }
 
 }

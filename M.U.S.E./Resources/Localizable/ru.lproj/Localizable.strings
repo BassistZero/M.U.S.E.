@@ -11,6 +11,19 @@ Note.a = "Ля";
 Note.aSharp = "Ля♯";
 Note.b = "Си";
 
+Note.c.plain = "C";
+Note.cSharp.plain = "C#";
+Note.d.plain = "D";
+Note.dSharp.plain = "D#";
+Note.e.plain = "E";
+Note.f.plain = "F";
+Note.fSharp.plain = "F#";
+Note.g.plain = "G";
+Note.gSharp.plain = "G#";
+Note.a.plain = "A";
+Note.aSharp.plain = "A#";
+Note.b.plain = "B";
+
 Interval.unison = "Унисон";
 Interval.minorSecond = "Малая Секунда";
 Interval.majorSecond = "Большая Секунда";
@@ -34,6 +47,9 @@ ScaleStep.seven = "VII";
 
 Key.major = "Мажор";
 Key.minor = "Минор";
+
+Key.Major.plain = "Major";
+Key.Minor.plain = "Minor";
 
 Genre.metal = "Метал";
 Genre.rock = "Рок";
@@ -104,7 +120,7 @@ SongBuilder.Detail.Configuration.timeName = "Размер";
 SongBuilder.Detail.Configuration.upButton = "";
 SongBuilder.Detail.Configuration.downButton = "";
 
-SongBuilder.Detail.Structure.Main.addNewStructurePart = "Добавить Новую Структуру";
+SongBuilder.Detail.Structure.Main.addNewStructurePart = "Новая Структура";
 SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing = "Изменить";
 SongBuilder.Detail.Structure.Main.EditStructurePart.editing = "Готово";
 SongBuilder.Detail.Structure.Main.menuTitle = "Структурная Часть";

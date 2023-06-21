@@ -6,7 +6,7 @@ final class StructurePartProgressionTableViewCell: UITableViewCell {
 
     @IBOutlet private weak var progressionNameLabel: UILabel!
     @IBOutlet private weak var progressionLabel: UILabel!
-    @IBOutlet private weak var progressionConfigurationView: ProgressionConfigurationView!
+    @IBOutlet private weak var configurationView: ProgressionConfigurationView!
 
     // MARK: - Public Events
 
@@ -14,7 +14,11 @@ final class StructurePartProgressionTableViewCell: UITableViewCell {
 
     // MARK: - Public Properties
 
-    var progression: Progression?
+    var progression: Progression? {
+        didSet {
+            updatePart()
+        }
+    }
 
     // MARK: - UITableViewCell
 
@@ -35,14 +39,14 @@ private extension StructurePartProgressionTableViewCell {
         progressionNameLabel.font = .preferredFont(forTextStyle: .title2)
         progressionNameLabel.textAlignment = .center
 
-        progressionConfigurationView.didTapped = {
+        configurationView.didTapped = {
             self.updatePart()
         }
 
         guard let noteValue = progression?.chords.first?.rootNote.value else { return }
-        progressionConfigurationView.updateNoteValue(to: noteValue)
+        configurationView.updateNoteValue(to: noteValue)
 
-        progression = progressionConfigurationView.progression
+        progression = configurationView.progression
         progressionLabel.text = progression?.description
     }
 
@@ -50,9 +54,10 @@ private extension StructurePartProgressionTableViewCell {
         print(progression?.description ?? "Empty")
 
         guard let noteValue = progression?.chords.first?.rootNote.value else { return }
-        progressionConfigurationView.updateNoteValue(to: noteValue)
+        configurationView.updateNoteValue(to: noteValue)
 
-        progression = progressionConfigurationView.progression
+        progression = configurationView.progression
+        print("Configuration view progression: \(configurationView.progression?.description ?? "none")")
         progressionLabel.text = progression?.description
     }
 

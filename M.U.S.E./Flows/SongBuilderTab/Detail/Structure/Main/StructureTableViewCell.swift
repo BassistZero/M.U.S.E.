@@ -191,13 +191,17 @@ private extension StructureTableViewCell {
     }
 
     func configureEditing() {
-        editSongPartsButton.setTitle(L10n.SongBuilder.Detail.Structure.Main.EditStructurePart.editing, for: .normal)
-        tableView.isEditing = true
+        UIView.animate(withDuration: 0.2) {
+            self.editSongPartsButton.setTitle(L10n.SongBuilder.Detail.Structure.Main.EditStructurePart.editing, for: .normal)
+            self.tableView.isEditing = true
+        }
     }
 
     func configureNotEditing() {
-        editSongPartsButton.setTitle(L10n.SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing, for: .normal)
-        tableView.isEditing = false
+        UIView.animate(withDuration: 0.2) {
+            self.editSongPartsButton.setTitle(L10n.SongBuilder.Detail.Structure.Main.EditStructurePart.notEditing, for: .normal)
+            self.tableView.isEditing = false
+        }
     }
 
 }

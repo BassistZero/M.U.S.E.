@@ -11,6 +11,19 @@ Note.a = "A";
 Note.aSharp = "A♯";
 Note.b = "B";
 
+Note.c.plain = "C";
+Note.cSharp.plain = "C#";
+Note.d.plain = "D";
+Note.dSharp.plain = "D#";
+Note.e.plain = "E";
+Note.f.plain = "F";
+Note.fSharp.plain = "F#";
+Note.g.plain = "G";
+Note.gSharp.plain = "G#";
+Note.a.plain = "A";
+Note.aSharp.plain = "A#";
+Note.b.plain = "B";
+
 Interval.unison = "Unison";
 Interval.minorSecond = "Minor Second";
 Interval.majorSecond = "Major Second";
@@ -34,6 +47,9 @@ ScaleStep.seven = "VII";
 
 Key.major = "Major";
 Key.minor = "Minor";
+
+Key.Major.plain = "Major";
+Key.Minor.plain = "Minor";
 
 Genre.metal = "Metal";
 Genre.rock = "Rock";

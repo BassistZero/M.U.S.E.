@@ -55,6 +55,8 @@ private extension ProgressionConfigurationView {
     func configureEvents() {
         notePickerView.didTapped = didTapped
         progressionType.addTarget(self, action: #selector(updateSong), for: .valueChanged)
+        progressionTypeColor.addTarget(self, action: #selector(updateSong), for: .valueChanged)
+        progressionVersion.addTarget(self, action: #selector(updateSong), for: .valueChanged)
     }
 
     func configureProgressionTypeText() {
